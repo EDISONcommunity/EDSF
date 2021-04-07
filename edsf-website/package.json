@@ -1,0 +1,60 @@
+{
+  "name": "edsf-website",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://sarahtartaruga.github.io/EDSF",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.1",
+    "@types/react-router": "^5.1.13",
+    "gh-pages": "^3.1.0",
+    "history": "^5.0.0",
+    "markdown-to-jsx": "^7.1.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-ga": "^3.3.0",
+    "react-markdown": "^5.0.3",
+    "react-router-dom": "^5.2.0",
+    "react-router-ga": "^1.2.3",
+    "react-scripts": "4.0.3",
+    "react-syntax-highlighter": "^15.4.3",
+    "react-twitter-embed": "^3.0.3",
+    "remark-gfm": "^1.0.0",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build webpack --env.ENVIRONMENT=production --config webpack.config.build.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "webpack --env.ENVIRONMENT=development --config webpack.config.dev.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "dotenv": "^8.2.0"
+  }
+}
