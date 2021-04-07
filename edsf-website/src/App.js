@@ -21,7 +21,6 @@ import workshop2020Fair from "./EDSF.wiki/(5)-FAIR-Competences-for-Higher-Educat
 import Box from "@material-ui/core/Box";
 import MarkDownComponent from "./MarkDownComponent";
 import { Switch, Route } from "react-router-dom";
-import { Typography } from "@material-ui/core";
 
 function App() {
   return (

@@ -73,13 +73,12 @@ const useStyles = makeStyles((theme) => ({
   },
   cardTitle: {
     marginTop: "5%",
-    marginBottom: "3%",
+    marginBottom: "0%",
   },
-
   footerGrid: {
     height: "5%",
     width: "100%",
-    marginBottom: "1%"
+    marginBottom: "1%",
   },
   footerGridItemContact: {
     height: "100%",
@@ -114,6 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   yearActions: {
     textAlign: "flex-start",
+    paddingBottom: "0%",
   },
   matesBox: {
     height: "100%",
@@ -130,10 +130,48 @@ const useStyles = makeStyles((theme) => ({
     height: "100px",
     width: "100%",
   },
+
+  linkList: {
+    textAlign: "left",
+    display: "flex",
+    flexDirection: "column",
+    marginLeft: "7%",
+    padding: "0%",
+  },
+  linkListText: {
+    color: "#28F994",
+  },
 }));
 
 export default function Home(props) {
   const classes = useStyles();
+
+  function MaterialList(slidesURL, videoURL) {
+    return (
+      <List className={classes.linkList}>
+        <Link
+          target="_blank"
+          href={slidesURL}
+          rel="noopener"
+          style={{ textDecoration: "none" }}
+        >
+          <Typography variant="caption" className={classes.linkListText}>
+            Lecture and practice material
+          </Typography>
+        </Link>
+        <Link
+          target="_blank"
+          href={videoURL}
+          rel="noopener"
+          style={{ textDecoration: "none" }}
+        >
+          <Typography variant="caption" className={classes.linkListText}>
+            Video material
+          </Typography>
+        </Link>
+      </List>
+    );
+  }
 
   return (
     <Box className={classes.rootBox}>
@@ -161,7 +199,8 @@ export default function Home(props) {
             style={{ paddingTop: "0" }}
           >
             <Typography variant="subtitle1">
-              Here, you can find information about the EDISON community, offered trainings and workshops
+              Here, you can find information about the EDISON community, offered
+              trainings and workshops
             </Typography>
           </Grid>
         </Grid>
@@ -190,8 +229,12 @@ export default function Home(props) {
                       primary='MATES ED2MIT "Industrial Data Spaces, Organisational Data Management and Governance for the Maritime Sector"'
                       secondary="16, 18, 23 February"
                     />
-                  </ListItem>{" "}
+                  </ListItem>
                 </CardActions>
+                {MaterialList(
+                  "https://drive.google.com/drive/folders/1Hjevyvnm8we2IgtieLMtU3WtD2KvPaMH",
+                  "https://surfdrive.surf.nl/files/index.php/s/lRGca7eeizWQR1p"
+                )}
                 <CardActions className={classes.yearActions}>
                   <ListItem
                     button
@@ -204,6 +247,10 @@ export default function Home(props) {
                     />
                   </ListItem>
                 </CardActions>
+                {MaterialList(
+                  "https://drive.google.com/drive/u/0/folders/1su2P7NqDF24MJKnfMqtREseK4iH5HWxY",
+                  "https://surfdrive.surf.nl/files/index.php/s/t5WLTsVcylKkHhh"
+                )}
               </List>
               <Box className={classes.yearBox}>
                 <Typography color="textSecondary" className={classes.year}>
