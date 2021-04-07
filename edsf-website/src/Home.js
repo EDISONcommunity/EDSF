@@ -150,7 +150,9 @@ export default function Home(props) {
             className={classes.gridTitleItem}
             style={{ paddingBottom: "0" }}
           >
-            <Typography variant="h4">Welcome to the EDISON Community</Typography>
+            <Typography variant="h4">
+              Welcome to the EDISON Community
+            </Typography>
           </Grid>
           <Grid
             item
