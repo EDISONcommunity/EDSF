@@ -161,8 +161,7 @@ export default function Home(props) {
             style={{ paddingTop: "0" }}
           >
             <Typography variant="subtitle1">
-              Here, you can find information about the EDISON Data Science
-              Framework, offered trainings and workshops
+              Here, you can find information about the EDISON community, offered trainings and workshops
             </Typography>
           </Grid>
         </Grid>

@@ -47,28 +47,42 @@ export default function ButtonAppBar() {
         <Box className={classes.menuPopperBox}>
           <MenuPopper />
           <Box className={classes.titleBox}>
-            <Typography
-              variant="h5"
-              color="textSecondary"
-            >
+            <Typography variant="caption" color="textSecondary">
               <RouterLink to="/" className={classes.routerLink}>
-                {/* EDISON Data Science Framework */}
+                Data Science Competence Framework
+              </RouterLink>
+            </Typography>
+          </Box>
+          <Box className={classes.titleBox}>
+            <Typography variant="caption" color="textSecondary">
+              <RouterLink to="/" className={classes.routerLink}>
+                Data Science Body of Knowledge
+              </RouterLink>
+            </Typography>
+          </Box>
+          <Box className={classes.titleBox}>
+            <Typography variant="caption" color="textSecondary">
+              <RouterLink to="/" className={classes.routerLink}>
+                Data Science Model Curriculum
+              </RouterLink>
+            </Typography>
+          </Box>
+          <Box className={classes.titleBox}>
+            <Typography variant="caption" color="textSecondary">
+              <RouterLink to="/" className={classes.routerLink}>
+                Data Science Professional Profiles
               </RouterLink>
             </Typography>
           </Box>
         </Box>
 
         {/* <RouterLink to="/about" className={classes.routerLink}> */}
-          <Box className={classes.iconBox}>
-              {/* <Typography variant="subtitle1" color="textSecondary">About EDSF</Typography> */}
-              <Icon className={classes.iconRoot}>
-                <img
-                  className={classes.iconImage}
-                  src={logoEdison}
-                  alt="logo"
-                />
-              </Icon>
-          </Box>
+        <Box className={classes.iconBox}>
+          {/* <Typography variant="subtitle1" color="textSecondary">About EDSF</Typography> */}
+          <Icon className={classes.iconRoot}>
+            <img className={classes.iconImage} src={logoEdison} alt="logo" />
+          </Icon>
+        </Box>
         {/* </RouterLink> */}
       </Toolbar>
     </AppBar>
