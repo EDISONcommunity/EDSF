@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
   },
   yearBox: {
     display: "flex",
-    marginBottom: "2%",
+    paddingTop: "5%",
   },
   yearList: {
     backgroundColor: theme.palette.background.paper,
