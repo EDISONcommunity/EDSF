@@ -2,6 +2,10 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Contact from "./Contact";
 import Upcoming from "./Upcoming";
+import CFDS from "./CFDS";
+import DSBoK from "./DSBoK";
+import DSPP from "./DSPP";
+import MCDS from "./MCDS";
 import about from "./EDSF.wiki/EDSFhome.md";
 import tutorial2019Bdit4dal from "./EDSF.wiki/(4)-BDIT4DA-Tutorial-HPCS2019.md";
 import tutorial2019Edsf from "./EDSF.wiki/(3)-EDSF-Tutorial-Summer-2019-Data-Science-Competence-and-Education.md";
@@ -17,6 +21,7 @@ import workshop2020Fair from "./EDSF.wiki/(5)-FAIR-Competences-for-Higher-Educat
 import Box from "@material-ui/core/Box";
 import MarkDownComponent from "./MarkDownComponent";
 import { Switch, Route } from "react-router-dom";
+import { Typography } from "@material-ui/core";
 
 function App() {
   return (
@@ -34,6 +39,18 @@ function App() {
           </Route>
           <Route path="/upcoming">
             <Upcoming />
+          </Route>
+          <Route path="/data-science-competence-framework">
+            <CFDS />
+          </Route>
+          <Route path="/data-science-body-of-knowledge">
+            <DSBoK/>
+          </Route>
+          <Route path="/data-science-model-curriculum">
+            <MCDS/>
+          </Route>
+          <Route path="/data-science-professional-profiles">
+            <DSPP/>
           </Route>
           <Route path="/about">
             <MarkDownComponent markdown={about} key={0} />

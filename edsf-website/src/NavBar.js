@@ -48,28 +48,40 @@ export default function ButtonAppBar() {
           <MenuPopper />
           <Box className={classes.titleBox}>
             <Typography variant="caption" color="textSecondary">
-              <RouterLink to="/" className={classes.routerLink}>
+              <RouterLink
+                to="/data-science-competence-framework"
+                className={classes.routerLink}
+              >
                 Data Science Competence Framework
               </RouterLink>
             </Typography>
           </Box>
           <Box className={classes.titleBox}>
             <Typography variant="caption" color="textSecondary">
-              <RouterLink to="/" className={classes.routerLink}>
+              <RouterLink
+                to="/data-science-body-of-knowledge"
+                className={classes.routerLink}
+              >
                 Data Science Body of Knowledge
               </RouterLink>
             </Typography>
           </Box>
           <Box className={classes.titleBox}>
             <Typography variant="caption" color="textSecondary">
-              <RouterLink to="/" className={classes.routerLink}>
+              <RouterLink
+                to="/data-science-model-curriculum"
+                className={classes.routerLink}
+              >
                 Data Science Model Curriculum
               </RouterLink>
             </Typography>
           </Box>
           <Box className={classes.titleBox}>
             <Typography variant="caption" color="textSecondary">
-              <RouterLink to="/" className={classes.routerLink}>
+              <RouterLink
+                to="/data-science-professional-profiles"
+                className={classes.routerLink}
+              >
                 Data Science Professional Profiles
               </RouterLink>
             </Typography>
