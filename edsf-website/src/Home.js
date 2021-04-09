@@ -18,6 +18,7 @@ import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
 import uvaLogo from "./img/uva.png";
 import backgroundImg from "./img/background2.png";
+import ReactGA from "react-ga";
 
 const useStyles = makeStyles((theme) => ({
   rootBox: {
@@ -186,14 +187,42 @@ export default function Home(props) {
   const classes = useStyles();
 
   function MaterialList(slidesURL, videoURL) {
+  
+    function handleLectureMaterialClick(e) {
+      ReactGA.event({
+        category: 'Links',
+        action: 'Lecture Material',
+        label: 'Lecture Material Link clicked',
+        value: 1
+      })
+    }
+
+    function handleVideoMaterialClick(e) {ReactGA.event({
+      category: "Links",
+      action: "Video Material",
+      label: "Video Material Link clicked",
+      value: 1,
+    });}
+
+
     return (
       <List className={classes.linkList}>
-        <Link target="_blank" href={slidesURL} rel="noopener">
+        <Link
+          target="_blank"
+          href={slidesURL}
+          rel="noopener"
+          onClick={handleLectureMaterialClick}
+        >
           <Typography variant="caption" className={classes.linkListText}>
             Lecture and practice material
           </Typography>
         </Link>
-        <Link target="_blank" href={videoURL} rel="noopener">
+        <Link
+          target="_blank"
+          href={videoURL}
+          rel="noopener"
+          onClick={handleVideoMaterialClick}
+        >
           <Typography variant="caption" className={classes.linkListText}>
             Video material
           </Typography>
@@ -464,17 +493,6 @@ export default function Home(props) {
                     className={classes.iconImage}
                     src={matesLogo}
                     alt="matesLogo"
-                  />
-                </Icon>
-              </Link>
-            </Box>
-            <Box className={classes.logoBox}>
-              <Link target="_blank" href="https://www.uva.nl/en" rel="noopener">
-                <Icon className={classes.iconRoot} href="https://www.uva.nl/en">
-                  <img
-                    className={classes.iconImage}
-                    src={uvaLogo}
-                    alt="uvaLogo"
                   />
                 </Icon>
               </Link>

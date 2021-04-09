@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./Theme";
-// import ReactGA from "react-ga";
+import ReactGA from "react-ga";
 import Analytics from "react-router-ga";
 // import { createBrowserHistory } from "history";
 import { BrowserRouter as Router} from "react-router-dom";
@@ -11,7 +11,7 @@ import { BrowserRouter as Router} from "react-router-dom";
 import "./index.css";
 
 const trackingId = process.env.REACT_APP_GA_MEASUREMENT_ID; // Replace with your Google Analytics tracking ID
-// ReactGA.initialize(trackingId);
+ReactGA.initialize(trackingId);
 
 // const history = createBrowserHistory();
 // Initialize google analytics page view tracking
