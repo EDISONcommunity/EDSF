@@ -153,7 +153,6 @@ export default function Home(props) {
           target="_blank"
           href={slidesURL}
           rel="noopener"
-          style={{ textDecoration: "none" }}
         >
           <Typography variant="caption" className={classes.linkListText}>
             Lecture and practice material
@@ -163,7 +162,6 @@ export default function Home(props) {
           target="_blank"
           href={videoURL}
           rel="noopener"
-          style={{ textDecoration: "none" }}
         >
           <Typography variant="caption" className={classes.linkListText}>
             Video material
