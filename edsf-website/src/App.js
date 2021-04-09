@@ -43,15 +43,15 @@ function App() {
             <CFDS />
           </Route>
           <Route path="/data-science-body-of-knowledge">
-            <DSBoK/>
+            <DSBoK />
           </Route>
           <Route path="/data-science-model-curriculum">
-            <MCDS/>
+            <MCDS />
           </Route>
           <Route path="/data-science-professional-profiles">
-            <DSPP/>
+            <DSPP />
           </Route>
-          <Route path="/about">
+          <Route path="/edison-community">
             <MarkDownComponent markdown={about} key={0} />
           </Route>
           <Route path="/tutorials-2019-edsf-data-science-competence-and-education">

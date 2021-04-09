@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
-      width: "80%",
+      minWidth: "80%",
     },
   },
   cardWorkshops: {
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
-      width: "80%",
+      minWidth: "80%",
     },
   },
   cardTwitter: {
@@ -96,7 +96,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
-      width: "300px",
+      minWidth: "300px",
+      maxWidth: "80%",
     },
   },
   cardTitle: {
@@ -223,7 +224,7 @@ export default function Home(props) {
       </Grid>
 
       <Grid container direction="row" className={classes.gridCardContainer}>
-        <Grid item className={classes.gridCardItem} xs>
+        <Grid item className={classes.gridCardItem} sm>
           <Typography variant="h6" className={classes.cardTitle}>
             Trainings
           </Typography>
@@ -323,7 +324,7 @@ export default function Home(props) {
             </List>
           </Card>
         </Grid>
-        <Grid item className={classes.gridCardItem} xs>
+        <Grid item className={classes.gridCardItem} sm>
           <Typography variant="h6" className={classes.cardTitle}>
             Workshops
           </Typography>
@@ -424,7 +425,7 @@ export default function Home(props) {
             </List>
           </Card>
         </Grid>
-        <Grid item className={classes.gridCardItem} xs>
+        <Grid item className={classes.gridCardItem} sm>
           <Card className={classes.cardTwitter} variant="outlined">
             <TwitterTimelineEmbed
               sourceType="profile"

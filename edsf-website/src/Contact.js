@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
     flexDirection: "column",
-    textAlign: "center"
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10%",
+    },
   },
   contactBox: {
     height: "100%",

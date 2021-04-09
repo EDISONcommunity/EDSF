@@ -136,17 +136,40 @@ export default function MenuPopper() {
                     defaultExpandIcon={<ChevronRightIcon />}
                   >
                     {/* Home section   */}
-                    <MenuItemLink
-                      label="Home"
-                      to="/"
-                      onClick={handleClose}
-                    />
+                    <MenuItemLink label="Home" to="/" onClick={handleClose} />
                     {/* About section   */}
-                    <MenuItemLink
+                    <TreeItem
+                      nodeId="0"
                       label="About"
-                      to="/about"
-                      onClick={handleClose}
-                    />
+                      className={classes.rootTreeItem}
+                    >
+                      <MenuItemLink
+                        label="EDISON Community"
+                        to="/edison-community"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Data Science Competence Framework"
+                        to="/data-science-competence-framework"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Data Science Body of Knowledge"
+                        to="/data-science-body-of-knowledge"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Data Science Model Curriculum"
+                        to="/data-science-model-curriculum"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Data Science Professional Profiles"
+                        to="/data-science-professional-profiles"
+                        onClick={handleClose}
+                      />
+                    </TreeItem>
+
                     {/* Tutorial section   */}
                     <TreeItem
                       nodeId="1"
