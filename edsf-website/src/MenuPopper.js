@@ -24,13 +24,23 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
     minWidth: "600px",
     paddingBottom: "10px",
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: "1px",
+      margin: theme.spacing(1),
+    },
   },
   rootTreeItem: {
     padding: "5px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "1px",
+    },
   },
   menuItem: {
     padding: "5px",
-
+    [theme.breakpoints.down("sm")]: {
+      padding: "0px",
+      margin: "0px",
+    },
     // color: "#116FB4",
   },
 }));

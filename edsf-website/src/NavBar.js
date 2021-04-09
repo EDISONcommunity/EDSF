@@ -13,28 +13,42 @@ const useStyles = makeStyles((theme) => ({
   menuPopperBox: {
     flexGrow: 1,
     display: "flex",
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center",
+    },
   },
   iconImage: {
     height: "100%",
   },
   iconRoot: {
-    height: "8vh",
+    height: "7vh",
     width: "auto",
   },
   iconBox: {
     flexDirection: "row",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
   titleBox: {
     textAlign: "center",
     height: "100%",
     width: "100%",
     margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: "2%",
+      paddingTop: "2%",
+      display: "none",
+    },
   },
   routerLink: {
     textDecoration: "none",
     color: "inherit",
+  },
+  navItemText: {
+    fontSize: "0.8rem",
   },
 }));
 
@@ -47,7 +61,11 @@ export default function ButtonAppBar() {
         <Box className={classes.menuPopperBox}>
           <MenuPopper />
           <Box className={classes.titleBox}>
-            <Typography variant="caption" color="textSecondary">
+            <Typography
+              variant="caption"
+              color="textSecondary"
+              className={classes.navItemText}
+            >
               <RouterLink
                 to="/data-science-competence-framework"
                 className={classes.routerLink}
@@ -57,7 +75,11 @@ export default function ButtonAppBar() {
             </Typography>
           </Box>
           <Box className={classes.titleBox}>
-            <Typography variant="caption" color="textSecondary">
+            <Typography
+              variant="caption"
+              color="textSecondary"
+              className={classes.navItemText}
+            >
               <RouterLink
                 to="/data-science-body-of-knowledge"
                 className={classes.routerLink}
@@ -67,7 +89,11 @@ export default function ButtonAppBar() {
             </Typography>
           </Box>
           <Box className={classes.titleBox}>
-            <Typography variant="caption" color="textSecondary">
+            <Typography
+              variant="caption"
+              color="textSecondary"
+              className={classes.navItemText}
+            >
               <RouterLink
                 to="/data-science-model-curriculum"
                 className={classes.routerLink}
@@ -77,7 +103,11 @@ export default function ButtonAppBar() {
             </Typography>
           </Box>
           <Box className={classes.titleBox}>
-            <Typography variant="caption" color="textSecondary">
+            <Typography
+              variant="caption"
+              color="textSecondary"
+              className={classes.navItemText}
+            >
               <RouterLink
                 to="/data-science-professional-profiles"
                 className={classes.routerLink}
