@@ -16,9 +16,9 @@ import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
-import uvaLogo from "./img/uva.png";
 import backgroundImg from "./img/background2.png";
 import ReactGA from "react-ga";
+import CookieConsent from "react-cookie-consent";
 
 const useStyles = makeStyles((theme) => ({
   rootBox: {
