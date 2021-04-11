@@ -21,8 +21,10 @@ import workshop2020Fair from "./EDSF.wiki/(5)-FAIR-Competences-for-Higher-Educat
 import Box from "@material-ui/core/Box";
 import MarkDownComponent from "./MarkDownComponent";
 import { Switch, Route } from "react-router-dom";
+import MUICookieConsent from "material-ui-cookie-consent";
 
 function App() {
+
   return (
     <Box>
       <Box height="10vh">
