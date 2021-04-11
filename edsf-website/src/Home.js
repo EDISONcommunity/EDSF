@@ -188,21 +188,21 @@ export default function Home(props) {
 
   function MaterialList(slidesURL, videoURL) {
   
-    function handleLectureMaterialClick(e) {
-      ReactGA.event({
-        category: 'Links',
-        action: 'Lecture Material',
-        label: 'Lecture Material Link clicked',
-        value: 1
-      })
-    }
+    // function handleLectureMaterialClick(e) {
+    //   ReactGA.event({
+    //     category: 'Links',
+    //     action: 'Lecture Material',
+    //     label: 'Lecture Material Link clicked',
+    //     value: 1
+    //   })
+    // }
 
-    function handleVideoMaterialClick(e) {ReactGA.event({
-      category: "Links",
-      action: "Video Material",
-      label: "Video Material Link clicked",
-      value: 1,
-    });}
+    // function handleVideoMaterialClick(e) {ReactGA.event({
+    //   category: "Links",
+    //   action: "Video Material",
+    //   label: "Video Material Link clicked",
+    //   value: 1,
+    // });}
 
 
     return (
@@ -211,7 +211,7 @@ export default function Home(props) {
           target="_blank"
           href={slidesURL}
           rel="noopener"
-          onClick={handleLectureMaterialClick}
+          // onClick={handleLectureMaterialClick}
         >
           <Typography variant="caption" className={classes.linkListText}>
             Lecture and practice material
@@ -221,7 +221,7 @@ export default function Home(props) {
           target="_blank"
           href={videoURL}
           rel="noopener"
-          onClick={handleVideoMaterialClick}
+          // onClick={handleVideoMaterialClick}
         >
           <Typography variant="caption" className={classes.linkListText}>
             Video material
