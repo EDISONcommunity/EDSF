@@ -18,7 +18,6 @@ import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
 import backgroundImg from "./img/background2.png";
 import ReactGA from "react-ga";
-import CookieConsent from "react-cookie-consent";
 
 const useStyles = makeStyles((theme) => ({
   rootBox: {
@@ -47,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   gridSubtitle: {
     paddingBottom: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
-      fontSize: "0.8rem"
+      fontSize: "0.8rem",
     },
   },
   gridCardContainer: {
@@ -130,6 +129,11 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  privacyText: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
   iconBox: {
     height: "100%",
     flexDirection: "row",
@@ -187,23 +191,27 @@ export default function Home(props) {
   const classes = useStyles();
 
   function MaterialList(slidesURL, videoURL) {
-  
-    // function handleLectureMaterialClick(e) {
-    //   ReactGA.event({
-    //     category: 'Links',
-    //     action: 'Lecture Material',
-    //     label: 'Lecture Material Link clicked',
-    //     value: 1
-    //   })
-    // }
+    function handleLectureMaterialClick(e) {
+      if (props.cookiesEnabled) {
+        ReactGA.event({
+          category: "Links",
+          action: "Lecture Material",
+          label: "Lecture Material Link clicked",
+          value: 1,
+        });
+      }
+    }
 
-    // function handleVideoMaterialClick(e) {ReactGA.event({
-    //   category: "Links",
-    //   action: "Video Material",
-    //   label: "Video Material Link clicked",
-    //   value: 1,
-    // });}
-
+    function handleVideoMaterialClick(e) {
+      if (props.cookiesEnabled) {
+        ReactGA.event({
+          category: "Links",
+          action: "Video Material",
+          label: "Video Material Link clicked",
+          value: 1,
+        });
+      }
+    }
 
     return (
       <List className={classes.linkList}>
@@ -211,7 +219,7 @@ export default function Home(props) {
           target="_blank"
           href={slidesURL}
           rel="noopener"
-          // onClick={handleLectureMaterialClick}
+          onClick={handleLectureMaterialClick}
         >
           <Typography variant="caption" className={classes.linkListText}>
             Lecture and practice material
@@ -221,7 +229,7 @@ export default function Home(props) {
           target="_blank"
           href={videoURL}
           rel="noopener"
-          // onClick={handleVideoMaterialClick}
+          onClick={handleVideoMaterialClick}
         >
           <Typography variant="caption" className={classes.linkListText}>
             Video material
@@ -454,14 +462,14 @@ export default function Home(props) {
             </List>
           </Card>
         </Grid>
-        <Grid item className={classes.gridCardItem} sm>
+        {/* <Grid item className={classes.gridCardItem} sm>
           <Card className={classes.cardTwitter} variant="outlined">
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName="erasmusmates"
             />
           </Card>
-        </Grid>
+        </Grid> */}
       </Grid>
       <Grid container direction="row" className={classes.footerGrid}>
         <Grid item xs className={classes.footerGridItemContact}>
@@ -469,6 +477,13 @@ export default function Home(props) {
             <IconButton className={classes.contactButton}>
               <MailOutlineIcon />
             </IconButton>
+          </RouterLink>
+        {/* </Grid>
+        <Grid item xs className={classes.footerGridItemContact}> */}
+          <RouterLink to="/privacy-policy">
+            <Typography variant="subtitle1" color="textSecondary" style={{paddingLeft: "10px"}} className={classes.privacyText}>
+              Privacy Policy
+            </Typography>
           </RouterLink>
           <Box flexGrow="1" />
         </Grid>

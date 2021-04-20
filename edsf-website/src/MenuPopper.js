@@ -264,6 +264,12 @@ export default function MenuPopper() {
                       to="/contact"
                       onClick={handleClose}
                     />
+                    {/* Privacy policy section   */}
+                    <MenuItemLink
+                      label="Privacy policy"
+                      to="/privacy-policy"
+                      onClick={handleClose}
+                    />
                   </TreeView>
                 </ClickAwayListener>
               </Paper>

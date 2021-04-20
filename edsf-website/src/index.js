@@ -9,9 +9,8 @@ import { BrowserRouter as Router} from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 import "./index.css";
 import { Route } from "react-router-dom";
-import MUICookieConsent from "material-ui-cookie-consent";
 
-// const trackingId = process.env.REACT_APP_GA_MEASUREMENT_ID; // Replace with your Google Analytics tracking ID
+const trackingId = process.env.REACT_APP_GA_MEASUREMENT_ID; // Replace with your Google Analytics tracking ID
 // ReactGA.initialize(trackingId);
 
 
@@ -20,7 +19,7 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <Router basename="/EDSF">
         {/* <Analytics id={trackingId} debug> */}
-          <App />
+          <App cookiesEnabled={false} trackingId={trackingId} />
         {/* </Analytics> */}
       </Router>
     </ThemeProvider>
