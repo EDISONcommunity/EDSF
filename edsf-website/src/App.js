@@ -24,7 +24,7 @@ import { Switch, Route } from "react-router-dom";
 import Cookiesnackbar from "./Cookiesnackbar";
 import PrivacyPolicy from "./PrivacyPolicy";
 import ReactGA from "react-ga";
-
+import Analytics from "react-router-ga";
 import React, { Component } from "react";
 
 export default class App extends Component {
@@ -43,8 +43,8 @@ export default class App extends Component {
   cookiesEnable() {
     this.setState({ cookiesEnabled: true });
     this.setState({ cookiesSet: true });
-    //ReactGA.initialize(this.props.trackingId);
-    //ReactGA.set({ anonymizeIp: true });
+    ReactGA.initialize(this.props.trackingId);
+    ReactGA.set({ anonymizeIp: true });
   }
 
   twitterEnable() {
@@ -56,7 +56,7 @@ export default class App extends Component {
     this.setState({ cookiesSet: true });
   }
 
-  render() {
+  app() {
     return (
       <Box>
         <Box height="10vh">
@@ -140,5 +140,16 @@ export default class App extends Component {
         </Box>
       </Box>
     );
+  }
+
+  render() {
+    if (this.cookiesEnabled) {
+      return (
+        <Analytics id={this.props.trackingId} debug>
+          {this.app()}
+        </Analytics>
+      );
+    }
+    return this.app();
   }
 }
