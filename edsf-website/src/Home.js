@@ -18,6 +18,7 @@ import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
 import backgroundImg from "./img/background2.png";
 import ReactGA from "react-ga";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   rootBox: {
@@ -185,10 +186,36 @@ const useStyles = makeStyles((theme) => ({
   linkListText: {
     color: "#28F994",
   },
+  twitterBanner: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+  },
+  twitterBannerText: {
+    marginTop: "10%",
+  },
 }));
 
 export default function Home(props) {
   const classes = useStyles();
+
+  function TwitterComponent() {
+    if (props.twitterEnabled) {
+      return (
+        <TwitterTimelineEmbed sourceType="profile" screenName="erasmusmates" />
+      );
+    }
+
+    return (
+      <Card className={classes.twitterBanner}>
+        <Typography variant="caption" className={classes.twitterBannerText}>
+          This is a Twitter component using cookies. For details see our privacy
+          policy.
+        </Typography>
+        <Button onClick={(e) => props.onTwitterEnable()}>Show content</Button>
+      </Card>
+    );
+  }
 
   function MaterialList(slidesURL, videoURL) {
     function handleLectureMaterialClick(e) {
@@ -462,14 +489,11 @@ export default function Home(props) {
             </List>
           </Card>
         </Grid>
-        {/* <Grid item className={classes.gridCardItem} sm>
+        <Grid item className={classes.gridCardItem} sm>
           <Card className={classes.cardTwitter} variant="outlined">
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="erasmusmates"
-            />
+            <TwitterComponent />
           </Card>
-        </Grid> */}
+        </Grid>
       </Grid>
       <Grid container direction="row" className={classes.footerGrid}>
         <Grid item xs className={classes.footerGridItemContact}>
@@ -478,10 +502,15 @@ export default function Home(props) {
               <MailOutlineIcon />
             </IconButton>
           </RouterLink>
-        {/* </Grid>
+          {/* </Grid>
         <Grid item xs className={classes.footerGridItemContact}> */}
-          <RouterLink to="/privacy-policy">
-            <Typography variant="subtitle1" color="textSecondary" style={{paddingLeft: "10px"}} className={classes.privacyText}>
+          <RouterLink to="/privacy-policy" style={{ textDecoration: "none" }}>
+            <Typography
+              variant="subtitle1"
+              color="textSecondary"
+              style={{ paddingLeft: "10px" }}
+              className={classes.privacyText}
+            >
               Privacy Policy
             </Typography>
           </RouterLink>

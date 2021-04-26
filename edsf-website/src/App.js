@@ -33,15 +33,22 @@ export default class App extends Component {
     this.state = {
       cookiesEnabled: props.cookiesEnabled,
       cookiesSet: false,
+      twitterEnabled: props.cookiesEnabled,
     };
     this.cookiesEnable = this.cookiesEnable.bind(this);
     this.cookiesDisable = this.cookiesDisable.bind(this);
+    this.twitterEnable = this.twitterEnable.bind(this);
   }
 
   cookiesEnable() {
     this.setState({ cookiesEnabled: true });
     this.setState({ cookiesSet: true });
     //ReactGA.initialize(this.props.trackingId);
+    //ReactGA.set({ anonymizeIp: true });
+  }
+
+  twitterEnable() {
+    this.setState({ twitterEnabled: true });
   }
 
   cookiesDisable() {
@@ -60,6 +67,8 @@ export default class App extends Component {
             <Route exact path="/">
               <Home
                 cookiesEnabled={this.state.cookiesEnabled}
+                onTwitterEnable={this.twitterEnable}
+                twitterEnabled={this.state.twitterEnabled}
                 trackingId={this.props.trackingId}
               />
             </Route>

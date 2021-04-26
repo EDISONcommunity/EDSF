@@ -31,7 +31,7 @@ export default function SimpleSnackbar(props) {
           horizontal: "left",
         }}
         open={open}
-        autoHideDuration={8000}
+        
         onClose={handleClose}
         style={props.cookiesSet ? { display: "none" } : { display: "initial" }}
         message="We make use of Google Analytics cookies to enhance our educational programme. For details see our privacy policy. "

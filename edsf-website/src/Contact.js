@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
+  contactText: {
+    paddingLeft: "15%",
+  },
 }));
 
 export default function Contact() {
@@ -39,8 +42,18 @@ export default function Contact() {
           </Link>
         </Typography>
         <Typography>
-          For further information or questions, please contact Yuri Demchenko:{" "}
-          <Link href="mailto:y.demchenko@uva.nl">y.demchenko@uva.nl</Link>
+          For further information or questions, please contact{" "}
+          <Link href="mailto:y.demchenko@uva.nl">Yuri Demchenko</Link>.
+        </Typography>
+        <Typography
+          align="left"
+          variant="subtitle1"
+          className={classes.contactText}
+        >
+          Yuri Demchenko
+          <br />
+          IVI Science Park <br />
+          904 1098 XH Amsterdam
         </Typography>
       </Card>
     </Box>
