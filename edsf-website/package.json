@@ -20,6 +20,7 @@
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
     "react-markdown": "^5.0.3",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-router-ga": "^1.2.3",
     "react-scripts": "4.0.3",

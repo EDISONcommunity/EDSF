@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Icon from "@material-ui/core/Icon";
 import Typography from "@material-ui/core/Typography";
 import MenuPopper from "./MenuPopper";
-import logoEdison from "./img/edsf-head.ico";
+import logoEdison from "./img/edison_logo.png";
 import Box from "@material-ui/core/Box";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     display: "flex",
     alignItems: "center",
+    padding: "0.8%",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     color: "inherit",
   },
   navItemText: {
-    fontSize: "0.8rem",
+    fontSize: "0.9rem",
   },
 }));
 
@@ -70,7 +71,7 @@ export default function ButtonAppBar() {
                 to="/data-science-competence-framework"
                 className={classes.routerLink}
               >
-                Data Science Competence Framework
+                Data Science Competence Framework {"("}CF-DS{")"}
               </RouterLink>
             </Typography>
           </Box>
@@ -84,7 +85,7 @@ export default function ButtonAppBar() {
                 to="/data-science-body-of-knowledge"
                 className={classes.routerLink}
               >
-                Data Science Body of Knowledge
+                Data Science Body of Knowledge {"("}DS-BoK{")"}
               </RouterLink>
             </Typography>
           </Box>
@@ -98,7 +99,7 @@ export default function ButtonAppBar() {
                 to="/data-science-model-curriculum"
                 className={classes.routerLink}
               >
-                Data Science Model Curriculum
+                Data Science Model Curriculum {"("}MC-DS{")"}
               </RouterLink>
             </Typography>
           </Box>
@@ -112,20 +113,17 @@ export default function ButtonAppBar() {
                 to="/data-science-professional-profiles"
                 className={classes.routerLink}
               >
-                Data Science Professional Profiles
+                Data Science Professional Profiles {"("}DSPP{")"}
               </RouterLink>
             </Typography>
           </Box>
         </Box>
 
-        {/* <RouterLink to="/about" className={classes.routerLink}> */}
         <Box className={classes.iconBox}>
-          {/* <Typography variant="subtitle1" color="textSecondary">About EDSF</Typography> */}
           <Icon className={classes.iconRoot}>
             <img className={classes.iconImage} src={logoEdison} alt="logo" />
           </Icon>
         </Box>
-        {/* </RouterLink> */}
       </Toolbar>
     </AppBar>
   );

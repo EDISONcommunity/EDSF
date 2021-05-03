@@ -12,7 +12,7 @@ import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, withRouter } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
@@ -276,7 +276,7 @@ export default function Home(props) {
           style={{ paddingBottom: "0" }}
         >
           <Typography variant="h4" className={classes.gridTitle}>
-            Welcome to the EDISON Community
+            Welcome to the EDISON Community 
           </Typography>
         </Grid>
         <Grid item xs style={{ paddingTop: "0" }}>

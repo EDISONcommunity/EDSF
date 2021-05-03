@@ -20,7 +20,7 @@ import workshop2019Edfsr4 from "./EDSF.wiki/(2)-EDSF-Release-4-Design-Workshop-2
 import workshop2020Fair from "./EDSF.wiki/(5)-FAIR-Competences-for-Higher-Education-Design-Workshop-8-9-October-2020-Agenda-and-documents.md";
 import Box from "@material-ui/core/Box";
 import MarkDownComponent from "./MarkDownComponent";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import Cookiesnackbar from "./Cookiesnackbar";
 import PrivacyPolicy from "./PrivacyPolicy";
 import ReactGA from "react-ga";
@@ -31,29 +31,133 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cookiesEnabled: props.cookiesEnabled,
-      cookiesSet: false,
-      twitterEnabled: props.cookiesEnabled,
+      // cookiesEnabled: props.cookiesEnabled,
+      // cookiesSet: false,
+      twitterEnabled: false,
     };
-    this.cookiesEnable = this.cookiesEnable.bind(this);
-    this.cookiesDisable = this.cookiesDisable.bind(this);
+    // this.cookiesEnable = this.cookiesEnable.bind(this);
+    // this.cookiesDisable = this.cookiesDisable.bind(this);
     this.twitterEnable = this.twitterEnable.bind(this);
   }
 
-  cookiesEnable() {
-    this.setState({ cookiesEnabled: true });
-    this.setState({ cookiesSet: true });
-    ReactGA.initialize(this.props.trackingId);
-    ReactGA.set({ anonymizeIp: true });
-  }
+  // cookiesEnable() {
+  //   this.setState({ cookiesEnabled: true });
+  //   this.setState({ cookiesSet: true });
+  //   ReactGA.initialize(this.props.trackingId);
+  //   ReactGA.set({ anonymizeIp: true });
+  //   this.props.onEnableRouterAnalytics();
+
+    // this.props.history.listen((location, action) => {
+    //   ReactGA.set({ page: location.pathname });
+    //   ReactGA.pageview(location.pathname);
+    // });
+  
 
   twitterEnable() {
     this.setState({ twitterEnabled: true });
   }
 
-  cookiesDisable() {
-    this.setState({ cookiesEnabled: false });
-    this.setState({ cookiesSet: true });
+  // cookiesDisable() {
+  //   this.setState({ cookiesEnabled: false });
+  //   this.setState({ cookiesSet: true });
+  // }
+
+  appWithAnalytics() {
+    return (
+      <Box>
+        <Box height="10vh">
+          <NavBar />
+        </Box>
+        <Box height="90vh">
+          <Analytics id={this.props.trackingId} basename="/EDSF" debug>
+            <Switch>
+              <Route exact path="/">
+                <Home
+                  cookiesEnabled={this.props.cookiesEnabled}
+                  onTwitterEnable={this.twitterEnable}
+                  twitterEnabled={this.state.twitterEnabled}
+                  trackingId={this.props.trackingId}
+                />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/privacy-policy">
+                <PrivacyPolicy />
+              </Route>
+              <Route path="/upcoming">
+                <Upcoming />
+              </Route>
+              <Route path="/data-science-competence-framework">
+                <CFDS />
+              </Route>
+              <Route path="/data-science-body-of-knowledge">
+                <DSBoK />
+              </Route>
+              <Route path="/data-science-model-curriculum">
+                <MCDS />
+              </Route>
+              <Route path="/data-science-professional-profiles">
+                <DSPP />
+              </Route>
+              <Route path="/edison-community">
+                <MarkDownComponent markdown={about} key={0} />
+              </Route>
+              <Route path="/tutorials-2019-edsf-data-science-competence-and-education">
+                <MarkDownComponent markdown={tutorial2019Edsf} key={1} />
+              </Route>
+              <Route path="/tutorials-2019-bdit4da-hpcs">
+                <MarkDownComponent markdown={tutorial2019Bdit4dal} key={2} />
+              </Route>
+              <Route path="/tutorials-2020-mates-ed2mit-bdit4da">
+                <MarkDownComponent
+                  markdown={tutorial2020MatesBdit4da}
+                  key={3}
+                />
+              </Route>
+              <Route path="/tutorials-2021-mates-ed2mit-bdit4da-january-february">
+                <MarkDownComponent
+                  markdown={tutorial2021MatesBdit4da}
+                  key={4}
+                />
+              </Route>
+              <Route path="/tutorials-2021-mates-ed2mit-dmg-february">
+                <MarkDownComponent markdown={tutorial2021MatesDmg} key={5} />
+              </Route>
+              <Route path="/workshops-2018-edison-may-denmark">
+                <MarkDownComponent markdown={workshop2018Edison} key={6} />
+              </Route>
+              <Route path="/workshops-2018-edsf-release3-july-agenda">
+                <MarkDownComponent
+                  markdown={workshop2018Edsfr3Agenda}
+                  key={7}
+                />
+              </Route>
+              <Route path="/workshops-2018-edsf-release3-july-uva">
+                <MarkDownComponent markdown={workshop2018Edsfr3Uva} key={8} />
+              </Route>
+              <Route path="/workshops-2019-dtw-september-sandiego">
+                <MarkDownComponent markdown={workshop2019Dtw} key={9} />
+              </Route>
+              <Route path="/workshops-2019-edsf-release4-november">
+                <MarkDownComponent markdown={workshop2019Edfsr4} key={10} />
+              </Route>
+              <Route path="/workshops-2020-fair-competences-october">
+                <MarkDownComponent markdown={workshop2020Fair} key={11} />
+              </Route>
+            </Switch>
+          </Analytics>
+
+          <Cookiesnackbar
+            cookiesSet={this.props.cookiesSet}
+            cookiesEnabled={this.props.cookiesEnabled}
+            trackingId={this.props.trackingId}
+            onCookiesEnable={this.props.cookiesEnable}
+            onCookiesDisable={this.props.cookiesDisable}
+          />
+        </Box>
+      </Box>
+    );
   }
 
   app() {
@@ -66,7 +170,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/">
               <Home
-                cookiesEnabled={this.state.cookiesEnabled}
+                cookiesEnabled={this.props.cookiesEnabled}
                 onTwitterEnable={this.twitterEnable}
                 twitterEnabled={this.state.twitterEnabled}
                 trackingId={this.props.trackingId}
@@ -131,11 +235,11 @@ export default class App extends Component {
             </Route>
           </Switch>
           <Cookiesnackbar
-            cookiesSet={this.state.cookiesSet}
+            cookiesSet={this.props.cookiesSet}
             cookiesEnabled={this.props.cookiesEnabled}
             trackingId={this.props.trackingId}
-            onCookiesEnable={this.cookiesEnable}
-            onCookiesDisable={this.cookiesDisable}
+            onCookiesEnable={this.props.cookiesEnable}
+            onCookiesDisable={this.props.cookiesDisable}
           />
         </Box>
       </Box>
@@ -143,13 +247,11 @@ export default class App extends Component {
   }
 
   render() {
-    if (this.cookiesEnabled) {
-      return (
-        <Analytics id={this.props.trackingId} debug>
-          {this.app()}
-        </Analytics>
-      );
-    }
+    // if (this.cookiesEnabled) {
+    //   return this.appWithAnalytics();
+    // } else {
+    //   return this.app();
+    // }
     return this.app();
   }
 }
