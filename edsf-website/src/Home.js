@@ -16,7 +16,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
-import backgroundImg from "./img/background10.png";
+import backgroundImg from "./img/background8.png";
 import ReactGA from "react-ga";
 import { Button } from "@material-ui/core";
 
@@ -172,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "1%",
   },
   footerSpan: {
-    backgroundColor: "#A8EFFF",
+    backgroundColor: "#419EB4",
     height: "100px",
     width: "100%",
     [theme.breakpoints.down("sm")]: {
