@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     color: "inherit",
   },
   navItemText: {
-    fontSize: "0.9rem",
+    fontSize: "0.7rem",
   },
 }));
 
@@ -71,7 +71,8 @@ export default function ButtonAppBar() {
                 to="/data-science-competence-framework"
                 className={classes.routerLink}
               >
-                Data Science Competence Framework {"("}CF-DS{")"}
+                Data Science Competence Framework <br />
+                {"("}CF-DS{")"}
               </RouterLink>
             </Typography>
           </Box>
@@ -85,7 +86,8 @@ export default function ButtonAppBar() {
                 to="/data-science-body-of-knowledge"
                 className={classes.routerLink}
               >
-                Data Science Body of Knowledge {"("}DS-BoK{")"}
+                Data Science Body of Knowledge <br />
+                {"("}DS-BoK{")"}
               </RouterLink>
             </Typography>
           </Box>
@@ -99,7 +101,8 @@ export default function ButtonAppBar() {
                 to="/data-science-model-curriculum"
                 className={classes.routerLink}
               >
-                Data Science Model Curriculum {"("}MC-DS{")"}
+                Data Science Model Curriculum <br />
+                {"("}MC-DS{")"}
               </RouterLink>
             </Typography>
           </Box>
@@ -113,7 +116,8 @@ export default function ButtonAppBar() {
                 to="/data-science-professional-profiles"
                 className={classes.routerLink}
               >
-                Data Science Professional Profiles {"("}DSPP{")"}
+                Data Science Professional Profiles <br />
+                {"("}DSPP{")"}
               </RouterLink>
             </Typography>
           </Box>
