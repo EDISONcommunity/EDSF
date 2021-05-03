@@ -3,7 +3,7 @@ import Markdown from "./Markdown";
 import { withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
-import backgroundImg from "./img/background2.png";
+import backgroundImg from "./img/background10.png";
 
 
 const styles = (theme) => ({

@@ -16,7 +16,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
-import backgroundImg from "./img/background2.png";
+import backgroundImg from "./img/background10.png";
 import ReactGA from "react-ga";
 import { Button } from "@material-ui/core";
 
@@ -41,12 +41,14 @@ const useStyles = makeStyles((theme) => ({
   },
   gridTitle: {
     paddingTop: theme.spacing(2),
+    color: "#666666",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
     },
   },
   gridSubtitle: {
     paddingBottom: theme.spacing(1),
+    color: "#666666",
     [theme.breakpoints.down("sm")]: {
       fontSize: "0.8rem",
     },
@@ -72,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   cardTutorials: {
     height: "90%",
     minWidth: "300px",
-    backgroundColor: "rgba(17, 111, 180,0.97)",
+    backgroundColor: "rgba(52, 84, 209,0.8)",
     color: "#ffffff",
     margin: "auto",
     overflowY: "scroll",
@@ -82,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardWorkshops: {
     height: "90%",
-    backgroundColor: "rgba(36, 94, 118,0.97)",
+    backgroundColor: "rgba(52, 84, 209,0.8)",
     color: "#ffffff",
     margin: "auto",
     overflowY: "scroll",
@@ -170,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "1%",
   },
   footerSpan: {
-    backgroundColor: "#63B4A7",
+    backgroundColor: "#A8EFFF",
     height: "100px",
     width: "100%",
     [theme.breakpoints.down("sm")]: {
@@ -269,15 +271,15 @@ export default function Home(props) {
 
   return (
     <Box className={classes.rootBox}>
-      <Grid container direction="column" >
-        <Grid
-          item
-          xs
-        >
-          <Typography variant="h4" className={classes.gridTitle}>
+      <Grid container direction="column">
+        <Grid item xs>
+          <Typography
+            variant="h4"
+            className={classes.gridTitle}
+          >
             Welcome to the EDISON Community
           </Typography>
-        {/* </Grid>
+          {/* </Grid>
         <Grid item xs style={{ paddingTop: "0" }}> */}
           <Typography variant="subtitle1" className={classes.gridSubtitle}>
             Here, you can find information about the EDISON community, offered
@@ -291,7 +293,7 @@ export default function Home(props) {
           <Typography variant="h6" className={classes.cardTitle}>
             Trainings
           </Typography>
-          <Card className={classes.cardTutorials} variant="outlined">
+          <Card className={classes.cardTutorials} elevation={9}>
             <Box className={classes.yearBox}>
               <Typography color="textSecondary" className={classes.year}>
                 2021
@@ -391,7 +393,7 @@ export default function Home(props) {
           <Typography variant="h6" className={classes.cardTitle}>
             Workshops
           </Typography>
-          <Card className={classes.cardWorkshops} variant="outlined">
+          <Card className={classes.cardWorkshops} elevation={9}>
             <Box className={classes.yearBox}>
               <Typography color="textSecondary" className={classes.year}>
                 2020
@@ -489,7 +491,7 @@ export default function Home(props) {
           </Card>
         </Grid>
         <Grid item className={classes.gridCardItem} sm>
-          <Card className={classes.cardTwitter} variant="outlined">
+          <Card className={classes.cardTwitter} elevation={9}>
             <TwitterComponent />
           </Card>
         </Grid>
