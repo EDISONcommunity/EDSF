@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
       padding: "0px",
       margin: "0px",
     },
-    // color: "#116FB4",
   },
 }));
 
@@ -140,8 +139,7 @@ export default function MenuPopper() {
                     {/* About section   */}
                     <TreeItem
                       nodeId="0"
-                      label="About"
-                      className={classes.rootTreeItem}
+                      label="About"   
                     >
                       <MenuItemLink
                         label="EDISON Community"
@@ -174,7 +172,6 @@ export default function MenuPopper() {
                     <TreeItem
                       nodeId="1"
                       label="Trainings"
-                      className={classes.rootTreeItem}
                     >
                       {" "}
                       <TreeItem nodeId="2" label="2021">
@@ -213,7 +210,6 @@ export default function MenuPopper() {
                     <TreeItem
                       nodeId="4"
                       label="Workshops"
-                      className={classes.rootTreeItem}
                     >
                       <TreeItem nodeId="5" label="2020">
                         <MenuItemLink
