@@ -177,7 +177,6 @@ const useStyles = makeStyles((theme) => ({
       height: "0%",
     },
   },
-
   linkList: {
     textAlign: "left",
     display: "flex",
@@ -194,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   twitterBannerText: {
-    marginTop: "10%",
+    margin: "10%",
   },
 }));
 
