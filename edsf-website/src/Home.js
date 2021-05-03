@@ -93,11 +93,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardTwitter: {
-    height: "100%",
-    margin: "auto",
+    marginTop: "6%",
+    height: "90%",
+    width: "80%",
+    marginLeft: "auto",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
-      minWidth: "300px",
+      minWidth: "200px",
       maxWidth: "80%",
     },
   },
@@ -502,8 +504,6 @@ export default function Home(props) {
               <MailOutlineIcon />
             </IconButton>
           </RouterLink>
-          {/* </Grid>
-        <Grid item xs className={classes.footerGridItemContact}> */}
           <RouterLink to="/privacy-policy" style={{ textDecoration: "none" }}>
             <Typography
               variant="subtitle1"
@@ -516,7 +516,6 @@ export default function Home(props) {
           </RouterLink>
           <Box flexGrow="1" />
         </Grid>
-        {/* <Grid item xs className={classes.footerGridItem}></Grid> */}
         <Grid item xs className={classes.footerGridItemMates}>
           <Box className={classes.matesBox}>
             <Box flexGrow="1" />
