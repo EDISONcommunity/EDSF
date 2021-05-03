@@ -117,7 +117,7 @@ export default function ButtonAppBar() {
                 className={classes.routerLink}
               >
                 Data Science Professional Profiles <br />
-                {"("}DSPP{")"}
+                {"("}DSP{")"}
               </RouterLink>
             </Typography>
           </Box>

@@ -12,7 +12,7 @@ import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Link as RouterLink, withRouter } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
@@ -36,11 +36,12 @@ const useStyles = makeStyles((theme) => ({
   },
   gridTitleItem: {
     padding: theme.spacing(2),
+    display: "flex",
+    flexDirection: "column",
   },
   gridTitle: {
-    paddingTop: theme.spacing(1),
+    paddingTop: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(2),
       fontSize: "1.5rem",
     },
   },
@@ -67,10 +68,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: "1",
     display: "flex",
   },
-  titleBox: {
-    marginTop: "2%",
-    maxHeight: "10%",
-  },
+
   cardTutorials: {
     height: "90%",
     minWidth: "300px",
@@ -93,14 +91,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardTwitter: {
-    marginTop: "6%",
-    height: "90%",
+    marginTop: "10%",
+    marginBottom: "10%",
+    height: "80%",
     width: "80%",
     marginLeft: "auto",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
       minWidth: "200px",
-      maxWidth: "80%",
+      maxWidth: "300px",
+      margin: "auto",
     },
   },
   cardTitle: {
@@ -270,18 +270,16 @@ export default function Home(props) {
 
   return (
     <Box className={classes.rootBox}>
-      <Grid container direction="column" className={classes.gridTitleContainer}>
+      <Grid container direction="column" >
         <Grid
           item
           xs
-          className={classes.gridTitleItem}
-          style={{ paddingBottom: "0" }}
         >
           <Typography variant="h4" className={classes.gridTitle}>
-            Welcome to the EDISON Community 
+            Welcome to the EDISON Community
           </Typography>
-        </Grid>
-        <Grid item xs style={{ paddingTop: "0" }}>
+        {/* </Grid>
+        <Grid item xs style={{ paddingTop: "0" }}> */}
           <Typography variant="subtitle1" className={classes.gridSubtitle}>
             Here, you can find information about the EDISON community, offered
             trainings and workshops
