@@ -16,7 +16,9 @@ import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
-import backgroundImg from "./img/background8.png";
+import backgroundImg from "./img/Untitled-4.png";
+import titleImg from "./img/Asset 4.png";
+import edsfImg from "./img/edsf-1.png";
 import ReactGA from "react-ga";
 import { Button } from "@material-ui/core";
 
@@ -27,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     textAlign: "center",
     backgroundImage: `url(${backgroundImg})`,
-    backgroundAttachment: "fixed",
+    backgroundAttachment: "scroll",
     backgroundSize: "cover",
-    overflow: "hidden",
+    overflow: "scroll",
     [theme.breakpoints.down("sm")]: {
       overflow: "scroll",
     },
@@ -72,24 +74,27 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cardTutorials: {
-    height: "90%",
-    minWidth: "300px",
+    height: "100%",
+    minWidth: "280px",
     backgroundColor: "rgba(52, 84, 209,0.8)",
     color: "#ffffff",
     margin: "auto",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
-      minWidth: "80%",
+      width: "80%",
+      height: "90%",
     },
   },
   cardWorkshops: {
-    height: "90%",
+    height: "100%",
+    minWidth: "280px",
     backgroundColor: "rgba(52, 84, 209,0.8)",
     color: "#ffffff",
     margin: "auto",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
-      minWidth: "80%",
+      width: "80%",
+      height: "90%",
     },
   },
   cardTwitter: {
@@ -98,21 +103,28 @@ const useStyles = makeStyles((theme) => ({
     height: "80%",
     width: "80%",
     marginLeft: "auto",
+    marginRight: "10%",
     overflowY: "scroll",
     [theme.breakpoints.down("sm")]: {
       minWidth: "200px",
       maxWidth: "300px",
       margin: "auto",
+      marginTop: "10%",
     },
   },
   cardTitle: {
     marginTop: "0%",
     paddingTop: "0%",
     marginBottom: "0%",
+    color: "grey",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "10px",
+    },
   },
   footerGrid: {
     height: "5%",
     width: "100%",
+    marginTop: "auto",
     marginBottom: "1%",
   },
   footerGridItemContact: {
@@ -171,9 +183,20 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     marginLeft: "1%",
   },
+  footerSpanAbove: {
+    minHeight: "10%",
+    [theme.breakpoints.down("sm")]: {
+      height: "5%",
+    },
+  },
+  titleSpanBelow: {
+    minHeight: "20%",
+    [theme.breakpoints.down("sm")]: {
+      minHeight: "0%",
+    },
+  },
   footerSpan: {
-    backgroundColor: "#419EB4",
-    height: "100px",
+    height: "30px",
     width: "100%",
     [theme.breakpoints.down("sm")]: {
       height: "0%",
@@ -197,6 +220,32 @@ const useStyles = makeStyles((theme) => ({
   twitterBannerText: {
     margin: "10%",
   },
+  imgTitle: {
+    width: "100%",
+    paddingTop: "20px",
+    paddingRight: "auto",
+  },
+  imgTitleCard: {
+    marginRight: "auto",
+    width: "45%",
+    minWidth: "300px",
+    marginLeft: "5%",
+    [theme.breakpoints.down("sm")]: {
+      margin: "auto",
+    },
+  },
+  imgEdsf: {
+    width: "100%",
+  },
+  imgEdsfCard: {
+    width: "40%",
+    minWidth: "300px",
+    marginLeft: "auto",
+    marginRight: "10%",
+    [theme.breakpoints.down("sm")]: {
+      margin: "auto",
+    },
+  },
 }));
 
 export default function Home(props) {
@@ -205,18 +254,288 @@ export default function Home(props) {
   function TwitterComponent() {
     if (props.twitterEnabled) {
       return (
-        <TwitterTimelineEmbed sourceType="profile" screenName="erasmusmates" />
+        <Card className={classes.cardTwitter} elevation={9}>
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="erasmusmates"
+          />
+        </Card>
       );
     }
 
     return (
-      <Card className={classes.twitterBanner}>
-        <Typography variant="caption" className={classes.twitterBannerText}>
-          This is a Twitter component using cookies. For details see our privacy
-          policy.
-        </Typography>
-        <Button onClick={(e) => props.onTwitterEnable()}>Show content</Button>
+      <Card className={classes.cardTwitter} elevation={9}>
+        <Card className={classes.twitterBanner}>
+          <Typography variant="caption" className={classes.twitterBannerText}>
+            This is a Twitter component using cookies. For details see our
+            privacy policy.
+          </Typography>
+          <Button onClick={(e) => props.onTwitterEnable()}>Show content</Button>
+        </Card>
       </Card>
+    );
+  }
+
+  function Footer() {
+    return (
+      <React.Fragment>
+        <Grid item xs className={classes.footerGridItemContact}>
+          <RouterLink to="/contact">
+            <IconButton className={classes.contactButton}>
+              <MailOutlineIcon />
+            </IconButton>
+          </RouterLink>
+          <RouterLink to="/privacy-policy" style={{ textDecoration: "none" }}>
+            <Typography
+              variant="subtitle1"
+              color="textSecondary"
+              style={{ paddingLeft: "10px" }}
+              className={classes.privacyText}
+            >
+              Privacy Policy
+            </Typography>
+          </RouterLink>
+          <Box flexGrow="1" />
+        </Grid>
+        <Grid item xs className={classes.footerGridItemMates}>
+          <Box className={classes.matesBox}>
+            <Box flexGrow="1" />
+            <Typography variant="subtitle1" color="textSecondary">
+              Partnered by
+            </Typography>
+            <Box className={classes.logoBox}>
+              <Link
+                target="_blank"
+                href="https://www.projectmates.eu/"
+                rel="noopener"
+              >
+                <Icon
+                  className={classes.iconRoot}
+                  href="https://www.projectmates.eu/"
+                >
+                  <img
+                    className={classes.iconImage}
+                    src={matesLogo}
+                    alt="matesLogo"
+                  />
+                </Icon>
+              </Link>
+            </Box>
+          </Box>
+        </Grid>
+        <Box className={classes.footerSpan} />
+      </React.Fragment>
+    );
+  }
+
+  function TutorialComponent() {
+    return (
+      <React.Fragment>
+        <Typography variant="h6"  className={classes.cardTitle}>
+          Trainings
+        </Typography>
+        <Card className={classes.cardTutorials} elevation={9}>
+          <Box className={classes.yearBox}>
+            <Typography color="textSecondary" className={classes.year}>
+              2021
+            </Typography>
+            <Box flexGrow="1" />
+          </Box>
+          <Divider variant="middle" />
+          <List>
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/tutorials-2021-mates-ed2mit-dmg-february"
+              >
+                <ListItemText
+                  primary='MATES ED2MIT "Industrial Data Spaces, Organisational Data Management and Governance for the Maritime Sector"'
+                  secondary="16, 18, 23 February"
+                />
+              </ListItem>
+            </CardActions>
+            {MaterialList(
+              "https://drive.google.com/drive/folders/1Hjevyvnm8we2IgtieLMtU3WtD2KvPaMH",
+              "https://surfdrive.surf.nl/files/index.php/s/lRGca7eeizWQR1p"
+            )}
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/tutorials-2021-mates-ed2mit-bdit4da-january-february"
+              >
+                <ListItemText
+                  primary='MATES ED2MIT "Big Data Infrastructure Technologies for Data Analytics"'
+                  secondary="20, 26, 28 January and 4 February"
+                />
+              </ListItem>
+            </CardActions>
+            {MaterialList(
+              "https://drive.google.com/drive/u/0/folders/1su2P7NqDF24MJKnfMqtREseK4iH5HWxY",
+              "https://surfdrive.surf.nl/files/index.php/s/t5WLTsVcylKkHhh"
+            )}
+          </List>
+          <Box className={classes.yearBox}>
+            <Typography color="textSecondary" className={classes.year}>
+              2020
+            </Typography>
+            <Box flexGrow="1" />
+          </Box>
+          <Divider variant="middle" />
+          <List>
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/tutorials-2020-mates-ed2mit-bdit4da"
+              >
+                <ListItemText
+                  primary='MATES ED2MIT "Introduction to Big Data and Data Management for Maritime Industry"'
+                  secondary="Pilot experience"
+                />
+              </ListItem>
+            </CardActions>
+          </List>
+          <Box className={classes.yearBox}>
+            <Typography color="textSecondary" className={classes.year}>
+              2019
+            </Typography>
+            <Box flexGrow="1" />
+          </Box>
+          <Divider variant="middle" />
+          <List>
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/tutorials-2019-bdit4da-hpcs"
+              >
+                <ListItemText
+                  primary="Big Data and Technologies for Data Analytics"
+                  secondary="HPCS 2019"
+                />
+              </ListItem>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/tutorials-2019-edsf-data-science-competence-and-education"
+              >
+                <ListItemText
+                  primary="EDSF Data Science Competence and Education"
+                  secondary="Summer"
+                />
+              </ListItem>
+            </CardActions>
+          </List>
+        </Card>
+      </React.Fragment>
+    );
+  }
+
+  function WorkshopComponent() {
+    return (
+      <React.Fragment>
+        <Typography variant="h6" className={classes.cardTitle}>
+          Workshops
+        </Typography>
+        <Card className={classes.cardWorkshops} elevation={9}>
+          <Box className={classes.yearBox}>
+            <Typography color="textSecondary" className={classes.year}>
+              2020
+            </Typography>
+            <Box flexGrow="1" />
+          </Box>
+          <Divider variant="middle" />
+          <List>
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/workshops-2020-fair-competences-october"
+              >
+                <ListItemText
+                  primary="FAIR Competences for Higher Education Design Workshop"
+                  secondary="8,9 October"
+                />
+              </ListItem>
+            </CardActions>
+          </List>
+
+          <Box className={classes.yearBox}>
+            <Typography color="textSecondary" className={classes.year}>
+              2019
+            </Typography>
+            <Box flexGrow="1" />
+          </Box>
+          <Divider variant="middle" />
+          <List>
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/workshops-2019-edsf-release4-november"
+              >
+                <ListItemText
+                  primary="EDSF Release 4 Design Workshop"
+                  secondary="20 November"
+                />
+              </ListItem>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/workshops-2019-dtw-september-sandiego"
+              >
+                <ListItemText
+                  primary=" Data Teaching Workshop"
+                  secondary="September, San Diego"
+                />
+              </ListItem>
+            </CardActions>
+          </List>
+          <Box className={classes.yearBox}>
+            <Typography color="textSecondary" className={classes.year}>
+              2018
+            </Typography>
+            <Box flexGrow="1" />
+          </Box>
+          <Divider variant="middle" />
+          <List>
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/workshops-2018-edsf-release3-july-uva"
+              >
+                <ListItemText
+                  primary="EDSF Release 3 Design Workshop UvA"
+                  secondary="18, 19 July"
+                />
+              </ListItem>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/workshops-2018-edsf-release3-july-agenda"
+              >
+                <ListItemText
+                  primary="EDSF Release 3 Design Workshop Agenda"
+                  secondary="18, 19 July"
+                />
+              </ListItem>
+              <ListItem
+                button
+                component={RouterLink}
+                to="/workshops-2018-edison-may-denmark"
+              >
+                <ListItemText
+                  primary="EDISON Workshop"
+                  secondary="31 May, Denmark"
+                />
+              </ListItem>
+            </CardActions>
+          </List>
+        </Card>
+      </React.Fragment>
     );
   }
 
@@ -269,279 +588,59 @@ export default function Home(props) {
     );
   }
 
+  function Title() {
+    return (
+      <React.Fragment>
+        <Typography variant="h4" className={classes.gridTitle}>
+          Welcome to the EDISON Community
+        </Typography>
+        <Typography variant="subtitle1" className={classes.gridSubtitle}>
+          Here, you can find information about the EDISON community, offered
+          trainings and workshops
+        </Typography>
+      </React.Fragment>
+    );
+  }
+
+  function ImageTitle() {
+    return (
+      <Box className={classes.imgTitleCard}>
+        <img src={titleImg} className={classes.imgTitle} alt="title" />
+      </Box>
+    );
+  }
+
+  function ImageEdsf() {
+    return (
+      <Box className={classes.imgEdsfCard}>
+        <img src={edsfImg} className={classes.imgEdsf} alt="title" />
+      </Box>
+    );
+  }
+
   return (
     <Box className={classes.rootBox}>
       <Grid container direction="column">
         <Grid item xs>
-          <Typography
-            variant="h4"
-            className={classes.gridTitle}
-          >
-            Welcome to the EDISON Community
-          </Typography>
-          {/* </Grid>
-        <Grid item xs style={{ paddingTop: "0" }}> */}
-          <Typography variant="subtitle1" className={classes.gridSubtitle}>
-            Here, you can find information about the EDISON community, offered
-            trainings and workshops
-          </Typography>
+          <ImageTitle />
+          <ImageEdsf/>
         </Grid>
       </Grid>
-
+      <Box className={classes.titleSpanBelow} />
       <Grid container direction="row" className={classes.gridCardContainer}>
         <Grid item className={classes.gridCardItem} sm>
-          <Typography variant="h6" className={classes.cardTitle}>
-            Trainings
-          </Typography>
-          <Card className={classes.cardTutorials} elevation={9}>
-            <Box className={classes.yearBox}>
-              <Typography color="textSecondary" className={classes.year}>
-                2021
-              </Typography>
-              <Box flexGrow="1" />
-            </Box>
-            <Divider variant="middle" />
-            <List>
-              <CardActions className={classes.yearActions}>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/tutorials-2021-mates-ed2mit-dmg-february"
-                >
-                  <ListItemText
-                    primary='MATES ED2MIT "Industrial Data Spaces, Organisational Data Management and Governance for the Maritime Sector"'
-                    secondary="16, 18, 23 February"
-                  />
-                </ListItem>
-              </CardActions>
-              {MaterialList(
-                "https://drive.google.com/drive/folders/1Hjevyvnm8we2IgtieLMtU3WtD2KvPaMH",
-                "https://surfdrive.surf.nl/files/index.php/s/lRGca7eeizWQR1p"
-              )}
-              <CardActions className={classes.yearActions}>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/tutorials-2021-mates-ed2mit-bdit4da-january-february"
-                >
-                  <ListItemText
-                    primary='MATES ED2MIT "Big Data Infrastructure Technologies for Data Analytics"'
-                    secondary="20, 26, 28 January and 4 February"
-                  />
-                </ListItem>
-              </CardActions>
-              {MaterialList(
-                "https://drive.google.com/drive/u/0/folders/1su2P7NqDF24MJKnfMqtREseK4iH5HWxY",
-                "https://surfdrive.surf.nl/files/index.php/s/t5WLTsVcylKkHhh"
-              )}
-            </List>
-            <Box className={classes.yearBox}>
-              <Typography color="textSecondary" className={classes.year}>
-                2020
-              </Typography>
-              <Box flexGrow="1" />
-            </Box>
-            <Divider variant="middle" />
-            <List>
-              <CardActions className={classes.yearActions}>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/tutorials-2020-mates-ed2mit-bdit4da"
-                >
-                  <ListItemText
-                    primary='MATES ED2MIT "Introduction to Big Data and Data Management for Maritime Industry"'
-                    secondary="Pilot experience"
-                  />
-                </ListItem>
-              </CardActions>
-            </List>
-            <Box className={classes.yearBox}>
-              <Typography color="textSecondary" className={classes.year}>
-                2019
-              </Typography>
-              <Box flexGrow="1" />
-            </Box>
-            <Divider variant="middle" />
-            <List>
-              <CardActions className={classes.yearActions}>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/tutorials-2019-bdit4da-hpcs"
-                >
-                  <ListItemText
-                    primary="Big Data and Technologies for Data Analytics"
-                    secondary="HPCS 2019"
-                  />
-                </ListItem>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/tutorials-2019-edsf-data-science-competence-and-education"
-                >
-                  <ListItemText
-                    primary="EDSF Data Science Competence and Education"
-                    secondary="Summer"
-                  />
-                </ListItem>
-              </CardActions>
-            </List>
-          </Card>
+          <TutorialComponent />
         </Grid>
         <Grid item className={classes.gridCardItem} sm>
-          <Typography variant="h6" className={classes.cardTitle}>
-            Workshops
-          </Typography>
-          <Card className={classes.cardWorkshops} elevation={9}>
-            <Box className={classes.yearBox}>
-              <Typography color="textSecondary" className={classes.year}>
-                2020
-              </Typography>
-              <Box flexGrow="1" />
-            </Box>
-            <Divider variant="middle" />
-            <List>
-              <CardActions className={classes.yearActions}>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/workshops-2020-fair-competences-october"
-                >
-                  <ListItemText
-                    primary="FAIR Competences for Higher Education Design Workshop"
-                    secondary="8,9 October"
-                  />
-                </ListItem>
-              </CardActions>
-            </List>
-
-            <Box className={classes.yearBox}>
-              <Typography color="textSecondary" className={classes.year}>
-                2019
-              </Typography>
-              <Box flexGrow="1" />
-            </Box>
-            <Divider variant="middle" />
-            <List>
-              <CardActions className={classes.yearActions}>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/workshops-2019-edsf-release4-november"
-                >
-                  <ListItemText
-                    primary="EDSF Release 4 Design Workshop"
-                    secondary="20 November"
-                  />
-                </ListItem>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/workshops-2019-dtw-september-sandiego"
-                >
-                  <ListItemText
-                    primary=" Data Teaching Workshop"
-                    secondary="September, San Diego"
-                  />
-                </ListItem>
-              </CardActions>
-            </List>
-            <Box className={classes.yearBox}>
-              <Typography color="textSecondary" className={classes.year}>
-                2018
-              </Typography>
-              <Box flexGrow="1" />
-            </Box>
-            <Divider variant="middle" />
-            <List>
-              <CardActions className={classes.yearActions}>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/workshops-2018-edsf-release3-july-uva"
-                >
-                  <ListItemText
-                    primary="EDSF Release 3 Design Workshop UvA"
-                    secondary="18, 19 July"
-                  />
-                </ListItem>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/workshops-2018-edsf-release3-july-agenda"
-                >
-                  <ListItemText
-                    primary="EDSF Release 3 Design Workshop Agenda"
-                    secondary="18, 19 July"
-                  />
-                </ListItem>
-                <ListItem
-                  button
-                  component={RouterLink}
-                  to="/workshops-2018-edison-may-denmark"
-                >
-                  <ListItemText
-                    primary="EDISON Workshop"
-                    secondary="31 May, Denmark"
-                  />
-                </ListItem>
-              </CardActions>
-            </List>
-          </Card>
+          <WorkshopComponent />
         </Grid>
         <Grid item className={classes.gridCardItem} sm>
-          <Card className={classes.cardTwitter} elevation={9}>
-            <TwitterComponent />
-          </Card>
+          <TwitterComponent />
         </Grid>
       </Grid>
+      <Box className={classes.footerSpanAbove} />
       <Grid container direction="row" className={classes.footerGrid}>
-        <Grid item xs className={classes.footerGridItemContact}>
-          <RouterLink to="/contact">
-            <IconButton className={classes.contactButton}>
-              <MailOutlineIcon />
-            </IconButton>
-          </RouterLink>
-          <RouterLink to="/privacy-policy" style={{ textDecoration: "none" }}>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-              style={{ paddingLeft: "10px" }}
-              className={classes.privacyText}
-            >
-              Privacy Policy
-            </Typography>
-          </RouterLink>
-          <Box flexGrow="1" />
-        </Grid>
-        <Grid item xs className={classes.footerGridItemMates}>
-          <Box className={classes.matesBox}>
-            <Box flexGrow="1" />
-            <Typography variant="subtitle1" color="textSecondary">
-              Partnered by
-            </Typography>
-            <Box className={classes.logoBox}>
-              <Link
-                target="_blank"
-                href="https://www.projectmates.eu/"
-                rel="noopener"
-              >
-                <Icon
-                  className={classes.iconRoot}
-                  href="https://www.projectmates.eu/"
-                >
-                  <img
-                    className={classes.iconImage}
-                    src={matesLogo}
-                    alt="matesLogo"
-                  />
-                </Icon>
-              </Link>
-            </Box>
-          </Box>
-        </Grid>
-        <Box className={classes.footerSpan} />
+        <Footer />
       </Grid>
     </Box>
   );
