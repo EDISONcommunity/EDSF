@@ -242,6 +242,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "300px",
     marginLeft: "auto",
     marginRight: "10%",
+    marginBottom: "5%",
     [theme.breakpoints.down("sm")]: {
       margin: "auto",
       width: "60%",
