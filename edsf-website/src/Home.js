@@ -192,7 +192,7 @@ const useStyles = makeStyles((theme) => ({
   titleSpanBelow: {
     minHeight: "20%",
     [theme.breakpoints.down("sm")]: {
-      minHeight: "0%",
+      minHeight: "10%",
     },
   },
   footerSpan: {
@@ -244,6 +244,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "10%",
     [theme.breakpoints.down("sm")]: {
       margin: "auto",
+      width: "60%",
     },
   },
 }));
