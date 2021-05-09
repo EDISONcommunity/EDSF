@@ -25,13 +25,16 @@ export default function Upcoming() {
   return (
     <Box>
       <Card variant="outlined" className={classes.card}>
-        <Typography variant="h6" className={classes.title}>Upcoming Trainings and Workshops</Typography>
+        <Typography variant="h6" className={classes.title}>
+          Upcoming Trainings and Workshops
+        </Typography>
         <Typography>
           For upcoming trainings in cooperation with{" "}
           <Link
             target="_blank"
             href="https://www.projectmates.eu/"
             rel="noopener"
+            color="blue"
           >
             MATES
           </Link>
@@ -40,6 +43,7 @@ export default function Upcoming() {
             target="_blank"
             href="https://www.projectmates.eu/pilotexperience/ed2mit/"
             rel="noopener"
+            color="blue"
           >
             website
           </Link>{" "}

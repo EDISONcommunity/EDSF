@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     paddingBottom: "3%",
   },
+  link: {
+    textDecoration: "none"
+  }
 }));
 
 export default function PrivacyPolicy() {
@@ -111,16 +114,33 @@ export default function PrivacyPolicy() {
             including your IP address by Google as well as the processing of
             this data by Google by downloading and installing the browser
             plug-in available under the following{" "}
-            <a href="https://tools.google.com/dlpage/gaoptout?hl=en">link</a>.
-            This browser add-on informs Google Analytics via JavaScript that no
-            data and information about website visits may be transmitted to
+            <a
+              className={classes.link}
+              href="https://tools.google.com/dlpage/gaoptout?hl=en"
+            >
+              link
+            </a>
+            . This browser add-on informs Google Analytics via JavaScript that
+            no data and information about website visits may be transmitted to
             Google Analytics. In addition, a set cookie by Google Analytics can
             be deleted at any time via your Internet browser or other software
             programs. Further information and Google‘s applicable privacy
             regulations can be found{" "}
-            <a href="https://policies.google.com/privacy?hl=en">here</a> and{" "}
-            <a href="https://marketingplatform.google.com/about/"> here</a>.{" "}
-            <br /> <br />
+            <a
+              className={classes.link}
+              href="https://policies.google.com/privacy?hl=en"
+            >
+              here
+            </a>{" "}
+            and{" "}
+            <a
+              className={classes.link}
+              href="https://marketingplatform.google.com/about/"
+            >
+              {" "}
+              here
+            </a>
+            . <br /> <br />
           </Typography>{" "}
         </Typography>
         <Typography variant="subtitle1" align="left">
@@ -140,95 +160,11 @@ export default function PrivacyPolicy() {
           the accessed website and the user's IP address, but this information
           is not used for purposes other than the presentation of the Twitter
           component. Further information can be found in the{" "}
-          <a href="https://twitter.com/en/privacy">privacy policy</a> of
-          Twitter.
+          <a className={classes.link} href="https://twitter.com/en/privacy">
+            privacy policy
+          </a>{" "}
+          of Twitter.
         </Typography>
-        {/* <Typography variant="h6">
-          1. What is the personal information we collect?
-        </Typography>
-        <Typography variant="caption" align="left" className={classes.text}>
-          If users give consent to our use of Google Analytics cookies, we
-          collect and store geolocational data - the country from where the
-          website query was done - in order to adapt our educational programme
-          to the potential participants' background. For example, if we observe
-          a high request for specific training material from a certain country,
-          we can design specific courses that relate close to this country's
-          involvement on big data technologie education.
-        </Typography>
-        <Typography variant="caption" align="left" className={classes.text}>
-          Further, we collect and store the amount of clicks for internal and
-          external links. This gives us an impression on which sites are
-          considered interesting or useful by our target audience, and allows us
-          to put more focus on the highly-demanded content.
-        </Typography>
-        <Typography variant="caption" align="left">
-          For internal links, we track the page routing of a user with Google
-          Analytics - meaning that we gain insight on how users travel between
-          internal pages. Here, also the amount of time spent on a specific page
-          is saved.
-        </Typography>
-        <Typography variant="h6">
-          2. What are the external services we use?
-        </Typography>
-        <Typography variant="caption" align="left" className={classes.text}>
-          We have integrated Google Analytics into our website, which allow us
-          to evaluate user behavior or to establish links with other websites.
-          Google Analytics The controller has integrated the component Google
-          Analytics with an anonymization functino on this website. Google
-          Analytics is a web analytics service. Web analysis is the gathering,
-          collection and analysis of data about the behavior of visitors to
-          websites. Among other things, a web analysis service collects data on
-          which website a data subject has come to a website from so-called
-          referrers, which subpages of the website were accessed or how often
-          and for which period of time a subpage was viewed. A web analysis is
-          mainly used to optimize a website and for the cost-benefit analysis of
-          Internet advertising. The operator of the Google Analytics component
-          is Google Inc., 1600 Amphitheatre Pkwy, Mountain View, CA 94043-1351,
-          USA. Google Analytics uses cookies. The information generated by the
-          cookie about your use of this website is usually transmitted to a
-          Google server in the USA and stored there. Google might transfer the
-          personal information collected via this technical procedure to third
-          parties. As IP anonymization is activated on our website, your IP
-          address will be shortened by Google within Member States of the
-          European Union or other states in agreement with the European Economic
-          Area. Only in exceptional cases, the full IP address is sent to and
-          shortened by a Google server in the USA. On behalf of the operator of
-          the website, Google will use this information to evaluate your use of
-          the website, compile reports on website activity and to provide
-          further services related to website and internet use to us. The IP
-          address transferred through your browser to Google Analytics will not
-          be combined with other data held by Google. In addition, this website
-          uses the Analytics feature UserID to track interaction data. This User
-          ID will be additionally anonymized and encrypted and will not be
-          linked with other data. You can prevent the storage of cookies by a
-          corresponding setting of your browser software; however, please note
-          that if you do this, you may not be able to use all the features of
-          this website to the fullest extent possible. In addition, you may
-          prevent the collection of the data generated by the cookie and related
-          to your use of the website including your IP address by Google as well
-          as the processing of this data by Google by downloading and installing
-          the browser plug-in available under the following{" "}
-          <a href="https://tools.google.com/dlpage/gaoptout?hl=en">link</a>.
-          This browser add-on informs Google Analytics via JavaScript that no
-          data and information about website visits may be transmitted to Google
-          Analytics. In addition, a cookie already set by Google Analytics can
-          be deleted at any time via the Internet browser or other software
-          programs. Further information and Google‘s applicable privacy
-          regulations can be found{" "}
-          <a href="https://policies.google.com/privacy?hl=en">here</a> and{" "}
-          <a href="https://marketingplatform.google.com/about/"> here</a>. The
-          latter link provides a further explanation of Google Analytics. Our
-          website also uses Google Analytics performance reports relating to
-          demographics and interests and reports on Google Display Network
-          impressions. You can disable Google Analytics for display advertising
-          and customize the ads on the Google Display Network by visiting the ad
-          settings at this{" "}
-          <a href="https://www.google.com/ads/preferences?continue=aHR0cHM6Ly9hZHNzZXR0aW5ncy5nb29nbGUuY29tL2Fub255bW91cw%3D%3D">
-            link
-          </a>
-          .
-        </Typography> 
-        */}
       </Card>
     </Box>
   );

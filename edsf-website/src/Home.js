@@ -17,7 +17,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import matesLogo from "./img/MatesMasterLogo_COL.png";
 import backgroundImg from "./img/Untitled-4.png";
-import titleImg from "./img/Asset 4.png";
+import titleImg from "./img/bAsset 3.png";
 import edsfImg from "./img/edsf-1.png";
 import ReactGA from "react-ga";
 import { Button } from "@material-ui/core";
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     height: "70%",
     width: "100%",
     flexGrow: "1",
- 
+
     [theme.breakpoints.down("sm")]: {
       flexGrow: "0",
     },
@@ -86,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       height: "90%",
+      paddingBottom: "0"
     },
   },
   cardTwitter: {
@@ -181,7 +182,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   titleSpanBelow: {
-    minHeight: "20%",
+    minHeight: "10%",
     [theme.breakpoints.down("sm")]: {
       minHeight: "10%",
     },
@@ -241,8 +242,11 @@ const useStyles = makeStyles((theme) => ({
   },
   contributeButton: {
     backgroundColor: "#28F994",
-    marginTop: "10%",
+    marginTop: "auto",
     padding: "5%",
+    [theme.breakpoints.down("sm")]: {
+      padding: "2%",
+    },
   },
 }));
 
@@ -541,7 +545,9 @@ export default function Home(props) {
                 to="/upcoming"
                 color="secondary"
               >
-                <Typography variant="h5">Upcoming events</Typography>
+                <Typography variant="h5" style={{ color: "#28F994" }}>
+                  Upcoming events
+                </Typography>
               </ListItem>
             </CardActions>
             <CardActions className={classes.yearActions}>

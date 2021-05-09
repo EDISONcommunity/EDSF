@@ -37,13 +37,16 @@ export default function Contact() {
       <Card variant="outlined" className={classes.contactCard}>
         <Typography>
           You can submit comments via the mailing list:{" "}
-          <Link href="mailto:edison-net@list.uva.nl">
+          <Link href="mailto:edison-net@list.uva.nl" color="blue">
             edison-net@list.uva.nl
           </Link>
         </Typography>
         <Typography>
           For further information or questions, please contact{" "}
-          <Link href="mailto:y.demchenko@uva.nl">Yuri Demchenko</Link>.
+          <Link href="mailto:y.demchenko@uva.nl" color="blue">
+            Yuri Demchenko
+          </Link>
+          .
         </Typography>
         <Typography
           align="left"
