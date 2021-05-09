@@ -18,6 +18,10 @@ import workshop2018Edsfr3Uva from "./EDSF.wiki/EDSF-Release-3-Design-Workshop-18
 import workshop2019Dtw from "./EDSF.wiki/(1)-DTW2019-Data-Teaching-Workshop-September-2019,-San-Diego.md";
 import workshop2019Edfsr4 from "./EDSF.wiki/(2)-EDSF-Release-4-Design-Workshop-20-November-2019.md";
 import workshop2020Fair from "./EDSF.wiki/(5)-FAIR-Competences-for-Higher-Education-Design-Workshop-8-9-October-2020-Agenda-and-documents.md";
+import RR3CFDS from "./resources/EDSFReleases/Release3/CFDS";
+import RR3DSBoK from "./resources/EDSFReleases/Release3/DSBoK";
+import RR3DSPP from "./resources/EDSFReleases/Release3/DSPP";
+import RR3MCDS from "./resources/EDSFReleases/Release3/MCDS";
 import Box from "@material-ui/core/Box";
 import MarkDownComponent from "./MarkDownComponent";
 import { Switch, Route } from "react-router-dom";
@@ -110,6 +114,9 @@ export default class App extends Component {
             </Route>
             <Route path="/workshops-2020-fair-competences-october">
               <MarkDownComponent markdown={workshop2020Fair} key={11} />
+            </Route>
+            <Route path="/resources-edsf-release3-cfds">
+              <RR3CFDS />
             </Route>
           </Switch>
           <Cookiesnackbar
