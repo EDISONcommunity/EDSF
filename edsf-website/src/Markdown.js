@@ -29,7 +29,7 @@ const options = {
       props: { gutterBottom: true, variant: "caption", paragraph: true },
     },
     p: { component: Typography, props: { paragraph: true } },
-    a: { component: Link },
+    a: { component: Link, props: { color: "#5e60ce" } },
     li: {
       component: withStyles(styles)(({ classes, ...props }) => (
         <li className={classes.listItem}>

@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     height: "70%",
     width: "100%",
     flexGrow: "1",
-    marginTop: "5%",
+ 
     [theme.breakpoints.down("sm")]: {
       flexGrow: "0",
     },
@@ -75,33 +75,23 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cardTutorials: {
-    height: "100%",
+    height: "80%",
     minWidth: "280px",
     backgroundColor: "rgba(52, 84, 209,0.8)",
     color: "#ffffff",
     margin: "auto",
     overflowY: "scroll",
-    [theme.breakpoints.down("sm")]: {
-      width: "80%",
-      height: "90%",
-    },
-  },
-  cardWorkshops: {
-    height: "100%",
-    minWidth: "280px",
-    backgroundColor: "rgba(52, 84, 209,0.8)",
-    color: "#ffffff",
-    margin: "auto",
-    overflowY: "scroll",
+    paddingBottom: "20%",
+    paddingTop: "2%",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       height: "90%",
     },
   },
   cardTwitter: {
-    marginTop: "10%",
-    marginBottom: "10%",
-    height: "80%",
+    marginTop: "5%",
+    marginBottom: "5%",
+    height: "75%",
     width: "80%",
     marginLeft: "auto",
     marginRight: "10%",
@@ -251,8 +241,8 @@ const useStyles = makeStyles((theme) => ({
   },
   contributeButton: {
     backgroundColor: "#28F994",
-    marginTop: "5%",
-    padding: "2%",
+    marginTop: "10%",
+    padding: "5%",
   },
 }));
 

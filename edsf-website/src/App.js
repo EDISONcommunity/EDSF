@@ -22,6 +22,14 @@ import RR3CFDS from "./resources/EDSFReleases/Release3/CFDS";
 import RR3DSBoK from "./resources/EDSFReleases/Release3/DSBoK";
 import RR3DSPP from "./resources/EDSFReleases/Release3/DSPP";
 import RR3MCDS from "./resources/EDSFReleases/Release3/MCDS";
+import RPR3CFDS from "./resources/EDSFReleases/PreRelease3/CFDS";
+import RPR3DSBoK from "./resources/EDSFReleases/PreRelease3/DSBoK";
+import RPR3DSPP from "./resources/EDSFReleases/PreRelease3/DSPP";
+import RPR3MCDS from "./resources/EDSFReleases/PreRelease3/MCDS";
+import RR2CFDS from "./resources/EDSFReleases/Release2/CFDS";
+import RR2DSBoK from "./resources/EDSFReleases/Release2/DSBoK";
+import RR2DSPP from "./resources/EDSFReleases/Release2/DSPP";
+import RR2MCDS from "./resources/EDSFReleases/Release2/MCDS";
 import Box from "@material-ui/core/Box";
 import MarkDownComponent from "./MarkDownComponent";
 import { Switch, Route } from "react-router-dom";
@@ -117,6 +125,39 @@ export default class App extends Component {
             </Route>
             <Route path="/resources-edsf-release3-cfds">
               <RR3CFDS />
+            </Route>
+            <Route path="/resources-edsf-release3-dsbok">
+              <RR3DSBoK />
+            </Route>
+            <Route path="/resources-edsf-release3-dspp">
+              <RR3DSPP />
+            </Route>
+            <Route path="/resources-edsf-release3-mcds">
+              <RR3MCDS />
+            </Route>
+            <Route path="/resources-edsf-prerelease3-cfds">
+              <RPR3CFDS />
+            </Route>
+            <Route path="/resources-edsf-prerelease3-dsbok">
+              <RPR3DSBoK />
+            </Route>
+            <Route path="/resources-edsf-prerelease3-dspp">
+              <RPR3DSPP />
+            </Route>
+            <Route path="/resources-edsf-prerelease3-mcds">
+              <RPR3MCDS />
+            </Route>
+            <Route path="/resources-edsf-release2-cfds">
+              <RR2CFDS />
+            </Route>
+            <Route path="/resources-edsf-release2-dsbok">
+              <RR2DSBoK />
+            </Route>
+            <Route path="/resources-edsf-release2-dspp">
+              <RR2DSPP />
+            </Route>
+            <Route path="/resources-edsf-release2-mcds">
+              <RR2MCDS />
             </Route>
           </Switch>
           <Cookiesnackbar
