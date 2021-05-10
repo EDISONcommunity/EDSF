@@ -56,20 +56,23 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridCardContainer: {
-    height: "70%",
+    height: "100%",
     width: "100%",
     flexGrow: "1",
 
     [theme.breakpoints.down("sm")]: {
       flexGrow: "0",
+      height: "100%",
     },
   },
   gridCardItem: {
     width: "100%",
     height: "100%",
     padding: theme.spacing(2),
+  
     [theme.breakpoints.down("sm")]: {
       margin: "5%",
+      marginTop: "10%",
     },
   },
   cardBox: {
