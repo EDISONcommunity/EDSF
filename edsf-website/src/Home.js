@@ -68,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     padding: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      margin: "5%",
+    },
   },
   cardBox: {
     flexGrow: "1",
@@ -85,8 +88,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "2%",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
-      height: "90%",
-      paddingBottom: "0"
+      height: "100%",
+      paddingBottom: "0",
+      paddingTop: "0",
     },
   },
   cardTwitter: {
@@ -102,6 +106,13 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: "300px",
       margin: "auto",
       marginTop: "10%",
+    },
+  },
+  cardTwitterBox: {
+    marginBottom: "0px",
+    height: "100%",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "100px",
     },
   },
   cardTitle: {
@@ -176,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "1%",
   },
   footerSpanAbove: {
-    minHeight: "10%",
+    minHeight: "30%",
     [theme.breakpoints.down("sm")]: {
       height: "5%",
     },
@@ -191,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
     height: "30px",
     width: "100%",
     [theme.breakpoints.down("sm")]: {
-      height: "0%",
+      height: "50px",
     },
   },
   linkList: {
@@ -241,11 +252,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   contributeButton: {
-    backgroundColor: "#28F994",
-    marginTop: "auto",
+    backgroundColor: "#f5f3f4",
+    marginTop: "10%",
     padding: "5%",
     [theme.breakpoints.down("sm")]: {
       padding: "2%",
+      marginTop: "5%",
     },
   },
 }));
@@ -266,15 +278,19 @@ export default function Home(props) {
     }
 
     return (
-      <Card className={classes.cardTwitter} elevation={9}>
-        <Card className={classes.twitterBanner}>
-          <Typography variant="caption" className={classes.twitterBannerText}>
-            This is a Twitter component using cookies. For details see our
-            privacy policy.
-          </Typography>
-          <Button onClick={(e) => props.onTwitterEnable()}>Show content</Button>
+      <div className={classes.cardTwitterBox}>
+        <Card className={classes.cardTwitter} elevation={9}>
+          <Card className={classes.twitterBanner}>
+            <Typography variant="caption" className={classes.twitterBannerText}>
+              This is a Twitter component using cookies. For details see our
+              privacy policy.
+            </Typography>
+            <Button onClick={(e) => props.onTwitterEnable()}>
+              Show content
+            </Button>
+          </Card>
         </Card>
-      </Card>
+      </div>
     );
   }
 
@@ -343,22 +359,22 @@ export default function Home(props) {
           <ResourcesEDSFProjectDeliverables />
           <ResourcesEDSFPresentations />
           <ResourcesEDISONPublications />
-          <ResourcesBooks/>
-          <ResourcesDatasets/>
+          <ResourcesBooks />
+          <ResourcesDatasets />
         </Card>
       </React.Fragment>
     );
   }
 
-   function ResourcesTrainingMaterial() {
-     return (
-       <List>
-         <ListItem>
-           <Typography variant="h5">Training Material</Typography>
-         </ListItem>
-       </List>
-     );
-   }
+  function ResourcesTrainingMaterial() {
+    return (
+      <List>
+        <ListItem>
+          <Typography variant="h5">Training Material</Typography>
+        </ListItem>
+      </List>
+    );
+  }
   function ResourcesDatasets() {
     return (
       <List>
@@ -387,7 +403,7 @@ export default function Home(props) {
         </ListItem>
         <ListItem>
           <Typography>
-            You can find a list under the following {' '}
+            You can find a list under the following{" "}
             <Link
               href="http://www.uazone.org/demch/academic/papers-edu.html"
               target="_blank"
@@ -772,20 +788,6 @@ export default function Home(props) {
           </Typography>
         </Link>
       </List>
-    );
-  }
-
-  function Title() {
-    return (
-      <React.Fragment>
-        <Typography variant="h4" className={classes.gridTitle}>
-          Welcome to the EDISON Community
-        </Typography>
-        <Typography variant="subtitle1" className={classes.gridSubtitle}>
-          Here, you can find information about the EDISON community, offered
-          trainings and workshops
-        </Typography>
-      </React.Fragment>
     );
   }
 
