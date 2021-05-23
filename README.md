@@ -1,11 +1,13 @@
-# EDSF
-Community supported EDISON Data Science Framework.
-This directory contains recent version of the EDSF - currently EDSF Release 3.
-For older and historical versions check directory x-old-versions.
+# EDSF Website
+This website is developed with React. 
 
-Editable versions are located in the individual directories by EDSF components:
-CF-DS – Data Science Competence Framework
-DS-BoK – Data Science Body of Knowledge
-MC-DS – Data Science Model Curriculum
-DSPP – Data Science Professional profiles
+## Dependencies
+Install React packages: `npm i`
+
+## Adding Wiki as submodule
+We make use of the EDSF Wiki and load markdown content automatically into webpages. Therefore, add Wiki as a git submodule:
+`git submodule add https://github.com/EDISONcommunity/EDSF.wiki.git`
+The added `.gitmodules` file keeps track between Wiki submodule and superrepository EDSF. 
+Check for updates in submodule via `git fetch`. Use `git merge` to merge upstream branch into remote.
+
 
