@@ -173,7 +173,7 @@ export default function MenuPopper() {
                         onClick={handleClose}
                       />
                       <MenuItemLink
-                        label="Upcoming Trainings and Workshops"
+                        label="Upcoming events"
                         to="/upcoming"
                         onClick={handleClose}
                       />
