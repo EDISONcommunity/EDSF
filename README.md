@@ -10,4 +10,5 @@ We make use of the EDSF Wiki and load markdown content automatically into webpag
 The added `.gitmodules` file keeps track between Wiki submodule and superrepository EDSF. 
 Check for updates in submodule via `git fetch`. Use `git merge` to merge upstream branch into remote.
 
-
+## Deploy gh-page 
+Run `npm run deploy` to deploy the website on the `gh-pages` branch. This branch hosts the website for EDSF.
