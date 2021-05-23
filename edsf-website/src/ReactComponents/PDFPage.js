@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "2%",
     margin: "auto",
     [theme.breakpoints.down("sm")]: {
-      overflow: "scroll",
       width: "90%",
     },
   },
