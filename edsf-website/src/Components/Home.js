@@ -5,22 +5,19 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import Icon from "@material-ui/core/Icon";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import IconButton from "@material-ui/core/IconButton";
-import Divider from "@material-ui/core/Divider";
+import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
-import matesLogo from "./img/MatesMasterLogo_COL.png";
-import backgroundImg from "./img/Untitled-4.png";
-import titleImg from "./img/bAsset 3.png";
-import edsfImg from "./img/edsf-1.png";
-import ReactGA from "react-ga";
+import backgroundImg from "../img/Untitled-4.png";
+import titleImg from "../img/home-oneliner-right.png";
 import { Button } from "@material-ui/core";
+import MaterialLink from "../ReactComponents/MaterialLink";
+import MaterialList from "../ReactComponents/MaterialList";
+import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
   rootBox: {
@@ -69,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     padding: theme.spacing(2),
-  
+
     [theme.breakpoints.down("sm")]: {
       margin: "5%",
       marginTop: "10%",
@@ -121,40 +118,11 @@ const useStyles = makeStyles((theme) => ({
   cardTitle: {
     marginTop: "0%",
     paddingTop: "0%",
-    marginBottom: "0%",
+    marginBottom: "5%",
+    textDecoration: "none",
     color: "grey",
     [theme.breakpoints.down("sm")]: {
       marginTop: "10px",
-    },
-  },
-  footerGrid: {
-    height: "5%",
-    width: "100%",
-    marginTop: "auto",
-    marginBottom: "1%",
-  },
-  footerGridItemContact: {
-    height: "100%",
-    display: "flex",
-    marginLeft: "2%",
-  },
-  footerGridItemMates: {
-    height: "100%",
-    marginRight: "2%",
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-  contactButton: {
-    height: "100%",
-    padding: "0",
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-  privacyText: {
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
     },
   },
   iconBox: {
@@ -179,33 +147,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "flex-start",
     paddingBottom: "0%",
   },
-  matesBox: {
-    height: "100%",
-    flexDirection: "row",
-    display: "flex",
-    alignItems: "center",
-  },
-  logoBox: {
-    height: "100%",
-    marginLeft: "1%",
-  },
-  footerSpanAbove: {
-    minHeight: "30%",
-    [theme.breakpoints.down("sm")]: {
-      height: "5%",
-    },
-  },
   titleSpanBelow: {
-    minHeight: "10%",
+    minHeight: "1%",
     [theme.breakpoints.down("sm")]: {
-      minHeight: "10%",
-    },
-  },
-  footerSpan: {
-    height: "30px",
-    width: "100%",
-    [theme.breakpoints.down("sm")]: {
-      height: "50px",
+      minHeight: "1%",
     },
   },
   linkList: {
@@ -227,15 +172,16 @@ const useStyles = makeStyles((theme) => ({
     margin: "10%",
   },
   imgTitle: {
-    width: "100%",
-    paddingTop: "20px",
-    paddingRight: "auto",
+    width: "60%",
+    paddingTop: "2%",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
   },
   imgTitleCard: {
     marginRight: "auto",
-    width: "45%",
+    width: "100%",
     minWidth: "300px",
-    marginLeft: "5%",
     [theme.breakpoints.down("sm")]: {
       margin: "auto",
     },
@@ -244,11 +190,11 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   imgEdsfCard: {
-    width: "40%",
-    minWidth: "300px",
+    width: "10%",
+    minWidth: "250px",
     marginLeft: "auto",
     marginRight: "10%",
-    marginBottom: "5%",
+    marginBottom: "0%",
     [theme.breakpoints.down("sm")]: {
       margin: "auto",
       width: "60%",
@@ -267,6 +213,30 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home(props) {
   const classes = useStyles();
+
+  return (
+    <Box className={classes.rootBox}>
+      <Grid container direction="column">
+        <Grid item xs>
+          <ImageTitle />
+        </Grid>
+      </Grid>
+      <Box className={classes.titleSpanBelow} />
+      <Grid container direction="row" className={classes.gridCardContainer}>
+        <Grid item className={classes.gridCardItem} sm>
+          <ResourcesComponent />
+        </Grid>
+        <Grid item className={classes.gridCardItem} sm>
+          <TrainingAndWorkshopComponent />
+        </Grid>
+        <Grid item className={classes.gridCardItem} sm>
+          <ContributeButton />
+          <TwitterComponent />
+        </Grid>
+      </Grid>
+      <Footer />
+    </Box>
+  );
 
   function TwitterComponent() {
     if (props.twitterEnabled) {
@@ -297,59 +267,6 @@ export default function Home(props) {
     );
   }
 
-  function Footer() {
-    return (
-      <React.Fragment>
-        <Grid item xs className={classes.footerGridItemContact}>
-          <RouterLink to="/contact">
-            <IconButton className={classes.contactButton}>
-              <MailOutlineIcon />
-            </IconButton>
-          </RouterLink>
-          <RouterLink to="/privacy-policy" style={{ textDecoration: "none" }}>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-              style={{ paddingLeft: "10px" }}
-              className={classes.privacyText}
-            >
-              Privacy Policy
-            </Typography>
-          </RouterLink>
-          <Box flexGrow="1" />
-        </Grid>
-        <Grid item xs className={classes.footerGridItemMates}>
-          <Box className={classes.matesBox}>
-            <Box flexGrow="1" />
-            <Typography variant="subtitle1" color="textSecondary">
-              Partnered by
-            </Typography>
-            <Box className={classes.logoBox}>
-              <Link
-                target="_blank"
-                href="https://www.projectmates.eu/"
-                rel="noopener"
-              >
-                <Icon
-                  className={classes.iconRoot}
-                  href="https://www.projectmates.eu/"
-                >
-                  <img
-                    className={classes.iconImage}
-                    src={matesLogo}
-                    alt="matesLogo"
-                  />
-                </Icon>
-              </Link>
-            </Box>
-          </Box>
-        </Grid>
-        <Box className={classes.footerSpan} />
-      </React.Fragment>
-    );
-  }
-
-  // TODO. insert edsf documents
   function ResourcesComponent() {
     return (
       <React.Fragment>
@@ -359,7 +276,8 @@ export default function Home(props) {
         <Card className={classes.cardTutorials} elevation={9}>
           <ResourcesEDSFReleases />
           <ResourcesEDSFCurriculaDesign />
-          <ResourcesEDSFProjectDeliverables />
+          <ResourcesEDISONProjects />
+          <ResourcesEDISONDeliverables />
           <ResourcesEDSFPresentations />
           <ResourcesEDISONPublications />
           <ResourcesBooks />
@@ -369,20 +287,23 @@ export default function Home(props) {
     );
   }
 
-  function ResourcesTrainingMaterial() {
-    return (
-      <List>
-        <ListItem>
-          <Typography variant="h5">Training Material</Typography>
-        </ListItem>
-      </List>
-    );
-  }
   function ResourcesDatasets() {
     return (
       <List>
         <ListItem>
-          <Typography variant="h5">Datasets</Typography>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/datasets"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            Datasets
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography>Coming soon</Typography>
         </ListItem>
       </List>
     );
@@ -392,7 +313,19 @@ export default function Home(props) {
     return (
       <List>
         <ListItem>
-          <Typography variant="h5">Books and Articles</Typography>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/books-and-articles"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            Books and Articles
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography>Coming soon</Typography>
         </ListItem>
       </List>
     );
@@ -402,7 +335,16 @@ export default function Home(props) {
     return (
       <List>
         <ListItem>
-          <Typography variant="h5">EDISON Related Publications</Typography>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/publications"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            EDISON Related Publications
+          </Typography>
         </ListItem>
         <ListItem>
           <Typography>
@@ -426,17 +368,63 @@ export default function Home(props) {
     return (
       <List>
         <ListItem>
-          <Typography variant="h5">EDSF Presentations</Typography>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/presentations"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            EDSF Presentations
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography>Coming soon</Typography>
         </ListItem>
       </List>
     );
   }
 
-  function ResourcesEDSFProjectDeliverables() {
+  function ResourcesEDISONProjects() {
     return (
       <List>
         <ListItem>
-          <Typography variant="h5">EDSF Project Deliverables</Typography>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/projects"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            EDISON Projects
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography>Coming soon</Typography>
+        </ListItem>
+      </List>
+    );
+  }
+
+  function ResourcesEDISONDeliverables() {
+    return (
+      <List>
+        <ListItem>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/deliverables"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            EDISON Deliverables
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography>Coming soon</Typography>
         </ListItem>
       </List>
     );
@@ -446,7 +434,19 @@ export default function Home(props) {
     return (
       <List>
         <ListItem>
-          <Typography variant="h5">EDSF Curricula Design</Typography>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/curricula-design"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            EDSF Curricula Design
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography>Coming soon</Typography>
         </ListItem>
       </List>
     );
@@ -456,93 +456,46 @@ export default function Home(props) {
     return (
       <List>
         <ListItem>
-          <Typography variant="h5">EDSF Releases</Typography>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/releases"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            EDSF Releases
+          </Typography>
         </ListItem>
         <CardActions className={classes.yearActions}>
           <ListItem>
-            <Typography variant="subtitle1">
-              Release 3 {"(31 December 2018)"}
-            </Typography>
+            <Typography variant="subtitle1">Release 3</Typography>
           </ListItem>
         </CardActions>
         <List className={classes.linkList}>
           <MaterialLink
             to="/resources-edsf-release3-cfds"
-            label="Data Science Competence Framework (CF-DS)"
-            action="EDSF material link"
+            label="Data Science Competence Framework (CF-DS) R3"
+            action="EDSF resource link"
+            color="#28F994"
           />
           <MaterialLink
             to="/resources-edsf-release3-dsbok"
-            label="Data Science Body of Knowledge (DS-BoK)"
-            action="EDSF material link"
+            label="Data Science Body of Knowledge (DS-BoK) R3"
+            action="EDSF resource link"
+            color="#28F994"
           />
           <MaterialLink
             to="/resources-edsf-release3-mcds"
-            label="Data Science Model Curriculum (MC-DS)"
-            action="EDSF material link"
+            label="Data Science Model Curriculum (MC-DS) R3"
+            action="EDSF resource link"
+            color="#28F994"
           />
           <MaterialLink
             to="/resources-edsf-release3-dspp"
-            label="Data Science Professional Profiles (DSPP)"
-            action="EDSF material link"
-          />
-        </List>
-        <CardActions className={classes.yearActions}>
-          <ListItem>
-            <Typography variant="subtitle1">
-              Pre-Release 3 {"(7 September 2018)"}
-            </Typography>
-          </ListItem>
-        </CardActions>
-        <List className={classes.linkList}>
-          <MaterialLink
-            to="/resources-edsf-prerelease3-cfds"
-            label="Data Science Competence Framework (CF-DS)"
-            action="EDSF material link"
-          />
-          <MaterialLink
-            to="/resources-edsf-prerelease3-dsbok"
-            label="Data Science Body of Knowledge (DS-BoK)"
-            action="EDSF material link"
-          />
-          <MaterialLink
-            to="/resources-edsf-prerelease3-mcds"
-            label="Data Science Model Curriculum (MC-DS)"
-            action="EDSF material link"
-          />
-          <MaterialLink
-            to="/resources-edsf-prerelease3-dspp"
-            label="Data Science Professional Profiles (DSPP)"
-            action="EDSF material link"
-          />
-        </List>
-        <CardActions className={classes.yearActions}>
-          <ListItem>
-            <Typography variant="subtitle1">
-              Release 2 {"(3 July 2017)"}
-            </Typography>
-          </ListItem>
-        </CardActions>
-        <List className={classes.linkList}>
-          <MaterialLink
-            to="/resources-edsf-release2-cfds"
-            label="Data Science Competence Framework (CF-DS)"
-            action="EDSF material link"
-          />
-          <MaterialLink
-            to="/resources-edsf-release2-dsbok"
-            label="Data Science Body of Knowledge (DS-BoK)"
-            action="EDSF material link"
-          />
-          <MaterialLink
-            to="/resources-edsf-release2-mcds"
-            label="Data Science Model Curriculum (MC-DS)"
-            action="EDSF material link"
-          />
-          <MaterialLink
-            to="/resources-edsf-release2-dspp"
-            label="Data Science Professional Profiles (DSPP)"
-            action="EDSF material link"
+            label="Data Science Professional Profiles (DSPP) R3"
+            action="EDSF resource link"
+            color="#28F994"
           />
         </List>
       </List>
@@ -552,9 +505,14 @@ export default function Home(props) {
   function TrainingAndWorkshopComponent() {
     return (
       <React.Fragment>
-        <Typography variant="h6" className={classes.cardTitle}>
-          Trainings and Workshops
-        </Typography>
+        <RouterLink
+          to="/trainings-and-workshops"
+          style={{ textDecoration: "none" }}
+        >
+          <Typography variant="h6" className={classes.cardTitle}>
+            Trainings and Workshops
+          </Typography>
+        </RouterLink>
         <Card className={classes.cardTutorials} elevation={9}>
           <List>
             <CardActions className={classes.yearActions}>
@@ -564,7 +522,11 @@ export default function Home(props) {
                 to="/upcoming"
                 color="secondary"
               >
-                <Typography variant="h5" style={{ color: "#28F994" }}>
+                <TrendingFlatIcon />
+                <Typography
+                  variant="h5"
+                  style={{ color: "#FFC89E", marginLeft: "10px" }}
+                >
                   Upcoming events
                 </Typography>
               </ListItem>
@@ -574,6 +536,7 @@ export default function Home(props) {
                 button
                 component={RouterLink}
                 to="/tutorials-2021-mates-ed2mit-dmg-february"
+                color="secondary"
               >
                 <ListItemText
                   primary='MATES ED2MIT "Industrial Data Spaces, Organisational Data Management and Governance for the Maritime Sector"'
@@ -581,10 +544,12 @@ export default function Home(props) {
                 />
               </ListItem>
             </CardActions>
-            {MaterialList(
-              "https://drive.google.com/drive/folders/1Hjevyvnm8we2IgtieLMtU3WtD2KvPaMH",
-              "https://surfdrive.surf.nl/files/index.php/s/lRGca7eeizWQR1p"
-            )}
+            <MaterialList
+              cookiesEnabled={props.cookiesEnabled}
+              color="#28F994"
+              slidesURL="https://drive.google.com/drive/folders/1Hjevyvnm8we2IgtieLMtU3WtD2KvPaMH"
+              videoURL="https://surfdrive.surf.nl/files/index.php/s/lRGca7eeizWQR1p"
+            />
             <CardActions className={classes.yearActions}>
               <ListItem
                 button
@@ -597,10 +562,12 @@ export default function Home(props) {
                 />
               </ListItem>
             </CardActions>
-            {MaterialList(
-              "https://drive.google.com/drive/u/0/folders/1su2P7NqDF24MJKnfMqtREseK4iH5HWxY",
-              "https://surfdrive.surf.nl/files/index.php/s/t5WLTsVcylKkHhh"
-            )}
+            <MaterialList
+              cookiesEnabled={props.cookiesEnabled}
+              color="#28F994"
+              slidesURL="https://drive.google.com/drive/u/0/folders/1su2P7NqDF24MJKnfMqtREseK4iH5HWxY"
+              videoURL="https://surfdrive.surf.nl/files/index.php/s/t5WLTsVcylKkHhh"
+            />
 
             <CardActions className={classes.yearActions}>
               <ListItem
@@ -717,83 +684,6 @@ export default function Home(props) {
     );
   }
 
-  function MaterialLink(props) {
-    function handleClick(e) {
-      if (props.cookiesEnabled) {
-        ReactGA.event({
-          category: "Links",
-          action: props.action,
-          label: props.label,
-          value: 1,
-        });
-      }
-    }
-    return (
-      <div>
-        <RouterLink
-          target="_blank"
-          to={props.to}
-          rel="noopener"
-          onClick={handleClick}
-          style={{ textDecoration: "none" }}
-        >
-          <Typography variant="caption" className={classes.linkListText}>
-            {props.label}
-          </Typography>
-        </RouterLink>
-      </div>
-    );
-  }
-
-  function MaterialList(slidesURL, videoURL) {
-    function handleLectureMaterialClick(e) {
-      if (props.cookiesEnabled) {
-        ReactGA.event({
-          category: "Links",
-          action: "Lecture Material",
-          label: "Lecture Material Link clicked",
-          value: 1,
-        });
-      }
-    }
-
-    function handleVideoMaterialClick(e) {
-      if (props.cookiesEnabled) {
-        ReactGA.event({
-          category: "Links",
-          action: "Video Material",
-          label: "Video Material Link clicked",
-          value: 1,
-        });
-      }
-    }
-
-    return (
-      <List className={classes.linkList}>
-        <Link
-          target="_blank"
-          href={slidesURL}
-          rel="noopener"
-          onClick={handleLectureMaterialClick}
-        >
-          <Typography variant="caption" className={classes.linkListText}>
-            Lecture and practice material
-          </Typography>
-        </Link>
-        <Link
-          target="_blank"
-          href={videoURL}
-          rel="noopener"
-          onClick={handleVideoMaterialClick}
-        >
-          <Typography variant="caption" className={classes.linkListText}>
-            Video material
-          </Typography>
-        </Link>
-      </List>
-    );
-  }
-
   function ImageTitle() {
     return (
       <Box className={classes.imgTitleCard}>
@@ -802,43 +692,14 @@ export default function Home(props) {
     );
   }
 
-  function ImageEdsf() {
+  function ContributeButton() {
+    const classes = useStyles();
     return (
-      <Box className={classes.imgEdsfCard}>
-        <img src={edsfImg} className={classes.imgEdsf} alt="title" />
-      </Box>
+      <RouterLink to="/edison-community" style={{ textDecoration: "none" }}>
+        <Button variant="outlined" className={classes.contributeButton}>
+          Contribute
+        </Button>
+      </RouterLink>
     );
   }
-
-  return (
-    <Box className={classes.rootBox}>
-      <Grid container direction="column">
-        <Grid item xs>
-          <ImageTitle />
-          <ImageEdsf />
-        </Grid>
-      </Grid>
-      <Box className={classes.titleSpanBelow} />
-      <Grid container direction="row" className={classes.gridCardContainer}>
-        <Grid item className={classes.gridCardItem} sm>
-          <ResourcesComponent />
-        </Grid>
-        <Grid item className={classes.gridCardItem} sm>
-          <TrainingAndWorkshopComponent />
-        </Grid>
-        <Grid item className={classes.gridCardItem} sm>
-          <RouterLink to="/edison-community" style={{ textDecoration: "none" }}>
-            <Button variant="outlined" className={classes.contributeButton}>
-              Contribute
-            </Button>
-          </RouterLink>
-          <TwitterComponent />
-        </Grid>
-      </Grid>
-      <Box className={classes.footerSpanAbove} />
-      <Grid container direction="row" className={classes.footerGrid}>
-        <Footer />
-      </Grid>
-    </Box>
-  );
 }

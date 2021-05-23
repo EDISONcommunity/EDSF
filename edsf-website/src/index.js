@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./Components/App";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./Theme";
 import { BrowserRouter as Router } from "react-router-dom";

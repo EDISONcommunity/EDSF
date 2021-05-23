@@ -2,38 +2,48 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Contact from "./Contact";
 import Upcoming from "./Upcoming";
-import CFDS from "./CFDS";
-import DSBoK from "./DSBoK";
-import DSPP from "./DSPP";
-import MCDS from "./MCDS";
-import about from "./EDSF.wiki/EDSFhome.md";
-import tutorial2019Bdit4dal from "./EDSF.wiki/(4)-BDIT4DA-Tutorial-HPCS2019.md";
-import tutorial2019Edsf from "./EDSF.wiki/(3)-EDSF-Tutorial-Summer-2019-Data-Science-Competence-and-Education.md";
-import tutorial2020MatesBdit4da from './EDSF.wiki/Webinar-MATES-ED2MIT-"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry".md';
-import tutorial2021MatesDmg from './EDSF.wiki/MATES-ED2MIT-2021-"Industrial-Data-Spaces,-Organisational-Data-Management-&-Governance-for-the-Maritime-Sector".md';
-import tutorial2021MatesBdit4da from './EDSF.wiki/MATES-ED2MIT-2021-"Big-Data-Infrastructure-Technologies-for-Data-Analytics".md';
-import workshop2018Edison from "./EDSF.wiki/EDISON-Workshop-31-May-2018-Denmark.md";
-import workshop2018Edsfr3Agenda from "./EDSF.wiki/Agenda---EDSFr3-Design-Workshop-(18-19-July-2018).md";
-import workshop2018Edsfr3Uva from "./EDSF.wiki/EDSF-Release-3-Design-Workshop-18-19-July-2018-(UvA).md";
-import workshop2019Dtw from "./EDSF.wiki/(1)-DTW2019-Data-Teaching-Workshop-September-2019,-San-Diego.md";
-import workshop2019Edfsr4 from "./EDSF.wiki/(2)-EDSF-Release-4-Design-Workshop-20-November-2019.md";
-import workshop2020Fair from "./EDSF.wiki/(5)-FAIR-Competences-for-Higher-Education-Design-Workshop-8-9-October-2020-Agenda-and-documents.md";
-import RR3CFDS from "./resources/EDSFReleases/Release3/CFDS";
-import RR3DSBoK from "./resources/EDSFReleases/Release3/DSBoK";
-import RR3DSPP from "./resources/EDSFReleases/Release3/DSPP";
-import RR3MCDS from "./resources/EDSFReleases/Release3/MCDS";
-import RPR3CFDS from "./resources/EDSFReleases/PreRelease3/CFDS";
-import RPR3DSBoK from "./resources/EDSFReleases/PreRelease3/DSBoK";
-import RPR3DSPP from "./resources/EDSFReleases/PreRelease3/DSPP";
-import RPR3MCDS from "./resources/EDSFReleases/PreRelease3/MCDS";
-import RR2CFDS from "./resources/EDSFReleases/Release2/CFDS";
-import RR2DSBoK from "./resources/EDSFReleases/Release2/DSBoK";
-import RR2DSPP from "./resources/EDSFReleases/Release2/DSPP";
-import RR2MCDS from "./resources/EDSFReleases/Release2/MCDS";
+import CFDS from "../EDSFComponents/CFDS";
+import DSBoK from "../EDSFComponents/DSBoK";
+import DSPP from "../EDSFComponents/DSPP";
+import MCDS from "../EDSFComponents/MCDS";
+import about from "../EDSF.wiki/EDSFhome.md";
+import tutorial2019Bdit4dal from "../EDSF.wiki/(4)-BDIT4DA-Tutorial-HPCS2019.md";
+import tutorial2019Edsf from "../EDSF.wiki/(3)-EDSF-Tutorial-Summer-2019-Data-Science-Competence-and-Education.md";
+import tutorial2020MatesBdit4da from '../EDSF.wiki/Webinar-MATES-ED2MIT-"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry".md';
+import tutorial2021MatesDmg from '../EDSF.wiki/MATES-ED2MIT-2021-"Industrial-Data-Spaces,-Organisational-Data-Management-&-Governance-for-the-Maritime-Sector".md';
+import tutorial2021MatesBdit4da from '../EDSF.wiki/MATES-ED2MIT-2021-"Big-Data-Infrastructure-Technologies-for-Data-Analytics".md';
+import workshop2018Edison from "../EDSF.wiki/EDISON-Workshop-31-May-2018-Denmark.md";
+import workshop2018Edsfr3Agenda from "../EDSF.wiki/Agenda---EDSFr3-Design-Workshop-(18-19-July-2018).md";
+import workshop2018Edsfr3Uva from "../EDSF.wiki/EDSF-Release-3-Design-Workshop-18-19-July-2018-(UvA).md";
+import workshop2019Dtw from "../EDSF.wiki/(1)-DTW2019-Data-Teaching-Workshop-September-2019,-San-Diego.md";
+import workshop2019Edfsr4 from "../EDSF.wiki/(2)-EDSF-Release-4-Design-Workshop-20-November-2019.md";
+import workshop2020Fair from "../EDSF.wiki/(5)-FAIR-Competences-for-Higher-Education-Design-Workshop-8-9-October-2020-Agenda-and-documents.md";
+import release2CFDS from "../files/EDSFReleases/EDISON_CF-DS-release2-v08.pdf";
+import releasep3CFDS from "../files/EDSFReleases/EDISON_CF-DS-release3-v09.pdf";
+import release3CFDS from "../files/EDSFReleases/EDISON_CF-DS-release3-v10.pdf";
+import release2DSBoK from "../files/EDSFReleases/EDISON_DS-BoK-release2-v04.pdf";
+import releasep3DSBoK from "../files/EDSFReleases/EDISON_DS-BoK-release3-v05.pdf";
+import release3DSBoK from "../files/EDSFReleases/EDISON_DS-BoK-release3-v06.pdf";
+import release2DSPP from "../files/EDSFReleases/EDISON_DSPP-release2-v05.pdf";
+import releasep3DSPP from "../files/EDSFReleases/EDISON_DSPP-release3-v06.pdf";
+import release3DSPP from "../files/EDSFReleases/EDISON_DSPP-release3-v07.pdf";
+import release2MCDS from "../files/EDSFReleases/EDISON_MC-DS-release2-v03.pdf";
+import releasep3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v04.pdf";
+import release3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v05.pdf";
+import Books from "../EDSFComponents/Resources/Books";
+import CurriculaDesign from "../EDSFComponents/Resources/CurriculaDesign";
+import Datasets from "../EDSFComponents/Resources/Datasets";
+import Deliverables from "../EDSFComponents/Resources/Deliverables";
+import Presentations from "../EDSFComponents/Resources/Presentations";
+import Projects from "../EDSFComponents/Resources/Projects";
+import Publications from "../EDSFComponents/Resources/Publications";
+import Releases from "../EDSFComponents/Resources/Releases";
+import Trainings from "./Trainings";
 import Box from "@material-ui/core/Box";
-import MarkDownComponent from "./MarkDownComponent";
+import MarkDownComponent from "../ReactComponents/MarkDownComponent";
+import PDFPage from "../ReactComponents/PDFPage";
 import { Switch, Route } from "react-router-dom";
-import Cookiesnackbar from "./Cookiesnackbar";
+import Cookiesnackbar from "../ReactComponents/Cookiesnackbar";
 import PrivacyPolicy from "./PrivacyPolicy";
 import React, { Component } from "react";
 
@@ -124,40 +134,67 @@ export default class App extends Component {
               <MarkDownComponent markdown={workshop2020Fair} key={11} />
             </Route>
             <Route path="/resources-edsf-release3-cfds">
-              <RR3CFDS />
+              <PDFPage pdf={release3CFDS} />
             </Route>
             <Route path="/resources-edsf-release3-dsbok">
-              <RR3DSBoK />
+              <PDFPage pdf={release3DSBoK} />
             </Route>
             <Route path="/resources-edsf-release3-dspp">
-              <RR3DSPP />
+              <PDFPage pdf={release3DSPP} />
             </Route>
             <Route path="/resources-edsf-release3-mcds">
-              <RR3MCDS />
+              <PDFPage pdf={release3MCDS} />
             </Route>
             <Route path="/resources-edsf-prerelease3-cfds">
-              <RPR3CFDS />
+              <PDFPage pdf={releasep3CFDS} />
             </Route>
             <Route path="/resources-edsf-prerelease3-dsbok">
-              <RPR3DSBoK />
+              <PDFPage pdf={releasep3DSBoK} />
             </Route>
             <Route path="/resources-edsf-prerelease3-dspp">
-              <RPR3DSPP />
+              <PDFPage pdf={releasep3DSPP} />
             </Route>
             <Route path="/resources-edsf-prerelease3-mcds">
-              <RPR3MCDS />
+              <PDFPage pdf={releasep3MCDS} />
             </Route>
             <Route path="/resources-edsf-release2-cfds">
-              <RR2CFDS />
+              <PDFPage pdf={release2CFDS} />
             </Route>
             <Route path="/resources-edsf-release2-dsbok">
-              <RR2DSBoK />
+              <PDFPage pdf={release2DSBoK} />
             </Route>
             <Route path="/resources-edsf-release2-dspp">
-              <RR2DSPP />
+              <PDFPage pdf={release2DSPP} />
             </Route>
             <Route path="/resources-edsf-release2-mcds">
-              <RR2MCDS />
+              <PDFPage pdf={release2MCDS} />
+            </Route>
+            <Route path="/releases">
+              <Releases />
+            </Route>
+            <Route path="/curricula-design">
+              <CurriculaDesign />
+            </Route>
+            <Route path="/deliverables">
+              <Deliverables />
+            </Route>
+            <Route path="/projects">
+              <Projects />
+            </Route>
+            <Route path="/presentations">
+              <Presentations />
+            </Route>
+            <Route path="/publications">
+              <Publications />
+            </Route>
+            <Route path="/books-and-articles">
+              <Books />
+            </Route>
+            <Route path="/datasets">
+              <Datasets />
+            </Route>
+            <Route path="/trainings-and-workshops">
+              <Trainings />
             </Route>
           </Switch>
           <Cookiesnackbar

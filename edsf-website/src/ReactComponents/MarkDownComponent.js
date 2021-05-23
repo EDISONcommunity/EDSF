@@ -3,8 +3,8 @@ import Markdown from "./Markdown";
 import { withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
-import backgroundImg from "./img/Untitled-3.png";
-
+import Footer from "../Components/Footer";
+import backgroundImg from "../img/Untitled-4.png";
 
 const styles = (theme) => ({
   mainBox: {
@@ -12,14 +12,12 @@ const styles = (theme) => ({
     backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    height: "100%",
   },
   mainPaper: {
     margin: "5%",
     padding: "5%",
     backgroundColor: "rgba(255,255,255,0.9)"
-  },
-  footerBox: {
-    height: "100px",
   },
 });
 
@@ -44,7 +42,7 @@ class MarkDownComponent extends Component {
         <Paper className={classes.mainPaper} variant="outlined">
           <Markdown>{this.state.terms}</Markdown>
         </Paper>
-        <Box className={classes.footerBox} />
+        <Footer/>
       </Box>
     );
   }
