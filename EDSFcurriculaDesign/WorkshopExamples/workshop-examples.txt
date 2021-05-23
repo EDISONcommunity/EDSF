@@ -1,9 +1,0 @@
-This directory contains examples used for practical exercises with the EDSF Toolkit
-
-1) Examples of CV collected from Internet and primarily from indeed.com
-Collection is provided for different intended professions or positions (e.g. Data Scientist, Data Analyst, Data Steward, others)
-
-2) Examples of using EDSF by the EDISON Champion universities for developing their 
-Data Science programmes (based on the EDISON Deliverable D3.3)  
-
-3) Example Data Science competences self assessment questions

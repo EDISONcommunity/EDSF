@@ -1,1 +1,0 @@
-This directory contains some of the EDISON project deliverables that are essential to understand the project legacy and are not covered by EDSF development
