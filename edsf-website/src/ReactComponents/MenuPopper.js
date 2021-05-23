@@ -137,10 +137,7 @@ export default function MenuPopper() {
                     {/* Home section   */}
                     <MenuItemLink label="Home" to="/" onClick={handleClose} />
                     {/* About section   */}
-                    <TreeItem
-                      nodeId="0"
-                      label="About"   
-                    >
+                    <TreeItem nodeId="0" label="About">
                       <MenuItemLink
                         label="EDISON Community"
                         to="/edison-community"
@@ -169,11 +166,17 @@ export default function MenuPopper() {
                     </TreeItem>
 
                     {/* Tutorial section   */}
-                    <TreeItem
-                      nodeId="1"
-                      label="Trainings"
-                    >
-                      {" "}
+                    <TreeItem nodeId="1" label="Trainings">
+                      <MenuItemLink
+                        label="All Trainings and Material"
+                        to="/trainings-and-workshops"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Upcoming Trainings and Workshops"
+                        to="/upcoming"
+                        onClick={handleClose}
+                      />
                       <TreeItem nodeId="2" label="2021">
                         <MenuItemLink
                           label="MATES ED2MIT DMG 16, 18, 23 February"
@@ -192,6 +195,11 @@ export default function MenuPopper() {
                           onClick={handleClose}
                           to="/tutorials-2020-mates-ed2mit-bdit4da"
                         />
+                        <MenuItemLink
+                          label="FAIR Competences for Higher Education Design Workshop 8, 9 October"
+                          onClick={handleClose}
+                          to="/workshops-2020-fair-competences-october"
+                        />
                       </TreeItem>
                       <TreeItem nodeId="4" label="2019">
                         <MenuItemLink
@@ -199,26 +207,6 @@ export default function MenuPopper() {
                           to="/tutorials-2019-bdit4da-hpcs"
                           onClick={handleClose}
                         />
-                        <MenuItemLink
-                          label="EDSF Tutorial Summer 2019: Data Science Competence and Education"
-                          to="/tutorials-2019-edsf-data-science-competence-and-education"
-                          onClick={handleClose}
-                        />
-                      </TreeItem>
-                    </TreeItem>
-                    {/* Workshop section   */}
-                    <TreeItem
-                      nodeId="4"
-                      label="Workshops"
-                    >
-                      <TreeItem nodeId="5" label="2020">
-                        <MenuItemLink
-                          label="FAIR Competences for Higher Education Design Workshop 8, 9 October"
-                          onClick={handleClose}
-                          to="/workshops-2020-fair-competences-october"
-                        />
-                      </TreeItem>
-                      <TreeItem nodeId="6" label="2019">
                         <MenuItemLink
                           label="EDSFr 4 Design Workshop 20 November"
                           onClick={handleClose}
@@ -229,8 +217,13 @@ export default function MenuPopper() {
                           onClick={handleClose}
                           to="/workshops-2019-dtw-september-sandiego"
                         />
+                        <MenuItemLink
+                          label="EDSF Tutorial Summer 2019: Data Science Competence and Education"
+                          to="/tutorials-2019-edsf-data-science-competence-and-education"
+                          onClick={handleClose}
+                        />
                       </TreeItem>
-                      <TreeItem nodeId="7" label="2018">
+                      <TreeItem nodeId="5" label="2018">
                         <MenuItemLink
                           label="EDSFr3 Design Workshop 18, 19 July UvA"
                           onClick={handleClose}
@@ -248,12 +241,118 @@ export default function MenuPopper() {
                         />
                       </TreeItem>
                     </TreeItem>
-                    {/* Upcoming section   */}
-                    <MenuItemLink
-                      label="Upcoming Tutorials and Workshops"
-                      to="/upcoming"
-                      onClick={handleClose}
-                    />
+
+                    <TreeItem nodeId="6" label="Resources">
+                      <TreeItem nodeId="7" label="Releases">
+                        <MenuItemLink
+                          label="All Releases"
+                          onClick={handleClose}
+                          to="/releases"
+                        />
+                        <TreeItem nodeId="8" label="Release 3">
+                          <MenuItemLink
+                            label="CF-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-cfds"
+                          />
+                          <MenuItemLink
+                            label="DS-BoK"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-dsbok"
+                          />
+                          <MenuItemLink
+                            label="MC-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-mcds"
+                          />
+                          <MenuItemLink
+                            label="DSPP"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-dspp"
+                          />
+                        </TreeItem>
+                        <TreeItem nodeId="9" label="Pre-Release 3">
+                          <MenuItemLink
+                            label="CF-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-cfds"
+                          />
+                          <MenuItemLink
+                            label="DS-BoK"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-dsbok"
+                          />
+                          <MenuItemLink
+                            label="MC-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-mcds"
+                          />
+                          <MenuItemLink
+                            label="DSPP"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-dspp"
+                          />
+                        </TreeItem>
+                        <TreeItem nodeId="10" label="Release 2">
+                          <MenuItemLink
+                            label="CF-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-cfds"
+                          />
+                          <MenuItemLink
+                            label="DS-BoK"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-dsbok"
+                          />
+                          <MenuItemLink
+                            label="MC-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-mcds"
+                          />
+                          <MenuItemLink
+                            label="DSPP"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-dspp"
+                          />
+                        </TreeItem>
+                      </TreeItem>
+                      <MenuItemLink
+                        label="Curricula Design"
+                        onClick={handleClose}
+                        to="/curricula-design"
+                      />
+                      <MenuItemLink
+                        label="Projects"
+                        onClick={handleClose}
+                        to="/projects"
+                      />
+                      <MenuItemLink
+                        label="Deliverables"
+                        onClick={handleClose}
+                        to="/deliverables"
+                      />
+                      <MenuItemLink
+                        label="Presentations"
+                        onClick={handleClose}
+                        to="/presentations"
+                      />
+                      <MenuItemLink
+                        label="Publications"
+                        onClick={handleClose}
+                        to="/publications"
+                      />
+                      <MenuItemLink
+                        label="Books and Articles"
+                        onClick={handleClose}
+                        to="/books-and-articles"
+                      />
+                      <MenuItemLink
+                        label="Datasets"
+                        onClick={handleClose}
+                        to="/datasets"
+                      />
+                    </TreeItem>
+
                     {/* Contact section   */}
                     <MenuItemLink
                       label="Contact"

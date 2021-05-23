@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     padding: "10%",
     paddingTop: "2%",
+    textAlign: "center",
   },
   title: {
     marginBottom: "2%",
