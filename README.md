@@ -18,7 +18,7 @@ Run `npm run deploy` from the `website` branch to deploy the running website on 
 
 * Admin has to do it
 * In GitHub repository:
-	* Head to `Settings` $ \rightarrow $ Custom domain $ \rightarrow $ Type custom domain and hit `Save`
+	* Head to `Settings` -> Custom domain -> Type custom domain and hit `Save`
 * Head to DNS provider:
 	* Create `CNAME` record that points `http://edison-project.net/` to subdomain `https://EDISONcommunity.github.io` (`CNAME` record should always point to `<organization>.github.io` excluding repository name)
 	* Takes up to 24 hours
