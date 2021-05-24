@@ -50,7 +50,9 @@ export default function CFDS() {
           This document presents the proposed EDISON Data Science Competences
           Framework that is defined based on the study of the demand and supply
           sides for Data Science competences and skills in research and
-          industry, as well as existing standards, taxonomies and studies. The
+          industry, as well as existing standards, taxonomies and studies. 
+          <br/>
+          The
           definition of the Data Science Competences Framework {"(CF-DS)"} is a
           cornerstone component of the whole EDISON framework. CF-DS will
           provide a basis for{" "}
