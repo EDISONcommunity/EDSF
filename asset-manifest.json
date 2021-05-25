@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EDSF/static/css/main.b8629051.chunk.css",
-    "main.js": "/EDSF/static/js/main.b5199979.chunk.js",
-    "main.js.map": "/EDSF/static/js/main.b5199979.chunk.js.map",
+    "main.js": "/EDSF/static/js/main.f63b8ffb.chunk.js",
+    "main.js.map": "/EDSF/static/js/main.f63b8ffb.chunk.js.map",
     "runtime-main.js": "/EDSF/static/js/runtime-main.be6d99b2.js",
     "runtime-main.js.map": "/EDSF/static/js/runtime-main.be6d99b2.js.map",
     "static/js/2.f1551a1c.chunk.js": "/EDSF/static/js/2.f1551a1c.chunk.js",
@@ -36,12 +36,12 @@
     "static/media/MatesMasterLogo_COL.11cc6812.png": "/EDSF/static/media/MatesMasterLogo_COL.11cc6812.png",
     "static/media/Untitled-4.e29008ce.png": "/EDSF/static/media/Untitled-4.e29008ce.png",
     "static/media/Webinar-MATES-ED2MIT-\"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry\".3d819cc6.md": "/EDSF/static/media/Webinar-MATES-ED2MIT-\"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry\".3d819cc6.md",
-    "static/media/home-oneliner-right.d878787f.png": "/EDSF/static/media/home-oneliner-right.d878787f.png"
+    "static/media/home-oneliner-right-new-opaque.60282d43.png": "/EDSF/static/media/home-oneliner-right-new-opaque.60282d43.png"
   },
   "entrypoints": [
     "static/js/runtime-main.be6d99b2.js",
     "static/js/2.f1551a1c.chunk.js",
     "static/css/main.b8629051.chunk.css",
-    "static/js/main.b5199979.chunk.js"
+    "static/js/main.f63b8ffb.chunk.js"
   ]
 }
