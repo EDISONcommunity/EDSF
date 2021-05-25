@@ -13,7 +13,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import backgroundImg from "../img/Untitled-4.png";
-import titleImg from "../img/home-oneliner-right-new.png";
+import titleImg from "../img/home-oneliner-right-new-opaque.png";
 import { Button } from "@material-ui/core";
 import MaterialLink from "../ReactComponents/MaterialLink";
 import MaterialList from "../ReactComponents/MaterialList";
@@ -172,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "10%",
   },
   imgTitle: {
-    width: "60%",
+    width: "65%",
     paddingTop: "2%",
     [theme.breakpoints.down("sm")]: {
       width: "90%",
