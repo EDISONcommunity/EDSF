@@ -13,7 +13,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import backgroundImg from "../img/Untitled-4.png";
-import titleImg from "../img/home-oneliner-right.png";
+import titleImg from "../img/home-oneliner-right-new.png";
 import { Button } from "@material-ui/core";
 import MaterialLink from "../ReactComponents/MaterialLink";
 import MaterialList from "../ReactComponents/MaterialList";
