@@ -14,6 +14,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import backgroundImg from "../img/Untitled-4.png";
 import titleImg from "../img/home-oneliner-right-new-opaque.png";
+import edsfImg from "../img/edison2021-dsci-framework-web-v11.png";
 import { Button } from "@material-ui/core";
 import MaterialLink from "../ReactComponents/MaterialLink";
 import MaterialList from "../ReactComponents/MaterialList";
@@ -209,6 +210,45 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "5%",
     },
   },
+  headerBox: {
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    height: "40%",
+    marginTop: "2%",
+    marginBottom: "5%",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      marginBottom: "2%",
+    },
+  },
+  headerTextBox: {
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  headerImg: {
+    height: "90%",
+    padding: "2%",
+    [theme.breakpoints.down("sm")]: {
+      width: "80%",
+    },
+  },
+  headerImgBox: {
+    height: "100%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  headerText1: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "xx-large",
+    },
+  },
+  headerText2: {},
 }));
 
 export default function Home(props) {
@@ -216,11 +256,7 @@ export default function Home(props) {
 
   return (
     <Box className={classes.rootBox}>
-      <Grid container direction="column">
-        <Grid item xs>
-          <ImageTitle />
-        </Grid>
-      </Grid>
+      <Header />
       <Box className={classes.titleSpanBelow} />
       <Grid container direction="row" className={classes.gridCardContainer}>
         <Grid item className={classes.gridCardItem} sm>
@@ -688,6 +724,30 @@ export default function Home(props) {
     return (
       <Box className={classes.imgTitleCard}>
         <img src={titleImg} className={classes.imgTitle} alt="title" />
+      </Box>
+    );
+  }
+
+  function Header() {
+    return (
+      <Box className={classes.headerBox}>
+        <Box className={classes.headerTextBox}>
+          <Typography variant="h2" className={classes.headerText1}>
+            EDISON Community Initiative
+          </Typography>
+          <Box
+            fontFamily="fontFamily"
+            fontSize="h6.fontSize"
+            fontStyle="oblique"
+            m={1}
+            className={classes.headerText2}
+          >
+            Building the Data Science Profession
+          </Box>
+        </Box>
+        <Box className={classes.headerImgBox}>
+          <img src={edsfImg} className={classes.headerImg} alt="title" />
+        </Box>
       </Box>
     );
   }
