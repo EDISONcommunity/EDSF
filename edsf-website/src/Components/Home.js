@@ -248,7 +248,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "xx-large",
     },
   },
-  headerText2: {},
+  headerText2: { color: "#88888e" },
 }));
 
 export default function Home(props) {
@@ -737,8 +737,9 @@ export default function Home(props) {
           </Typography>
           <Box
             fontFamily="fontFamily"
-            fontSize="h6.fontSize"
+            fontSize="h5.fontSize"
             fontStyle="oblique"
+            fontWeight="fontWeightLight"
             m={1}
             className={classes.headerText2}
           >
