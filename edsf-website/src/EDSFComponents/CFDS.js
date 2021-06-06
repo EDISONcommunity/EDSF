@@ -7,6 +7,7 @@ import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Footer from "../Components/Footer";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    overflow: "scroll",
   },
   title: {
     marginBottom: "2%",
@@ -41,7 +43,7 @@ export default function CFDS() {
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box style={{height: "100%"}}>
       <Card variant="outlined" className={classes.card}>
         <Typography variant="h4" className={classes.title}>
           Data Science Competence Framework {"(CF-DS)"}
@@ -140,6 +142,7 @@ export default function CFDS() {
           .
         </Typography>
       </Card>
+      <Footer />
     </Box>
   );
 }

@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   contactCard: {
@@ -49,7 +50,21 @@ export default function Copyright() {
           non-commercial and educational purposes. The use or re-distribution of
           any resources from this site is strictly under obligation of written
           consent by Yuri Demchenko as the representative of the EDISON
-          Community.<p>&copy; 2021 Yuri Demchenko</p>
+          Community.{" "}<br/><br/>
+          <Typography variant="caption">
+            All Release work of the EDISON Community is licensed under a{" "}
+            <Link
+              target="_blank"
+              rel="noopener"
+              alt="creative commons"
+              href="http://creativecommons.org/licenses/by/4.0/"
+              style={{ color: "#FFC89E" }}
+            >
+              Creative Common Attribution 4.0 International License
+            </Link>
+            .
+          </Typography>
+          <p>&copy; 2021 Yuri Demchenko</p>
         </Typography>
       </Card>
     </Box>

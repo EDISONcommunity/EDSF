@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "1%",
   },
   footerSpanAbove: {
-    minHeight: "30%",
+    minHeight: "20%",
     [theme.breakpoints.down("sm")]: {
       height: "5%",
     },
