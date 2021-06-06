@@ -89,16 +89,16 @@ export default class App extends Component {
             <Route path="/upcoming">
               <Upcoming />
             </Route>
-            <Route path="/data-science-competence-framework">
+            <Route path="/data-science-competence-framework-cf-ds">
               <CFDS />
             </Route>
-            <Route path="/data-science-body-of-knowledge">
+            <Route path="/data-science-body-knowledge-ds-bok">
               <DSBoK />
             </Route>
-            <Route path="/data-science-model-curriculum">
+            <Route path="/data-science-model-curriculum-mc-ds">
               <MCDS />
             </Route>
-            <Route path="/data-science-professional-profiles">
+            <Route path="/data-science-professional-profiles-definition-dsp">
               <DSPP />
             </Route>
             <Route path="/edison-community">

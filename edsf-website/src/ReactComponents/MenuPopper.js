@@ -225,22 +225,22 @@ export default function MenuPopper() {
                     <TreeItem nodeId="6" label="Resources">
                       <MenuItemLink
                         label="Data Science Competence Framework"
-                        to="/data-science-competence-framework"
+                        to="/data-science-competence-framework-cf-ds"
                         onClick={handleClose}
                       />
                       <MenuItemLink
                         label="Data Science Body of Knowledge"
-                        to="/data-science-body-of-knowledge"
+                        to="/data-science-body-knowledge-ds-bok"
                         onClick={handleClose}
                       />
                       <MenuItemLink
                         label="Data Science Model Curriculum"
-                        to="/data-science-model-curriculum"
+                        to="/data-science-model-curriculum-mc-ds"
                         onClick={handleClose}
                       />
                       <MenuItemLink
                         label="Data Science Professional Profiles"
-                        to="/data-science-professional-profiles"
+                        to="/data-science-professional-profiles-definition-dsp"
                         onClick={handleClose}
                       />
                       <TreeItem nodeId="7" label="Releases">

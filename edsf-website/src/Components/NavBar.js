@@ -68,7 +68,7 @@ export default function ButtonAppBar() {
               className={classes.navItemText}
             >
               <RouterLink
-                to="/data-science-competence-framework"
+                to="/data-science-competence-framework-cf-ds"
                 className={classes.routerLink}
               >
                 Data Science Competence Framework <br />
@@ -83,7 +83,7 @@ export default function ButtonAppBar() {
               className={classes.navItemText}
             >
               <RouterLink
-                to="/data-science-body-of-knowledge"
+                to="/data-science-body-knowledge-ds-bok"
                 className={classes.routerLink}
               >
                 Data Science Body of Knowledge <br />
@@ -98,7 +98,7 @@ export default function ButtonAppBar() {
               className={classes.navItemText}
             >
               <RouterLink
-                to="/data-science-model-curriculum"
+                to="/data-science-model-curriculum-mc-ds"
                 className={classes.routerLink}
               >
                 Data Science Model Curriculum <br />
@@ -113,7 +113,7 @@ export default function ButtonAppBar() {
               className={classes.navItemText}
             >
               <RouterLink
-                to="/data-science-professional-profiles"
+                to="/data-science-professional-profiles-definition-dsp"
                 className={classes.routerLink}
               >
                 Data Science Professional Profiles <br />
