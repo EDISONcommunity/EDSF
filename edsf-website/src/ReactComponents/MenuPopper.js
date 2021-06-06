@@ -143,26 +143,6 @@ export default function MenuPopper() {
                         to="/edison-community"
                         onClick={handleClose}
                       />
-                      <MenuItemLink
-                        label="Data Science Competence Framework"
-                        to="/data-science-competence-framework"
-                        onClick={handleClose}
-                      />
-                      <MenuItemLink
-                        label="Data Science Body of Knowledge"
-                        to="/data-science-body-of-knowledge"
-                        onClick={handleClose}
-                      />
-                      <MenuItemLink
-                        label="Data Science Model Curriculum"
-                        to="/data-science-model-curriculum"
-                        onClick={handleClose}
-                      />
-                      <MenuItemLink
-                        label="Data Science Professional Profiles"
-                        to="/data-science-professional-profiles"
-                        onClick={handleClose}
-                      />
                     </TreeItem>
 
                     {/* Tutorial section   */}
@@ -243,6 +223,26 @@ export default function MenuPopper() {
                     </TreeItem>
 
                     <TreeItem nodeId="6" label="Resources">
+                      <MenuItemLink
+                        label="Data Science Competence Framework"
+                        to="/data-science-competence-framework"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Data Science Body of Knowledge"
+                        to="/data-science-body-of-knowledge"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Data Science Model Curriculum"
+                        to="/data-science-model-curriculum"
+                        onClick={handleClose}
+                      />
+                      <MenuItemLink
+                        label="Data Science Professional Profiles"
+                        to="/data-science-professional-profiles"
+                        onClick={handleClose}
+                      />
                       <TreeItem nodeId="7" label="Releases">
                         <MenuItemLink
                           label="All Releases"
@@ -316,6 +316,7 @@ export default function MenuPopper() {
                           />
                         </TreeItem>
                       </TreeItem>
+
                       <MenuItemLink
                         label="Curricula Design"
                         onClick={handleClose}
@@ -353,18 +354,26 @@ export default function MenuPopper() {
                       />
                     </TreeItem>
 
-                    {/* Contact section   */}
-                    <MenuItemLink
-                      label="Contact"
-                      to="/contact"
-                      onClick={handleClose}
-                    />
-                    {/* Privacy policy section   */}
-                    <MenuItemLink
-                      label="Privacy policy"
-                      to="/privacy-policy"
-                      onClick={handleClose}
-                    />
+                    <TreeItem nodeId="11" label="Imprint">
+                      {/* Contact section   */}
+                      <MenuItemLink
+                        label="Contact"
+                        to="/contact"
+                        onClick={handleClose}
+                      />
+                      {/* Privacy policy section   */}
+                      <MenuItemLink
+                        label="Privacy Policy"
+                        to="/privacy-policy"
+                        onClick={handleClose}
+                      />
+                      {/* Copyright section   */}
+                      <MenuItemLink
+                        label="Copyright"
+                        to="/copyright"
+                        onClick={handleClose}
+                      />
+                    </TreeItem>
                   </TreeView>
                 </ClickAwayListener>
               </Paper>

@@ -1,0 +1,57 @@
+import React from "react";
+import Typography from "@material-ui/core/Typography";
+import Card from "@material-ui/core/Card";
+import { makeStyles } from "@material-ui/core/styles";
+import Box from "@material-ui/core/Box";
+
+const useStyles = makeStyles((theme) => ({
+  contactCard: {
+    width: "50%",
+    height: "50%",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+    padding: "5%",
+    overflow: "scroll",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10%",
+    },
+  },
+  contactBox: {
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    paddingTop: "3%",
+  },
+  title: {
+    paddingBottom: "3%",
+  },
+  link: {
+    textDecoration: "none",
+  },
+}));
+
+export default function Copyright() {
+  const classes = useStyles();
+
+  return (
+    <Box className={classes.contactBox}>
+      <Card variant="outlined" className={classes.contactCard}>
+        <Typography variant="h4" className={classes.title}>
+          Copyright
+        </Typography>
+        <Typography variant="caption" align="left" className={classes.text}>
+          All resources that are embedded within the website are for
+          non-commercial and educational purposes. The use or re-distribution of
+          any resources from this site is strictly under obligation of written
+          consent by Yuri Demchenko as the representative of the EDISON
+          Community.<p>&copy; 2021 Yuri Demchenko</p>
+        </Typography>
+      </Card>
+    </Box>
+  );
+}

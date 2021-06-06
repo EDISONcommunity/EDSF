@@ -96,6 +96,16 @@ export default function Footer() {
               Privacy Policy
             </Typography>
           </RouterLink>
+          <RouterLink to="/copyright" style={{ textDecoration: "none" }}>
+            <Typography
+              variant="subtitle1"
+              color="textSecondary"
+              style={{ paddingLeft: "10px" }}
+              className={classes.privacyText}
+            >
+              &copy; 2021 Yuri Demchenko
+            </Typography>
+          </RouterLink>
           <Box flexGrow="1" />
         </Grid>
         <Grid item xs className={classes.footerGridItemMates}>

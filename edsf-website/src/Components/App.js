@@ -1,6 +1,8 @@
 import NavBar from "./NavBar";
 import Home from "./Home";
 import Contact from "./Contact";
+import PrivacyPolicy from "./PrivacyPolicy";
+import Copyright from "./Copyright";
 import Upcoming from "./Upcoming";
 import CFDS from "../EDSFComponents/CFDS";
 import DSBoK from "../EDSFComponents/DSBoK";
@@ -44,7 +46,6 @@ import MarkDownComponent from "../ReactComponents/MarkDownComponent";
 import PDFPage from "../ReactComponents/PDFPage";
 import { Switch, Route } from "react-router-dom";
 import Cookiesnackbar from "../ReactComponents/Cookiesnackbar";
-import PrivacyPolicy from "./PrivacyPolicy";
 import React, { Component } from "react";
 
 export default class App extends Component {
@@ -81,6 +82,9 @@ export default class App extends Component {
             </Route>
             <Route path="/privacy-policy">
               <PrivacyPolicy />
+            </Route>
+            <Route path="/copyright">
+              <Copyright />
             </Route>
             <Route path="/upcoming">
               <Upcoming />
