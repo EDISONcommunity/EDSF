@@ -32,6 +32,7 @@ import release3DSPP from "../files/EDSFReleases/EDISON_DSPP-release3-v07.pdf";
 import release2MCDS from "../files/EDSFReleases/EDISON_MC-DS-release2-v03.pdf";
 import releasep3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v04.pdf";
 import release3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v05.pdf";
+import DSPandFAIR from "../EDSFComponents/Resources/DSPandFAIR";
 import Books from "../EDSFComponents/Resources/Books";
 import CurriculaDesign from "../EDSFComponents/Resources/CurriculaDesign";
 import Datasets from "../EDSFComponents/Resources/Datasets";
@@ -172,6 +173,9 @@ export default class App extends Component {
             </Route>
             <Route path="/resources-edsf-release2-mcds">
               <PDFPage pdf={release2MCDS} />
+            </Route>
+            <Route path="/data-stewardship-professional-and-fair-competence-framework">
+              <DSPandFAIR />
             </Route>
             <Route path="/releases">
               <Releases />

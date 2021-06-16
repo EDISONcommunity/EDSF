@@ -316,7 +316,11 @@ export default function MenuPopper() {
                           />
                         </TreeItem>
                       </TreeItem>
-
+                      <MenuItemLink
+                        label="Data Stewardship Professional and FAIR Competence Framework"
+                        onClick={handleClose}
+                        to="/data-stewardship-professional-and-fair-competence-framework"
+                      ></MenuItemLink>
                       <MenuItemLink
                         label="Curricula Design"
                         onClick={handleClose}

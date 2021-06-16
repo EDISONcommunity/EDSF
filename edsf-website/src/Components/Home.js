@@ -148,12 +148,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "flex-start",
     paddingBottom: "0%",
   },
-  titleSpanBelow: {
-    minHeight: "1%",
-    [theme.breakpoints.down("sm")]: {
-      minHeight: "1%",
-    },
-  },
   linkList: {
     textAlign: "left",
     display: "flex",
@@ -216,10 +210,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "40%",
     marginTop: "2%",
-    marginBottom: "5%",
+    marginBottom: "2%",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      marginBottom: "2%",
     },
   },
   headerTextBox: {
@@ -257,7 +250,6 @@ export default function Home(props) {
   return (
     <Box className={classes.rootBox}>
       <Header />
-      <Box className={classes.titleSpanBelow} />
       <Grid container direction="row" className={classes.gridCardContainer}>
         <Grid item className={classes.gridCardItem} sm>
           <ResourcesComponent />
@@ -311,15 +303,69 @@ export default function Home(props) {
         </Typography>
         <Card className={classes.cardTutorials} elevation={9}>
           <ResourcesEDSFReleases />
+          <ResourcesDSPandFAIR />
           <ResourcesEDSFCurriculaDesign />
           <ResourcesEDISONProjects />
-          <ResourcesEDISONDeliverables />
+          {/* <ResourcesEDISONDeliverables /> */}
           <ResourcesEDSFPresentations />
           <ResourcesEDISONPublications />
           <ResourcesBooks />
           <ResourcesDatasets />
         </Card>
       </React.Fragment>
+    );
+  }
+
+  function ResourcesDSPandFAIR() {
+    return (
+      <List>
+        <ListItem>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/data-stewardship-professional-and-fair-competence-framework"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            Data Stewardship Professional and FAIR Competence Framework
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography variant="caption">
+            <Link
+              href="https://zenodo.org/record/4562089#.YIBZeegzZPZ"
+              target="_blank"
+              rel="noopener"
+              style={{ textDecoration: "none" }}
+              className={classes.linkListText}
+            >
+              FAIR Competence Framework for Higher Education {"("}Data
+              Stewardship Professional Competence Framework{")"}
+            </Link>
+            , FAIRsFAIR Project Deliverable D7.3
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography variant="caption">
+            {" "}
+            Yuri Demchenko, Lennart Stoy,{" "}
+            <Link
+              href="http://www.uazone.org/demch/papers/educon2021-data-stewardship-competence-fw-v02.pdf"
+              target="_blank"
+              rel="noopener"
+              style={{ textDecoration: "none" }}
+              className={classes.linkListText}
+            >
+              Research Data Management and Data Stewardship Competences in
+              University Curriculum
+            </Link>
+            , In Proc. Data Science Education {"("}DSE
+            {")"}, Special Session, EDUCON2021 – IEEE Global Engineering
+            Education Conference, 21-23 April 2021, Vienna, Austria
+          </Typography>
+        </ListItem>
+      </List>
     );
   }
 
@@ -732,9 +778,14 @@ export default function Home(props) {
     return (
       <Box className={classes.headerBox}>
         <Box className={classes.headerTextBox}>
-          <Typography variant="h2" className={classes.headerText1}>
+          <Box
+            fontFamily="fontFamily"
+            fontSize="h3.fontSize"
+            fontWeight="fontWeightLight"
+            className={classes.headerText1}
+          >
             EDISON Community Initiative
-          </Typography>
+          </Box>
           <Box
             fontFamily="fontFamily"
             fontSize="h5.fontSize"
