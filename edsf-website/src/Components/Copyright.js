@@ -49,7 +49,7 @@ export default function Copyright() {
           All resources that are embedded within the website are for
           non-commercial and educational purposes. The use or re-distribution of
           any resources from this site is strictly under obligation of written
-          consent by Yuri Demchenko as the representative of the EDISON
+          consent by Yuri Demchenko as the maintainer of the EDISON
           Community.{" "}<br/><br/>
           <Typography variant="caption">
             All Release work of the EDISON Community is licensed under a{" "}
@@ -64,7 +64,7 @@ export default function Copyright() {
             </Link>
             .
           </Typography>
-          <p>&copy; 2021 Yuri Demchenko</p>
+          <p>&copy; 2021 EDISON Community</p>
         </Typography>
       </Card>
     </Box>

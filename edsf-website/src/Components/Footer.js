@@ -103,7 +103,7 @@ export default function Footer() {
               style={{ paddingLeft: "10px" }}
               className={classes.privacyText}
             >
-              &copy; 2021 Yuri Demchenko
+              &copy; 2021 EDISON Community
             </Typography>
           </RouterLink>
           <Box flexGrow="1" />
