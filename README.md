@@ -8,7 +8,7 @@ React is a Javascript (UI) library which is a tool for building UI components. A
 
 React allows to build components that are Javascript functions and return HTML code. Components can come as a function or a class, which can also be transferred into one another. Inside a component, you can embed HTML and Javascript as well. 
 
-Example of a Welcome component:
+Example of a `<Welcome/>` component:
 
 ```
 function Welcome() {
