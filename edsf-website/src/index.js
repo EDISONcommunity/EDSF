@@ -12,6 +12,7 @@ import "./index.css";
 
 const trackingId = process.env.REACT_APP_GA_MEASUREMENT_ID;
 const history = createBrowserHistory();
+const basename = "/EDSF"
 
 export default class MyApp extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ export default class MyApp extends Component {
   render() {
     if (this.state.cookiesEnabled) {
       return (
-        <Analytics id={trackingId} basename="/EDSF" debug>
+        <Analytics id={trackingId} basename={basename} debug>
           <App
             cookiesEnabled={this.state.cookiesEnabled}
             cookiesSet={this.state.cookiesSet}
@@ -70,7 +71,7 @@ export default class MyApp extends Component {
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Router basename="/EDSF" history={history}>
+      <Router basename={basename} history={history}>
         <MyApp />
       </Router>
     </ThemeProvider>

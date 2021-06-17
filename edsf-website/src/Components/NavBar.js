@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Icon from "@material-ui/core/Icon";
 import Typography from "@material-ui/core/Typography";
-import MenuPopper from "../ReactComponents/MenuPopper";
+import MenuPopper from "../Components/MenuPopper";
 import logoEdison from "../img/edison_logo.png";
 import Box from "@material-ui/core/Box";
 import { Link as RouterLink } from "react-router-dom";
