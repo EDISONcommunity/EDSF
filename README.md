@@ -83,10 +83,10 @@ For a more extensive and detailed introduction, see https://www.w3schools.com/re
 The `website` branch hosts the React website development code under the `edsf-website` directory.
 
 For most development, head to the `src` directory in the `edsf-website` directory. 
-The file `index.js` is the top node of development. It is built around to the root node in the `index.html` file located in the `public` directory. 
+The file `index.js` is the top node of development. It is built around the root node in the `index.html` file located in the `public` directory. 
 
 ## Dependencies
-In `edsf-website`, install React packages: `npm i`
+Install React packages: `npm i`
 
 ## Running localhost
 Run `npm start` to start the local server.
@@ -94,12 +94,13 @@ Run `npm start` to start the local server.
 ## Deploying GitHub Page 
 Run `npm run deploy` from the `website` branch to deploy the website build to the `gh-pages` branch. GitHub fetches the content from there (see Settings ... Pages).
 
-The settings for the automatic deployment to the GitHub Repository can be changed in the package.json file in the `edsf-website` directory by two steps. 
+The settings for the automatic deployment to the GitHub Repository can be changed in the `package.json` file in the `edsf-website` directory by two steps. 
+
 1. You can change the branch where the build will be deployed to by replacing the `gh-pages` branch by another branch (do not forget to change the branch as well on the server; for github, head to the Github Pages section and indicate which branch to use): 
    
 `"deploy": "gh-pages -d build"`
 
-1. Change the website url:
+2. Change the website url:
 
 `"homepage": "https://edisoncommunity.github.io/EDSF/"`
 
