@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EDSF/static/css/main.b8629051.chunk.css",
-    "main.js": "/EDSF/static/js/main.cb78617a.chunk.js",
-    "main.js.map": "/EDSF/static/js/main.cb78617a.chunk.js.map",
+    "main.js": "/EDSF/static/js/main.2add6819.chunk.js",
+    "main.js.map": "/EDSF/static/js/main.2add6819.chunk.js.map",
     "runtime-main.js": "/EDSF/static/js/runtime-main.be6d99b2.js",
     "runtime-main.js.map": "/EDSF/static/js/runtime-main.be6d99b2.js.map",
     "static/js/2.65c516cf.chunk.js": "/EDSF/static/js/2.65c516cf.chunk.js",
@@ -33,6 +33,7 @@
     "static/media/EDSFhome.cdbaa0ce.md": "/EDSF/static/media/EDSFhome.cdbaa0ce.md",
     "static/media/MATES-ED2MIT-2021-\"Big-Data-Infrastructure-Technologies-for-Data-Analytics\".d027943f.md": "/EDSF/static/media/MATES-ED2MIT-2021-\"Big-Data-Infrastructure-Technologies-for-Data-Analytics\".d027943f.md",
     "static/media/MATES-ED2MIT-2021-\"Industrial-Data-Spaces,-Organisational-Data-Management-&-Governance-for-the-Maritime-Sector\".7ba693ca.md": "/EDSF/static/media/MATES-ED2MIT-2021-\"Industrial-Data-Spaces,-Organisational-Data-Management-&-Governance-for-the-Maritime-Sector\".7ba693ca.md",
+    "static/media/MATES-ED2MIT-Training-\"Introduction-to-Data-Science-&-Analytics-Foundations-for-the-Maritime-Sector\".392ca3b8.md": "/EDSF/static/media/MATES-ED2MIT-Training-\"Introduction-to-Data-Science-&-Analytics-Foundations-for-the-Maritime-Sector\".392ca3b8.md",
     "static/media/MatesMasterLogo_COL.11cc6812.png": "/EDSF/static/media/MatesMasterLogo_COL.11cc6812.png",
     "static/media/Untitled-4.e29008ce.png": "/EDSF/static/media/Untitled-4.e29008ce.png",
     "static/media/Webinar-MATES-ED2MIT-\"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry\".3d819cc6.md": "/EDSF/static/media/Webinar-MATES-ED2MIT-\"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry\".3d819cc6.md",
@@ -43,6 +44,6 @@
     "static/js/runtime-main.be6d99b2.js",
     "static/js/2.65c516cf.chunk.js",
     "static/css/main.b8629051.chunk.css",
-    "static/js/main.cb78617a.chunk.js"
+    "static/js/main.2add6819.chunk.js"
   ]
 }
