@@ -12,6 +12,7 @@ import about from "../EDSF.wiki/EDSFhome.md";
 import tutorial2019Bdit4dal from "../EDSF.wiki/(4)-BDIT4DA-Tutorial-HPCS2019.md";
 import tutorial2019Edsf from "../EDSF.wiki/(3)-EDSF-Tutorial-Summer-2019-Data-Science-Competence-and-Education.md";
 import tutorial2020MatesBdit4da from '../EDSF.wiki/Webinar-MATES-ED2MIT-"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry".md';
+import tutorial2021MatesDsfa from '../EDSF.wiki/MATES-ED2MIT-Training-"Introduction-to-Data-Science-&-Analytics-Foundations-for-the-Maritime-Sector".md';
 import tutorial2021MatesDmg from '../EDSF.wiki/MATES-ED2MIT-2021-"Industrial-Data-Spaces,-Organisational-Data-Management-&-Governance-for-the-Maritime-Sector".md';
 import tutorial2021MatesBdit4da from '../EDSF.wiki/MATES-ED2MIT-2021-"Big-Data-Infrastructure-Technologies-for-Data-Analytics".md';
 import workshop2018Edison from "../EDSF.wiki/EDISON-Workshop-31-May-2018-Denmark.md";
@@ -114,29 +115,32 @@ export default class App extends Component {
             <Route path="/tutorials-2020-mates-ed2mit-bdit4da">
               <MarkDownComponent markdown={tutorial2020MatesBdit4da} key={3} />
             </Route>
+            <Route path="/tutorials-2021-mates-ed2mit-dsaf">
+              <MarkDownComponent markdown={tutorial2021MatesDsfa} key={4} />
+            </Route>
             <Route path="/tutorials-2021-mates-ed2mit-bdit4da-january-february">
-              <MarkDownComponent markdown={tutorial2021MatesBdit4da} key={4} />
+              <MarkDownComponent markdown={tutorial2021MatesBdit4da} key={5} />
             </Route>
             <Route path="/tutorials-2021-mates-ed2mit-dmg-february">
-              <MarkDownComponent markdown={tutorial2021MatesDmg} key={5} />
+              <MarkDownComponent markdown={tutorial2021MatesDmg} key={6} />
             </Route>
             <Route path="/workshops-2018-edison-may-denmark">
-              <MarkDownComponent markdown={workshop2018Edison} key={6} />
+              <MarkDownComponent markdown={workshop2018Edison} key={7} />
             </Route>
             <Route path="/workshops-2018-edsf-release3-july-agenda">
-              <MarkDownComponent markdown={workshop2018Edsfr3Agenda} key={7} />
+              <MarkDownComponent markdown={workshop2018Edsfr3Agenda} key={8} />
             </Route>
             <Route path="/workshops-2018-edsf-release3-july-uva">
-              <MarkDownComponent markdown={workshop2018Edsfr3Uva} key={8} />
+              <MarkDownComponent markdown={workshop2018Edsfr3Uva} key={9} />
             </Route>
             <Route path="/workshops-2019-dtw-september-sandiego">
-              <MarkDownComponent markdown={workshop2019Dtw} key={9} />
+              <MarkDownComponent markdown={workshop2019Dtw} key={10} />
             </Route>
             <Route path="/workshops-2019-edsf-release4-november">
-              <MarkDownComponent markdown={workshop2019Edfsr4} key={10} />
+              <MarkDownComponent markdown={workshop2019Edfsr4} key={11} />
             </Route>
             <Route path="/workshops-2020-fair-competences-october">
-              <MarkDownComponent markdown={workshop2020Fair} key={11} />
+              <MarkDownComponent markdown={workshop2020Fair} key={12} />
             </Route>
             <Route path="/resources-edsf-release3-cfds">
               <PDFPage pdf={release3CFDS} />

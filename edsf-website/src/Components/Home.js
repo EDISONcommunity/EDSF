@@ -617,6 +617,20 @@ export default function Home(props) {
               <ListItem
                 button
                 component={RouterLink}
+                to="/tutorials-2021-mates-ed2mit-dsaf"
+                color="secondary"
+              >
+                <ListItemText
+                  primary='MATES ED2MIT "Introduction to Data Science & Analytics Foundations for the Maritime Sector"'
+                  secondary="Self-study course 2021"
+                />
+              </ListItem>
+            </CardActions>
+
+            <CardActions className={classes.yearActions}>
+              <ListItem
+                button
+                component={RouterLink}
                 to="/tutorials-2021-mates-ed2mit-dmg-february"
                 color="secondary"
               >

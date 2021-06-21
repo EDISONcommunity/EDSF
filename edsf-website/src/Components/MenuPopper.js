@@ -147,17 +147,22 @@ export default function MenuPopper() {
 
                     {/* Tutorial section   */}
                     <TreeItem nodeId="1" label="Trainings">
-                      <MenuItemLink
+                      {/* <MenuItemLink
                         label="All Trainings and Material"
                         to="/trainings-and-workshops"
                         onClick={handleClose}
-                      />
+                      /> */}
                       <MenuItemLink
                         label="Upcoming events"
                         to="/upcoming"
                         onClick={handleClose}
                       />
                       <TreeItem nodeId="2" label="2021">
+                        <MenuItemLink
+                          label="MATES ED2MIT DSAF Self-Study Course"
+                          onClick={handleClose}
+                          to="/tutorials-2021-mates-ed2mit-dsaf"
+                        ></MenuItemLink>
                         <MenuItemLink
                           label="MATES ED2MIT DMG 16, 18, 23 February"
                           onClick={handleClose}

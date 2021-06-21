@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -12,11 +13,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10%",
     margin: "auto",
     padding: "10%",
-    paddingTop: "2%"
+    paddingTop: "2%",
   },
   title: {
     marginBottom: "2%",
-  }
+  },
+  link: {
+    textDecoration: "none",
+    color: "#8f857d",
+  },
 }));
 
 export default function Upcoming() {
@@ -29,6 +34,16 @@ export default function Upcoming() {
           Upcoming Trainings and Workshops
         </Typography>
         <Typography>
+          Next course: <br/>
+          <RouterLink
+            to="/tutorials-2021-mates-ed2mit-dsaf"
+            className={classes.link}
+          >
+            Introduction to Data Science and Analytics Foundations for the
+            Maritime Sector
+          </RouterLink>
+        </Typography>
+        {/* <Typography>
           For upcoming trainings in cooperation with{" "}
           <Link
             target="_blank"
@@ -48,7 +63,7 @@ export default function Upcoming() {
             website
           </Link>{" "}
           for registration and further information.
-        </Typography>
+        </Typography> */}
       </Card>
     </Box>
   );
