@@ -5,8 +5,6 @@ import Paper from "@material-ui/core/Paper";
 import Footer from "../../../Components/Footer";
 import backgroundImg from "../../../img/Untitled-4.png";
 import { Typography } from "@material-ui/core";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 import MATESED2MITTutorial from "./MATESED2MITTutorial";
 
 import ed2mit03practice from "../../../files/ed2mit/ed2mit_DSAF/ed2mit03practice01-dsaf-work-environ-prep-v01.pptx.pdf";

@@ -119,18 +119,15 @@ export default class App extends Component {
             <Route path="/tutorials-2020-mates-ed2mit-bdit4da">
               <MarkDownComponent markdown={tutorial2020MatesBdit4da} key={3} />
             </Route>
-            {/* <Route path="/tutorials-2021-mates-ed2mit-dsaf">
-              <MarkDownComponent markdown={tutorial2021MatesDsfa} key={4} />
-            </Route> */}
-            <MATESED2MIT2021DSAF />
-            {/* <Route path="/tutorials-2021-mates-ed2mit-bdit4da-january-february">
-              <MarkDownComponent markdown={tutorial2021MatesBdit4da} key={5} />
-            </Route> */}
-            <MATESED2MIT2021BDIT4DA />
-            {/* <Route path="/tutorials-2021-mates-ed2mit-dmg-february">
-              <MarkDownComponent markdown={tutorial2021MatesDmg} key={6} />
-            </Route> */}
-            <MATESED2MIT2021DMG />
+            <Route path="/tutorials-2021-mates-ed2mit-dsaf">
+              <MATESED2MIT2021DSAF />
+            </Route>
+            <Route path="/tutorials-2021-mates-ed2mit-bdit4da-january-february">
+              <MATESED2MIT2021BDIT4DA />{" "}
+            </Route>
+            <Route path="/tutorials-2021-mates-ed2mit-dmg-february">
+              <MATESED2MIT2021DMG />{" "}
+            </Route>
             <Route path="/workshops-2018-edison-may-denmark">
               <MarkDownComponent markdown={workshop2018Edison} key={7} />
             </Route>
