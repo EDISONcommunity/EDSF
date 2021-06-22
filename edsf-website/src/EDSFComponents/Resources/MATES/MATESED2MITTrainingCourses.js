@@ -8,7 +8,7 @@ import { Link as RouterLink } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Footer from "../../../Components/Footer";
-import MATESED2MITTutorial from "./MATESED2MITTutorial";
+import MATESED2MITTrainings from "./MATESED2MITTrainings";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -50,45 +50,17 @@ export default function MATESED2MITTrainingCourses() {
         <Typography variant="h4" className={classes.title}>
           MATES ED2MIT Training Courses
         </Typography>
-        <Typography variant="subtitle1">
-          Here you can find all information about offered MATES ED2MIT Trainings and Courses. 
-        </Typography>
-        <List>
-          <ListItem>
-            <Typography variant="caption">
-              <Link
-                href="https://zenodo.org/record/4562089#.YIBZeegzZPZ"
-                target="_blank"
-                rel="noopener"
-                style={{ textDecoration: "none" }}
-                className={classes.link}
-              >
-                FAIR Competence Framework for Higher Education {"("}Data
-                Stewardship Professional Competence Framework{")"}
-              </Link>
-              , FAIRsFAIR Project Deliverable D7.3
-            </Typography>
-          </ListItem>
-          <ListItem>
-            <Typography variant="caption">
-              {" "}
-              Yuri Demchenko, Lennart Stoy,{" "}
-              <Link
-                href="http://www.uazone.org/demch/papers/educon2021-data-stewardship-competence-fw-v02.pdf"
-                target="_blank"
-                rel="noopener"
-                style={{ textDecoration: "none" }}
-                className={classes.link}
-              >
-                Research Data Management and Data Stewardship Competences in
-                University Curriculum
-              </Link>
-              , In Proc. Data Science Education {"("}DSE
-              {")"}, Special Session, EDUCON2021 – IEEE Global Engineering
-              Education Conference, 21-23 April 2021, Vienna, Austria
-            </Typography>
-          </ListItem>
-        </List>
+       <Box
+            fontFamily="fontFamily"
+            fontSize="subtitle1.fontSize"
+            fontStyle="italic"
+            fontWeight="fontWeightLight"
+            className={classes.headerText1}
+          >
+          Here you can find all information about offered MATES ED2MIT Trainings
+          and Courses.
+        </Box>
+        <MATESED2MITTrainings />
       </Card>
       <Footer />
     </Box>

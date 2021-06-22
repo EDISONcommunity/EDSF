@@ -228,33 +228,65 @@ export default function MenuPopper() {
                     </TreeItem>
 
                     <TreeItem nodeId="6" label="Resources">
-                      <MenuItemLink
-                        label="Data Science Competence Framework"
-                        to="/data-science-competence-framework-cf-ds"
-                        onClick={handleClose}
-                      />
-                      <MenuItemLink
-                        label="Data Science Body of Knowledge"
-                        to="/data-science-body-knowledge-ds-bok"
-                        onClick={handleClose}
-                      />
-                      <MenuItemLink
-                        label="Data Science Model Curriculum"
-                        to="/data-science-model-curriculum-mc-ds"
-                        onClick={handleClose}
-                      />
-                      <MenuItemLink
-                        label="Data Science Professional Profiles"
-                        to="/data-science-professional-profiles-definition-dsp"
-                        onClick={handleClose}
-                      />
-                      <TreeItem nodeId="7" label="Releases">
+                      <TreeItem
+                        nodeId="7"
+                        label="EDSF"
+                      >
+                        <MenuItemLink
+                          label="Data Science Competence Framework"
+                          to="/data-science-competence-framework-cf-ds"
+                          onClick={handleClose}
+                        />
+                        <MenuItemLink
+                          label="Data Science Body of Knowledge"
+                          to="/data-science-body-knowledge-ds-bok"
+                          onClick={handleClose}
+                        />
+                        <MenuItemLink
+                          label="Data Science Model Curriculum"
+                          to="/data-science-model-curriculum-mc-ds"
+                          onClick={handleClose}
+                        />
+                        <MenuItemLink
+                          label="Data Science Professional Profiles"
+                          to="/data-science-professional-profiles-definition-dsp"
+                          onClick={handleClose}
+                        />
+                      </TreeItem>
+
+                      <TreeItem
+                        nodeId="8"
+                        label="MATES ED2MIT Training Courses"
+                      >
+                        <MenuItemLink
+                          label="Introduction to Data Science & Analytics Foundations for the Maritime Sector"
+                          to="/tutorials-2021-mates-ed2mit-dsaf"
+                          onClick={handleClose}
+                        />
+                        <MenuItemLink
+                          label="Industrial Data Spaces, Organisational Data Management & Governance for the Maritime Sector"
+                          to="/tutorials-2021-mates-ed2mit-dmg-february"
+                          onClick={handleClose}
+                        />
+                        <MenuItemLink
+                          label="Big Data Infrastructure Technologies for Data Analytics"
+                          to="/tutorials-2021-mates-ed2mit-bdit4da-january-february"
+                          onClick={handleClose}
+                        />
+                        <MenuItemLink
+                          label="Introduction to Big Data and Data Management for Maritime Industry"
+                          to="/tutorials-2020-mates-ed2mit-bdit4da"
+                          onClick={handleClose}
+                        />
+                      </TreeItem>
+
+                      <TreeItem nodeId="9" label="Releases">
                         <MenuItemLink
                           label="All Releases"
                           onClick={handleClose}
                           to="/releases"
                         />
-                        <TreeItem nodeId="8" label="Release 3">
+                        <TreeItem nodeId="10" label="Release 3">
                           <MenuItemLink
                             label="CF-DS"
                             onClick={handleClose}
@@ -276,7 +308,7 @@ export default function MenuPopper() {
                             to="/resources-edsf-release3-dspp"
                           />
                         </TreeItem>
-                        <TreeItem nodeId="9" label="Pre-Release 3">
+                        <TreeItem nodeId="11" label="Pre-Release 3">
                           <MenuItemLink
                             label="CF-DS"
                             onClick={handleClose}
@@ -298,7 +330,7 @@ export default function MenuPopper() {
                             to="/resources-edsf-prerelease3-dspp"
                           />
                         </TreeItem>
-                        <TreeItem nodeId="10" label="Release 2">
+                        <TreeItem nodeId="12" label="Release 2">
                           <MenuItemLink
                             label="CF-DS"
                             onClick={handleClose}
@@ -363,7 +395,7 @@ export default function MenuPopper() {
                       />
                     </TreeItem>
 
-                    <TreeItem nodeId="11" label="Imprint">
+                    <TreeItem nodeId="13" label="Imprint">
                       {/* Contact section   */}
                       <MenuItemLink
                         label="Contact"
