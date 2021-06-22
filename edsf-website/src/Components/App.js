@@ -12,9 +12,9 @@ import about from "../EDSF.wiki/EDSFhome.md";
 import tutorial2019Bdit4dal from "../EDSF.wiki/(4)-BDIT4DA-Tutorial-HPCS2019.md";
 import tutorial2019Edsf from "../EDSF.wiki/(3)-EDSF-Tutorial-Summer-2019-Data-Science-Competence-and-Education.md";
 import tutorial2020MatesBdit4da from '../EDSF.wiki/Webinar-MATES-ED2MIT-"Introduction-to-Big-Data-and-Data-Management-for-Maritime-Industry".md';
-import tutorial2021MatesDsfa from '../EDSF.wiki/MATES-ED2MIT-Training-"Introduction-to-Data-Science-&-Analytics-Foundations-for-the-Maritime-Sector".md';
-import tutorial2021MatesDmg from '../EDSF.wiki/MATES-ED2MIT-2021-"Industrial-Data-Spaces,-Organisational-Data-Management-&-Governance-for-the-Maritime-Sector".md';
-import tutorial2021MatesBdit4da from '../EDSF.wiki/MATES-ED2MIT-2021-"Big-Data-Infrastructure-Technologies-for-Data-Analytics".md';
+// import tutorial2021MatesDsfa from '../EDSF.wiki/MATES-ED2MIT-Training-"Introduction-to-Data-Science-&-Analytics-Foundations-for-the-Maritime-Sector".md';
+// import tutorial2021MatesDmg from '../EDSF.wiki/MATES-ED2MIT-2021-"Industrial-Data-Spaces,-Organisational-Data-Management-&-Governance-for-the-Maritime-Sector".md';
+// import tutorial2021MatesBdit4da from '../EDSF.wiki/MATES-ED2MIT-2021-"Big-Data-Infrastructure-Technologies-for-Data-Analytics".md';
 import workshop2018Edison from "../EDSF.wiki/EDISON-Workshop-31-May-2018-Denmark.md";
 import workshop2018Edsfr3Agenda from "../EDSF.wiki/Agenda---EDSFr3-Design-Workshop-(18-19-July-2018).md";
 import workshop2018Edsfr3Uva from "../EDSF.wiki/EDSF-Release-3-Design-Workshop-18-19-July-2018-(UvA).md";
@@ -33,7 +33,10 @@ import release3DSPP from "../files/EDSFReleases/EDISON_DSPP-release3-v07.pdf";
 import release2MCDS from "../files/EDSFReleases/EDISON_MC-DS-release2-v03.pdf";
 import releasep3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v04.pdf";
 import release3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v05.pdf";
-import MATESED2MITTrainingCourses from "../EDSFComponents/Resources/MATESED2MITTrainingCourses";
+import MATESED2MITTrainingCourses from "../EDSFComponents/Resources/MATES/MATESED2MITTrainingCourses";
+import MATESED2MIT2021BDIT4DA from "../EDSFComponents/Resources/MATES/MATESED2MIT2021BDIT4DA";
+import MATESED2MIT2021DMG from "../EDSFComponents/Resources/MATES/MATESED2MIT2021DMG";
+import MATESED2MIT2021DSAF from "../EDSFComponents/Resources/MATES/MATESED2MIT2021DSAF";
 import DSPandFAIR from "../EDSFComponents/Resources/DSPandFAIR";
 import Books from "../EDSFComponents/Resources/Books";
 import CurriculaDesign from "../EDSFComponents/Resources/CurriculaDesign";
@@ -116,15 +119,18 @@ export default class App extends Component {
             <Route path="/tutorials-2020-mates-ed2mit-bdit4da">
               <MarkDownComponent markdown={tutorial2020MatesBdit4da} key={3} />
             </Route>
-            <Route path="/tutorials-2021-mates-ed2mit-dsaf">
+            {/* <Route path="/tutorials-2021-mates-ed2mit-dsaf">
               <MarkDownComponent markdown={tutorial2021MatesDsfa} key={4} />
-            </Route>
-            <Route path="/tutorials-2021-mates-ed2mit-bdit4da-january-february">
+            </Route> */}
+            <MATESED2MIT2021DSAF />
+            {/* <Route path="/tutorials-2021-mates-ed2mit-bdit4da-january-february">
               <MarkDownComponent markdown={tutorial2021MatesBdit4da} key={5} />
-            </Route>
-            <Route path="/tutorials-2021-mates-ed2mit-dmg-february">
+            </Route> */}
+            <MATESED2MIT2021BDIT4DA />
+            {/* <Route path="/tutorials-2021-mates-ed2mit-dmg-february">
               <MarkDownComponent markdown={tutorial2021MatesDmg} key={6} />
-            </Route>
+            </Route> */}
+            <MATESED2MIT2021DMG />
             <Route path="/workshops-2018-edison-may-denmark">
               <MarkDownComponent markdown={workshop2018Edison} key={7} />
             </Route>

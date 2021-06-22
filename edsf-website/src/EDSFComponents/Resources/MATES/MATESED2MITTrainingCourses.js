@@ -7,7 +7,8 @@ import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Footer from "../../Components/Footer";
+import Footer from "../../../Components/Footer";
+import MATESED2MITTutorial from "./MATESED2MITTutorial";
 
 const useStyles = makeStyles((theme) => ({
   card: {

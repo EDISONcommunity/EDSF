@@ -3,7 +3,6 @@ import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -43,27 +42,6 @@ export default function Upcoming() {
             Maritime Sector
           </RouterLink>
         </Typography>
-        {/* <Typography>
-          For upcoming trainings in cooperation with{" "}
-          <Link
-            target="_blank"
-            href="https://www.projectmates.eu/"
-            rel="noopener"
-            color="blue"
-          >
-            MATES
-          </Link>
-          , please check their{" "}
-          <Link
-            target="_blank"
-            href="https://www.projectmates.eu/pilotexperience/ed2mit/"
-            rel="noopener"
-            color="blue"
-          >
-            website
-          </Link>{" "}
-          for registration and further information.
-        </Typography> */}
       </Card>
     </Box>
   );
