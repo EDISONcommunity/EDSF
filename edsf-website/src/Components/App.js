@@ -33,6 +33,7 @@ import release3DSPP from "../files/EDSFReleases/EDISON_DSPP-release3-v07.pdf";
 import release2MCDS from "../files/EDSFReleases/EDISON_MC-DS-release2-v03.pdf";
 import releasep3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v04.pdf";
 import release3MCDS from "../files/EDSFReleases/EDISON_MC-DS-release3-v05.pdf";
+import MATESED2MITTrainingCourses from "../EDSFComponents/Resources/MATESED2MITTrainingCourses";
 import DSPandFAIR from "../EDSFComponents/Resources/DSPandFAIR";
 import Books from "../EDSFComponents/Resources/Books";
 import CurriculaDesign from "../EDSFComponents/Resources/CurriculaDesign";
@@ -207,6 +208,9 @@ export default class App extends Component {
             </Route>
             <Route path="/trainings-and-workshops">
               <Trainings />
+            </Route>
+            <Route path="/mates-ed2mit-training-courses">
+              <MATESED2MITTrainingCourses />
             </Route>
           </Switch>
           <Cookiesnackbar

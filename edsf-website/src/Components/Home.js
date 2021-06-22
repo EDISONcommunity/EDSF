@@ -302,6 +302,7 @@ export default function Home(props) {
           Resources
         </Typography>
         <Card className={classes.cardTutorials} elevation={9}>
+          <ResourcesMATESCourses />
           <ResourcesEDSFReleases />
           <ResourcesDSPandFAIR />
           <ResourcesEDSFCurriculaDesign />
@@ -313,6 +314,26 @@ export default function Home(props) {
           <ResourcesDatasets />
         </Card>
       </React.Fragment>
+    );
+  }
+
+  function ResourcesMATESCourses() {
+    return (
+      <List>
+        <ListItem>
+          <Typography
+            variant="h5"
+            button
+            component={RouterLink}
+            to="/mates-ed2mit-training-courses"
+            style={{ textDecoration: "none" }}
+            color="primary"
+          >
+            MATES ED2MIT Training Courses
+          </Typography>
+        </ListItem>
+        <MATESED2MITCourses />
+      </List>
     );
   }
 
@@ -584,6 +605,77 @@ export default function Home(props) {
     );
   }
 
+  function MATESED2MITCourses() {
+    return (
+      <div>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/tutorials-2021-mates-ed2mit-dsaf"
+            color="secondary"
+          >
+            <ListItemText
+              primary='MATES ED2MIT "Introduction to Data Science & Analytics Foundations for the Maritime Sector"'
+              secondary="Self-study course 2021"
+            />
+          </ListItem>
+        </CardActions>
+
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/tutorials-2021-mates-ed2mit-dmg-february"
+            color="secondary"
+          >
+            <ListItemText
+              primary='MATES ED2MIT "Industrial Data Spaces, Organisational Data Management and Governance for the Maritime Sector"'
+              secondary="16, 18, 23 February 2021"
+            />
+          </ListItem>
+        </CardActions>
+        <MaterialList
+          cookiesEnabled={props.cookiesEnabled}
+          color="#28F994"
+          slidesURL="https://drive.google.com/drive/folders/1Hjevyvnm8we2IgtieLMtU3WtD2KvPaMH"
+          videoURL="https://surfdrive.surf.nl/files/index.php/s/lRGca7eeizWQR1p"
+        />
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/tutorials-2021-mates-ed2mit-bdit4da-january-february"
+          >
+            <ListItemText
+              primary='MATES ED2MIT "Big Data Infrastructure Technologies for Data Analytics"'
+              secondary="20, 26, 28 January and 4 February 2021"
+            />
+          </ListItem>
+        </CardActions>
+        <MaterialList
+          cookiesEnabled={props.cookiesEnabled}
+          color="#28F994"
+          slidesURL="https://drive.google.com/drive/u/0/folders/1su2P7NqDF24MJKnfMqtREseK4iH5HWxY"
+          videoURL="https://surfdrive.surf.nl/files/index.php/s/t5WLTsVcylKkHhh"
+        />
+
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/tutorials-2020-mates-ed2mit-bdit4da"
+          >
+            <ListItemText
+              primary='MATES ED2MIT "Introduction to Big Data and Data Management for Maritime Industry"'
+              secondary="Pilot experience 2020"
+            />
+          </ListItem>
+        </CardActions>
+      </div>
+    );
+  }
+
   function TrainingAndWorkshopComponent() {
     return (
       <React.Fragment>
@@ -592,7 +684,7 @@ export default function Home(props) {
           style={{ textDecoration: "none" }}
         >
           <Typography variant="h6" className={classes.cardTitle}>
-            Trainings and Workshops
+            All Trainings and Workshops
           </Typography>
         </RouterLink>
         <Card className={classes.cardTutorials} elevation={9}>
@@ -613,70 +705,8 @@ export default function Home(props) {
                 </Typography>
               </ListItem>
             </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/tutorials-2021-mates-ed2mit-dsaf"
-                color="secondary"
-              >
-                <ListItemText
-                  primary='MATES ED2MIT "Introduction to Data Science & Analytics Foundations for the Maritime Sector"'
-                  secondary="Self-study course 2021"
-                />
-              </ListItem>
-            </CardActions>
 
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/tutorials-2021-mates-ed2mit-dmg-february"
-                color="secondary"
-              >
-                <ListItemText
-                  primary='MATES ED2MIT "Industrial Data Spaces, Organisational Data Management and Governance for the Maritime Sector"'
-                  secondary="16, 18, 23 February 2021"
-                />
-              </ListItem>
-            </CardActions>
-            <MaterialList
-              cookiesEnabled={props.cookiesEnabled}
-              color="#28F994"
-              slidesURL="https://drive.google.com/drive/folders/1Hjevyvnm8we2IgtieLMtU3WtD2KvPaMH"
-              videoURL="https://surfdrive.surf.nl/files/index.php/s/lRGca7eeizWQR1p"
-            />
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/tutorials-2021-mates-ed2mit-bdit4da-january-february"
-              >
-                <ListItemText
-                  primary='MATES ED2MIT "Big Data Infrastructure Technologies for Data Analytics"'
-                  secondary="20, 26, 28 January and 4 February 2021"
-                />
-              </ListItem>
-            </CardActions>
-            <MaterialList
-              cookiesEnabled={props.cookiesEnabled}
-              color="#28F994"
-              slidesURL="https://drive.google.com/drive/u/0/folders/1su2P7NqDF24MJKnfMqtREseK4iH5HWxY"
-              videoURL="https://surfdrive.surf.nl/files/index.php/s/t5WLTsVcylKkHhh"
-            />
-
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/tutorials-2020-mates-ed2mit-bdit4da"
-              >
-                <ListItemText
-                  primary='MATES ED2MIT "Introduction to Big Data and Data Management for Maritime Industry"'
-                  secondary="Pilot experience 2020"
-                />
-              </ListItem>
-            </CardActions>
+            <MATESED2MITCourses />
             <CardActions className={classes.yearActions}>
               <ListItem
                 button
