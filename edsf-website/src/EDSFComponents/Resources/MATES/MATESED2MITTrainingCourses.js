@@ -4,11 +4,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import { Link as RouterLink } from "react-router-dom";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 import Footer from "../../../Components/Footer";
 import MATESED2MITTrainings from "./MATESED2MITTrainings";
+import matesLogo from "../../../img/MatesMasterLogo_COL.png";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -39,6 +37,17 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: "#8f857d",
   },
+  logo: {
+    width: "20%",
+    margin: "auto",
+    marginBottom: "2%",
+    minWidth: "150px",
+  },
+  header: {
+    display: "flex",
+    flexDirection: "row",
+    textAlign: "center",
+  },
 }));
 
 export default function MATESED2MITTrainingCourses() {
@@ -47,16 +56,27 @@ export default function MATESED2MITTrainingCourses() {
   return (
     <Box style={{ height: "100%" }}>
       <Card variant="outlined" className={classes.card}>
+        <div className={classes.header}>
+          <Link
+            target="_blank"
+            href="https://www.projectmates.eu/"
+            rel="noopener"
+            
+          >
+            <img src={matesLogo} className={classes.logo} alt="mates logo"/>
+          </Link>
+        </div>
+
         <Typography variant="h4" className={classes.title}>
           MATES ED2MIT Training Courses
         </Typography>
-       <Box
-            fontFamily="fontFamily"
-            fontSize="subtitle1.fontSize"
-            fontStyle="italic"
-            fontWeight="fontWeightLight"
-            className={classes.headerText1}
-          >
+        <Box
+          fontFamily="fontFamily"
+          fontSize="subtitle1.fontSize"
+          fontStyle="italic"
+          fontWeight="fontWeightLight"
+          className={classes.headerText1}
+        >
           Here you can find all information about offered MATES ED2MIT Trainings
           and Courses.
         </Box>

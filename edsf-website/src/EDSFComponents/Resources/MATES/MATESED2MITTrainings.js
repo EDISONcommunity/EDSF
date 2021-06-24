@@ -34,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: "#8f857d",
   },
+  logo: {
+
+  }
 }));
 
 export default function MATESED2MITTrainingCourses() {

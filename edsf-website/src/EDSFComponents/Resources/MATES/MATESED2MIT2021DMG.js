@@ -6,6 +6,8 @@ import Footer from "../../../Components/Footer";
 import backgroundImg from "../../../img/Untitled-4.png";
 import { Typography } from "@material-ui/core";
 import MATESED2MITTutorial from "./MATESED2MITTutorial";
+import matesLogo from "../../../img/MatesMasterLogo_COL.png";
+import Link from "@material-ui/core/Link";
 
 import intro from "../../../files/ed2mit/ed2mit_DMG/ed2mit2021mates_00-Introduction-digital-data-training-v03.pdf";
 
@@ -38,21 +40,19 @@ const styles = (theme) => ({
     textDecoration: "none",
     color: "#8f857d",
   },
+  header: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  logo: {
+    width: "20%",
+    margin: "auto",
+    marginBottom: "2%",
+    minWidth: "150px",
+  },
 });
 
 class MATESED2MIT2021DMG extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { terms: "", markdown: this.props.markdown };
-  }
-
-  componentWillMount() {
-    fetch(this.state.markdown)
-      .then((response) => response.text())
-      .then((text) => {
-        this.setState({ terms: text });
-      });
-  }
 
   render() {
     const { classes } = this.props;
@@ -60,6 +60,15 @@ class MATESED2MIT2021DMG extends Component {
     return (
       <Box className={classes.mainBox}>
         <Paper className={classes.mainPaper} variant="outlined">
+          <div className={classes.header}>
+            <Link
+              target="_blank"
+              href="https://www.projectmates.eu/"
+              rel="noopener"
+            >
+              <img src={matesLogo} className={classes.logo} alt="mates logo" />
+            </Link>
+          </div>
           <Typography variant="h4">MATES ED2MIT Training</Typography>
           <Typography variant="h5">
             Industrial Data Spaces, Organisational Data Management & Governance
