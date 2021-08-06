@@ -10,6 +10,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { Link as RouterLink } from "react-router-dom";
 import MATESED2MITTrainings from "../EDSFComponents/Resources/MATES/MATESED2MITTrainings";
 import Footer from "./Footer";
+import Box from "@material-ui/core/Box";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "10%",
     paddingTop: "2%",
   },
-  cardTitle: {
+  title: {
     margin: "5%",
     textAlign: "center",
   },
@@ -33,9 +35,15 @@ export default function TrainingsMaterial(props) {
 
   return (
     <React.Fragment className={classes.root}>
-      <Typography variant="h4" className={classes.cardTitle} color="secondary">
+      <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
         Trainings and Workshops
-      </Typography>
+      </Box>
       <Card className={classes.card} elevation={9}>
         <List>
           <CardActions className={classes.yearActions}>

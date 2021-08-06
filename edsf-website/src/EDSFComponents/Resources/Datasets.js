@@ -25,6 +25,15 @@ export default function Datasets() {
   return (
     <Box>
       <Card variant="outlined" className={classes.card}>
+                <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
+          Datasets
+        </Box>
         <Typography variant="subtitle1" className={classes.title}>
           Here you will soon find information about EDSF related Data Sets
         </Typography>

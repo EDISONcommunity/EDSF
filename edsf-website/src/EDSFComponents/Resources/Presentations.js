@@ -25,6 +25,14 @@ export default function Presentations() {
   return (
     <Box>
       <Card variant="outlined" className={classes.card}>
+        <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >          Presentations
+        </Box>
         <Typography variant="subtitle1" className={classes.title}>
           Here you will soon find information about held EDSF Presentations
         </Typography>

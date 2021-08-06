@@ -42,9 +42,15 @@ export default function Copyright() {
   return (
     <Box className={classes.contactBox}>
       <Card variant="outlined" className={classes.contactCard}>
-        <Typography variant="h4" className={classes.title}>
+        <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
           Copyright
-        </Typography>
+        </Box>
         <Typography variant="caption" align="left" className={classes.text}>
           All resources that are embedded within the website are for
           non-commercial and educational purposes. The use or re-distribution of

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     marginBottom: "2%",
-    textAlign: "center"
+    textAlign: "center",
   },
   box1: {
     width: "80%",
@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: "#8f857d",
   },
+  title: {
+    marginBottom: "2%",
+  },
 }));
 
 export default function DSPandFAIR() {
@@ -46,9 +49,15 @@ export default function DSPandFAIR() {
   return (
     <Box style={{ height: "100%" }}>
       <Card variant="outlined" className={classes.card}>
-        <Typography variant="h4" className={classes.title}>
+                <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
           Data Stewardship Professional and FAIR Competence Framework
-        </Typography>
+        </Box>
         <Typography variant="subtitle1" >
           Here you can find a list of related material:
         </Typography>

@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -13,7 +12,6 @@ import { Link as RouterLink } from "react-router-dom";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Grid from "@material-ui/core/Grid";
 import backgroundImg from "../img/Untitled-4.png";
-import titleImg from "../img/home-oneliner-right-new-opaque.png";
 import edsfImg from "../img/edison2021-dsci-framework-web-v11.png";
 import { Button } from "@material-ui/core";
 import MaterialLink from "../ReactComponents/MaterialLink";
@@ -61,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexGrow: "0",
       height: "100%",
+
     },
   },
   gridCardItem: {
@@ -70,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("sm")]: {
       margin: "5%",
-      marginTop: "10%",
+      marginTop: "20%",
     },
   },
   cardBox: {
@@ -81,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   cardTutorials: {
     height: "80%",
     minWidth: "280px",
-    backgroundColor: "rgba(52, 84, 209,0.8)",
+    backgroundColor: "rgba(72, 149, 239,0.5)",
     color: "#ffffff",
     margin: "auto",
     overflowY: "scroll",
@@ -126,6 +125,21 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "10px",
     },
   },
+  topicCard: {
+    width: "90%",
+    height: "auto",
+    backgroundColor: "rgba(49, 137, 237,0.4)",
+    color: "#ffffff",
+    margin: "auto",
+    overflowY: "scroll",
+    marginBottom: "2%",
+    marginTop: "2%",
+    paddingBottom: "5%",
+  },
+  resourcesTitle: {
+    textDecoration: "none",
+    color: "#2b2d42",
+  },
   iconBox: {
     height: "100%",
     flexDirection: "row",
@@ -156,7 +170,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "0%",
   },
   linkListText: {
-    color: "#28F994",
+    // color: "#28F994",
+    color: "white",
   },
   twitterBanner: {
     height: "100%",
@@ -240,6 +255,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   headerText2: { color: "#88888e" },
+  topicTitle: {
+    color: "#3F373E"
+  },
+  topicText: {
+    color: "#4D446B"
+  }
 }));
 
 export default function Home(props) {
@@ -275,40 +296,40 @@ export default function Home(props) {
             m={1}
 
             className={classes.cardTitle}
-          >Social Media</Box> 
-        <Card className={classes.cardTwitter} elevation={9}>
-          <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="erasmusmates"
-          />
-        </Card>
-        <Card className={classes.cardTwitter} elevation={9}>
-        <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="FAIRsFAIR_EU"
-          />
-        </Card>
+          >Social Media</Box>
+          <Card className={classes.cardTwitter} elevation={9}>
+            <TwitterTimelineEmbed
+              sourceType="profile"
+              screenName="erasmusmates"
+            />
+          </Card>
+          <Card className={classes.cardTwitter} elevation={9}>
+            <TwitterTimelineEmbed
+              sourceType="profile"
+              screenName="FAIRsFAIR_EU"
+            />
+          </Card>
         </React.Fragment>
       );
     }
 
     return (
       <div className={classes.cardTwitterBox}>
-          <Box
-            fontFamily="fontFamily"
-            fontSize="h5.fontSize"
-            fontWeight="fontWeightLight"
-            m={1}
-            className={classes.cardTitle}
-          >Social Media</Box> 
+        <Box
+          fontFamily="fontFamily"
+          fontSize="h5.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.cardTitle}
+        >Social Media</Box>
         <Card className={classes.cardTwitter} elevation={9}>
           <Card className={classes.twitterBanner}>
             <Typography variant="caption" className={classes.twitterBannerText}>
               This is a Twitter component using cookies. For details see our
               privacy policy.
             </Typography>
-            <Button onClick={(e) => props.onTwitterEnable()}>
-              Show content
+            <Button onClick={(e) => props.onTwitterEnable()} style={{ color: "#7A507A" }}>
+              Click here to view third-party content
             </Button>
           </Card>
         </Card>
@@ -319,13 +340,13 @@ export default function Home(props) {
   function ResourcesComponent() {
     return (
       <React.Fragment>
-          <Box
-            fontFamily="fontFamily"
-            fontSize="h5.fontSize"
-            fontWeight="fontWeightLight"
-            m={1}
-            className={classes.cardTitle}
-          >Resources</Box>
+        <Box
+          fontFamily="fontFamily"
+          fontSize="h5.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.cardTitle}
+        >Resources</Box>
         <Card className={classes.cardTutorials} elevation={9}>
           <ResourcesMATESCourses />
           <ResourcesEDSFReleases />
@@ -345,19 +366,24 @@ export default function Home(props) {
   function ResourcesMATESCourses() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/mates-ed2mit-training-courses"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            MATES ED2MIT Training Courses
-          </Typography>
-        </ListItem>
-        <MATESED2MITTrainings />
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/mates-ed2mit-training-courses"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              MATES ED2MIT Training Courses
+            </Box>
+          </ListItem>
+          <MATESED2MITTrainings />
+        </Card>
       </List>
     );
   }
@@ -365,52 +391,57 @@ export default function Home(props) {
   function ResourcesDSPandFAIR() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/data-stewardship-professional-and-fair-competence-framework"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            Data Stewardship Professional and FAIR Competence Framework
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography variant="caption">
-            <Link
-              href="https://zenodo.org/record/4562089#.YIBZeegzZPZ"
-              target="_blank"
-              rel="noopener"
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/data-stewardship-professional-and-fair-competence-framework"
               style={{ textDecoration: "none" }}
-              className={classes.linkListText}
+              className={classes.resourcesTitle}
             >
-              FAIR Competence Framework for Higher Education {"("}Data
-              Stewardship Professional Competence Framework{")"}
-            </Link>
-            , FAIRsFAIR Project Deliverable D7.3
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography variant="caption">
-            {" "}
-            Yuri Demchenko, Lennart Stoy,{" "}
-            <Link
-              href="http://www.uazone.org/demch/papers/educon2021-data-stewardship-competence-fw-v02.pdf"
-              target="_blank"
-              rel="noopener"
-              style={{ textDecoration: "none" }}
-              className={classes.linkListText}
-            >
-              Research Data Management and Data Stewardship Competences in
-              University Curriculum
-            </Link>
-            , In Proc. Data Science Education {"("}DSE
-            {")"}, Special Session, EDUCON2021 – IEEE Global Engineering
-            Education Conference, 21-23 April 2021, Vienna, Austria
-          </Typography>
-        </ListItem>
+              Data Stewardship Professional and FAIR Competence Framework
+            </Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicText}>
+              <Link
+                href="https://zenodo.org/record/4562089#.YIBZeegzZPZ"
+                target="_blank"
+                rel="noopener"
+                style={{ textDecoration: "none" }}
+                className={classes.linkListText}
+              >
+                FAIR Competence Framework for Higher Education {"("}Data
+                Stewardship Professional Competence Framework{")"}
+              </Link>
+              , FAIRsFAIR Project Deliverable D7.3
+            </Typography>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicText}>
+              {" "}
+              Yuri Demchenko, Lennart Stoy,{" "}
+              <Link
+                href="http://www.uazone.org/demch/papers/educon2021-data-stewardship-competence-fw-v02.pdf"
+                target="_blank"
+                rel="noopener"
+                style={{ textDecoration: "none" }}
+                className={classes.linkListText}
+              >
+                Research Data Management and Data Stewardship Competences in
+                University Curriculum
+              </Link>
+              , In Proc. Data Science Education {"("}DSE
+              {")"}, Special Session, EDUCON2021 – IEEE Global Engineering
+              Education Conference, 21-23 April 2021, Vienna, Austria
+            </Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
@@ -418,21 +449,26 @@ export default function Home(props) {
   function ResourcesDatasets() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/datasets"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            Datasets
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography>Coming soon</Typography>
-        </ListItem>
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/datasets"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              Datasets
+            </Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicTitle}>Coming soon</Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
@@ -440,21 +476,28 @@ export default function Home(props) {
   function ResourcesBooks() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/books-and-articles"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            Books and Articles
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography>Coming soon</Typography>
-        </ListItem>
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/books-and-articles"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              Books and Articles
+            </Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicTitle}>The Data Science Framework, A View from the EDISON Project, Editors
+              Juan J. Cuadrado-Gallego, Yuri Demchenko, Springer Nature Switzerland
+              AG 2020, ISBN 978-3-030-51022-0, ISBN 978-3-030-51023-7.</Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
@@ -462,32 +505,37 @@ export default function Home(props) {
   function ResourcesEDISONPublications() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/publications"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            EDISON Related Publications
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography>
-            You can find a list under the following{" "}
-            <Link
-              href="http://www.uazone.org/demch/academic/papers-edu.html"
-              target="_blank"
-              rel="noopener"
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/publications"
               style={{ textDecoration: "none" }}
-              className={classes.linkListText}
+              className={classes.resourcesTitle}
             >
-              link.
-            </Link>
-          </Typography>
-        </ListItem>
+              EDISON Related Publications
+            </Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicTitle}>
+              You can find a list under the following{" "}
+              <Link
+                href="http://www.uazone.org/demch/academic/papers-edu.html"
+                target="_blank"
+                rel="noopener"
+                style={{ textDecoration: "none" }}
+                className={classes.linkListText}
+              >
+                link.
+              </Link>
+            </Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
@@ -495,21 +543,26 @@ export default function Home(props) {
   function ResourcesEDSFPresentations() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/presentations"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            EDSF Presentations
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography>Coming soon</Typography>
-        </ListItem>
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/presentations"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              EDSF Presentations
+            </Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicTitle}>Coming soon</Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
@@ -517,43 +570,54 @@ export default function Home(props) {
   function ResourcesEDISONProjects() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/projects"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            EDISON Projects
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography>Coming soon</Typography>
-        </ListItem>
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/projects"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              EDISON Projects
+            </Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicTitle}>Coming soon</Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
 
+  // not in use
   function ResourcesEDISONDeliverables() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/deliverables"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            EDISON Deliverables
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography>Coming soon</Typography>
-        </ListItem>
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/deliverables"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              EDISON Deliverables
+            </Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicTitle}>Coming soon</Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
@@ -561,21 +625,25 @@ export default function Home(props) {
   function ResourcesEDSFCurriculaDesign() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/curricula-design"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            EDSF Curricula Design
-          </Typography>
-        </ListItem>
-        <ListItem>
-          <Typography>Coming soon</Typography>
-        </ListItem>
+        <Card className={classes.topicCard}>
+          <ListItem>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/curricula-design"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              EDSF Curricula Design</Box>
+          </ListItem>
+          <ListItem>
+            <Typography variant="caption" className={classes.topicTitle}>Coming soon</Typography>
+          </ListItem>
+        </Card>
       </List>
     );
   }
@@ -583,54 +651,58 @@ export default function Home(props) {
   function ResourcesEDSFReleases() {
     return (
       <List>
-        <ListItem>
-          <Typography
-            variant="h5"
-            button
-            component={RouterLink}
-            to="/releases"
-            style={{ textDecoration: "none" }}
-            color="primary"
-          >
-            EDSF Releases
-          </Typography>
-        </ListItem>
-        <CardActions className={classes.yearActions}>
+        <Card className={classes.topicCard}>
           <ListItem>
-            <Typography variant="subtitle1">Release 3</Typography>
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h6.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              button
+              component={RouterLink}
+              to="/releases"
+              style={{ textDecoration: "none" }}
+              className={classes.resourcesTitle}
+            >
+              EDSF Releases</Box>
           </ListItem>
-        </CardActions>
-        <List className={classes.linkList}>
-          <MaterialLink
-            to="/resources-edsf-release3-cfds"
-            label="Data Science Competence Framework (CF-DS) R3"
-            action="EDSF resource link"
-            color="#28F994"
-          />
-          <MaterialLink
-            to="/resources-edsf-release3-dsbok"
-            label="Data Science Body of Knowledge (DS-BoK) R3"
-            action="EDSF resource link"
-            color="#28F994"
-          />
-          <MaterialLink
-            to="/resources-edsf-release3-mcds"
-            label="Data Science Model Curriculum (MC-DS) R3"
-            action="EDSF resource link"
-            color="#28F994"
-          />
-          <MaterialLink
-            to="/resources-edsf-release3-dspp"
-            label="Data Science Professional Profiles (DSPP) R3"
-            action="EDSF resource link"
-            color="#28F994"
-          />
-        </List>
+          <CardActions className={classes.yearActions}>
+            <ListItem>
+              <Typography className={classes.topicTitle}>Release 3</Typography>
+            </ListItem>
+          </CardActions>
+          <List className={classes.linkList}>
+            <MaterialLink
+              to="/resources-edsf-release3-cfds"
+              label="Data Science Competence Framework (CF-DS) R3"
+              action="EDSF resource link"
+              color="white"
+            />
+            <MaterialLink
+              to="/resources-edsf-release3-dsbok"
+              label="Data Science Body of Knowledge (DS-BoK) R3"
+              action="EDSF resource link"
+              color="white"
+            />
+            <MaterialLink
+              to="/resources-edsf-release3-mcds"
+              label="Data Science Model Curriculum (MC-DS) R3"
+              action="EDSF resource link"
+              color="white"
+            />
+            <MaterialLink
+              to="/resources-edsf-release3-dspp"
+              label="Data Science Professional Profiles (DSPP) R3"
+              action="EDSF resource link"
+              color="white"
+            />
+          </List>
+        </Card>
       </List>
     );
   }
 
-  
+
   function TrainingAndWorkshopComponent() {
     return (
       <React.Fragment>
@@ -638,14 +710,14 @@ export default function Home(props) {
           to="/trainings-and-workshops"
           style={{ textDecoration: "none" }}
         >
-            <Box
+          <Box
             fontFamily="fontFamily"
             fontSize="h5.fontSize"
             fontWeight="fontWeightLight"
             m={1}
             className={classes.cardTitle}
           >All Trainings and Workshops</Box>
-          </RouterLink>
+        </RouterLink>
         <Card className={classes.cardTutorials} elevation={9}>
           <List>
             <CardActions className={classes.yearActions}>
@@ -655,127 +727,150 @@ export default function Home(props) {
                 to="/upcoming"
                 color="secondary"
               >
-                <TrendingFlatIcon />
-                <Typography
-                  variant="h5"
-                  style={{ color: "#FFC89E", marginLeft: "10px" }}
+                <Box
+                  fontFamily="fontFamily"
+                  fontSize="h6.fontSize"
+                  fontWeight="fontWeightLight"
+                  m={1}
+                  style={{ color: "white" }}
                 >
-                  Upcoming events
-                </Typography>
+                  Click here for upcoming events
+                </Box>
               </ListItem>
             </CardActions>
-
             <MATESED2MITTrainings />
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/workshops-2020-fair-competences-october"
-              >
-                <ListItemText
-                  primary="FAIR Competences for Higher Education Design Workshop"
-                  secondary="8,9 October 2020"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/tutorials-2019-bdit4da-hpcs"
-              >
-                <ListItemText
-                  primary="Big Data and Technologies for Data Analytics"
-                  secondary="HPCS 2019"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/tutorials-2019-edsf-data-science-competence-and-education"
-              >
-                <ListItemText
-                  primary="EDSF Data Science Competence and Education"
-                  secondary="Summer 2019"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/workshops-2019-edsf-release4-november"
-              >
-                <ListItemText
-                  primary="EDSF Release 4 Design Workshop"
-                  secondary="20 November 2019"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/workshops-2019-dtw-september-sandiego"
-              >
-                <ListItemText
-                  primary=" Data Teaching Workshop"
-                  secondary="September, San Diego 2019"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/workshops-2018-edsf-release3-july-uva"
-              >
-                <ListItemText
-                  primary="EDSF Release 3 Design Workshop UvA"
-                  secondary="18, 19 July 2018"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/workshops-2018-edsf-release3-july-agenda"
-              >
-                <ListItemText
-                  primary="EDSF Release 3 Design Workshop Agenda"
-                  secondary="18, 19 July 2018"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}>
-              <ListItem
-                button
-                component={RouterLink}
-                to="/workshops-2018-edison-may-denmark"
-              >
-                <ListItemText
-                  primary="EDISON Workshop"
-                  secondary="31 May 2018, Denmark"
-                />
-              </ListItem>
-            </CardActions>
-            <CardActions className={classes.yearActions}></CardActions>
+            <MATESED2MITWorkshops />
           </List>
         </Card>
       </React.Fragment>
     );
   }
 
-  function ImageTitle() {
-    return (
-      <Box className={classes.imgTitleCard}>
-        <img src={titleImg} className={classes.imgTitle} alt="title" />
-      </Box>
-    );
+  function MATESED2MITWorkshops() {
+    return <React.Fragment>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/workshops-2020-fair-competences-october"
+          >
+            <ListItemText
+              primary="FAIR Competences for Higher Education Design Workshop"
+              secondary="8,9 October 2020"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/tutorials-2019-bdit4da-hpcs"
+          >
+            <ListItemText
+              primary="Big Data and Technologies for Data Analytics"
+              secondary="HPCS 2019"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/tutorials-2019-edsf-data-science-competence-and-education"
+          >
+            <ListItemText
+              primary="EDSF Data Science Competence and Education"
+              secondary="Summer 2019"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/workshops-2019-edsf-release4-november"
+          >
+            <ListItemText
+              primary="EDSF Release 4 Design Workshop"
+              secondary="20 November 2019"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/workshops-2019-dtw-september-sandiego"
+          >
+            <ListItemText
+              primary=" Data Teaching Workshop"
+              secondary="September, San Diego 2019"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/workshops-2018-edsf-release3-july-uva"
+          >
+            <ListItemText
+              primary="EDSF Release 3 Design Workshop UvA"
+              secondary="18, 19 July 2018"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/workshops-2018-edsf-release3-july-agenda"
+          >
+            <ListItemText
+              primary="EDSF Release 3 Design Workshop Agenda"
+              secondary="18, 19 July 2018"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+      <Card className={classes.topicCard}>
+        <CardActions className={classes.yearActions}>
+          <ListItem
+            button
+            component={RouterLink}
+            to="/workshops-2018-edison-may-denmark"
+          >
+            <ListItemText
+              primary="EDISON Workshop"
+              secondary="31 May 2018, Denmark"
+              className={classes.topicText}
+            />
+          </ListItem>
+        </CardActions>
+      </Card>
+    </React.Fragment>;
   }
+
 
   function Header() {
     return (
@@ -799,7 +894,7 @@ export default function Home(props) {
           >
             Building the Data Science Profession
           </Box>
-           <Box
+          <Box
             fontFamily="fontFamily"
             fontSize="h6.fontSize"
             fontWeight="fontWeightLight"
@@ -814,6 +909,7 @@ export default function Home(props) {
     );
   }
 
+  // currently not in use; no existing contribution page
   function ContributeButton() {
     const classes = useStyles();
     return (

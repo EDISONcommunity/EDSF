@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     color: "#8f857d",
+    paddingTop: "2%",
   },
 }));
 
@@ -29,11 +30,19 @@ export default function Upcoming() {
   return (
     <Box>
       <Card variant="outlined" className={classes.card}>
-        <Typography variant="h6" className={classes.title}>
+        <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
+          {" "}
           Upcoming Trainings and Workshops
-        </Typography>
+        </Box>
         <Typography>
-          Next course: <br/>
+          Next course:
+          <br />
           <RouterLink
             to="/tutorials-2021-mates-ed2mit-dsaf"
             className={classes.link}

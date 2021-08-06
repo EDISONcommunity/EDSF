@@ -41,9 +41,15 @@ export default function PrivacyPolicy() {
   return (
     <Box className={classes.contactBox}>
       <Card variant="outlined" className={classes.contactCard}>
-        <Typography variant="h4" className={classes.title}>
+         <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
           Privacy Policy
-        </Typography>
+        </Box>
         <Typography variant="caption" align="left" className={classes.text}>
           We do not store any personal information via our website unless
           anonymized data about user behaviour that is retrieved via external

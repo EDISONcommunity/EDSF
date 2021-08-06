@@ -25,6 +25,15 @@ export default function CurriculaDesign() {
     return (
       <Box>
         <Card variant="outlined" className={classes.card}>
+                  <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
+            Curricula Design
+          </Box>
           <Typography variant="subtitle1" className={classes.title}>
             Here you will soon find information about the EDSF Curricula Design
           </Typography>

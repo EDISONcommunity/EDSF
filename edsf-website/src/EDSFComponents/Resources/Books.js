@@ -15,8 +15,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   title: {
-    marginBottom: "2%",
+    marginBottom: "5%",
   },
+  book: {
+    textAlign: "left",
+  }
 }));
 
 export default function Books() {
@@ -25,9 +28,19 @@ export default function Books() {
   return (
     <Box>
       <Card variant="outlined" className={classes.card}>
-        <Typography variant="subtitle1" className={classes.title}>
-          Here you will soon find information about the EDSF related Books and
-          Articles
+        <Box
+          fontFamily="fontFamily"
+          fontSize="h4.fontSize"
+          fontWeight="fontWeightLight"
+          m={1}
+          className={classes.title}
+        >
+          Books and Articles
+        </Box>
+        <Typography variant="subtitle1" className={classes.book}>
+          The Data Science Framework, A View from the EDISON Project, Editors
+          Juan J. Cuadrado-Gallego, Yuri Demchenko, Springer Nature Switzerland
+          AG 2020, ISBN 978-3-030-51022-0, ISBN 978-3-030-51023-7.
         </Typography>
       </Card>
     </Box>
