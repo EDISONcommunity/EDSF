@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   cardTwitter: {
     marginTop: "5%",
     marginBottom: "5%",
-    height: "75%",
+    height: "50%",
     width: "80%",
     marginLeft: "auto",
     marginRight: "10%",
@@ -267,18 +267,25 @@ export default function Home(props) {
   function TwitterComponent() {
     if (props.twitterEnabled) {
       return (
-        <React.Fragment>
+        <React.Fragment className={classes.cardTwitterBox}>
           <Box
             fontFamily="fontFamily"
             fontSize="h5.fontSize"
             fontWeight="fontWeightLight"
             m={1}
+
             className={classes.cardTitle}
           >Social Media</Box> 
         <Card className={classes.cardTwitter} elevation={9}>
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="erasmusmates"
+          />
+        </Card>
+        <Card className={classes.cardTwitter} elevation={9}>
+        <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="FAIRsFAIR_EU"
           />
         </Card>
         </React.Fragment>
