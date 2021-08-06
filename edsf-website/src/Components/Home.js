@@ -207,10 +207,10 @@ const useStyles = makeStyles((theme) => ({
   headerBox: {
     display: "flex",
     flexDirection: "row",
-    width: "100%",
+    textAlign: "left",
     height: "40%",
-    marginTop: "2%",
-    marginBottom: "2%",
+    margin: "2%",
+    marginLeft: "5%",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
@@ -224,14 +224,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   headerImg: {
-    height: "90%",
+    height: "50%",
     padding: "2%",
-    [theme.breakpoints.down("sm")]: {
-      width: "80%",
-    },
   },
   headerImgBox: {
     height: "100%",
+    marginLeft: "auto",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
@@ -770,6 +768,13 @@ export default function Home(props) {
           >
             Building the Data Science Profession
           </Box>
+           <Box
+            fontFamily="fontFamily"
+            fontSize="h6.fontSize"
+            fontWeight="fontWeightLight"
+            m={1}
+            className={classes.headerText2}
+          >Maintaining the EDISON project legacy</Box>
         </Box>
         <Box className={classes.headerImgBox}>
           <img src={edsfImg} className={classes.headerImg} alt="title" />
