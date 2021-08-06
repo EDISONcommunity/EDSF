@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "0%",
     marginBottom: "5%",
     textDecoration: "none",
-    color: "grey",
+    color: "#2b2d42",
     [theme.breakpoints.down("sm")]: {
       marginTop: "10px",
     },
@@ -208,7 +208,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     textAlign: "left",
-    height: "40%",
+    height: "30%",
     margin: "2%",
     marginLeft: "5%",
     [theme.breakpoints.down("sm")]: {
@@ -224,11 +224,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   headerImg: {
-    height: "50%",
+    height: "100%",
     padding: "2%",
   },
   headerImgBox: {
-    height: "100%",
+    height: "80%",
     marginLeft: "auto",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
@@ -256,10 +256,10 @@ export default function Home(props) {
           <TrainingAndWorkshopComponent />
         </Grid>
         <Grid item className={classes.gridCardItem} sm>
-          <ContributeButton />
           <TwitterComponent />
         </Grid>
       </Grid>
+      {/* <ContributeButton /> */}
       <Footer />
     </Box>
   );
@@ -267,17 +267,33 @@ export default function Home(props) {
   function TwitterComponent() {
     if (props.twitterEnabled) {
       return (
+        <React.Fragment>
+          <Box
+            fontFamily="fontFamily"
+            fontSize="h5.fontSize"
+            fontWeight="fontWeightLight"
+            m={1}
+            className={classes.cardTitle}
+          >Social Media</Box> 
         <Card className={classes.cardTwitter} elevation={9}>
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="erasmusmates"
           />
         </Card>
+        </React.Fragment>
       );
     }
 
     return (
       <div className={classes.cardTwitterBox}>
+          <Box
+            fontFamily="fontFamily"
+            fontSize="h5.fontSize"
+            fontWeight="fontWeightLight"
+            m={1}
+            className={classes.cardTitle}
+          >Social Media</Box> 
         <Card className={classes.cardTwitter} elevation={9}>
           <Card className={classes.twitterBanner}>
             <Typography variant="caption" className={classes.twitterBannerText}>
@@ -296,9 +312,13 @@ export default function Home(props) {
   function ResourcesComponent() {
     return (
       <React.Fragment>
-        <Typography variant="h6" className={classes.cardTitle}>
-          Resources
-        </Typography>
+          <Box
+            fontFamily="fontFamily"
+            fontSize="h5.fontSize"
+            fontWeight="fontWeightLight"
+            m={1}
+            className={classes.cardTitle}
+          >Resources</Box>
         <Card className={classes.cardTutorials} elevation={9}>
           <ResourcesMATESCourses />
           <ResourcesEDSFReleases />
@@ -611,10 +631,14 @@ export default function Home(props) {
           to="/trainings-and-workshops"
           style={{ textDecoration: "none" }}
         >
-          <Typography variant="h6" className={classes.cardTitle}>
-            All Trainings and Workshops
-          </Typography>
-        </RouterLink>
+            <Box
+            fontFamily="fontFamily"
+            fontSize="h5.fontSize"
+            fontWeight="fontWeightLight"
+            m={1}
+            className={classes.cardTitle}
+          >All Trainings and Workshops</Box>
+          </RouterLink>
         <Card className={classes.cardTutorials} elevation={9}>
           <List>
             <CardActions className={classes.yearActions}>
