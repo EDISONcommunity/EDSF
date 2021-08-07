@@ -11,7 +11,7 @@ import "./index.css";
 
 const trackingId = process.env.REACT_APP_GA_MEASUREMENT_ID;
 const history = createBrowserHistory();
-const basename = "/EDSF"
+const basename = "/EDSF";
 
 export default class MyApp extends Component {
   constructor(props) {
@@ -22,54 +22,52 @@ export default class MyApp extends Component {
       cookiesSet: false,
     };
 
-    localStorage.setItem("cookies", false);
-    localStorage.setItem("cookiesSet", false);
     this.cookiesEnable = this.cookiesEnable.bind(this);
     this.cookiesDisable = this.cookiesDisable.bind(this);
   }
 
   cookiesEnable() {
-    localStorage.setItem("cookies", true);
-    localStorage.setItem("cookiesSet", true);
     this.setState({ cookiesEnabled: true });
     this.setState({ cookiesSet: true });
     ReactGA.initialize(this.props.trackingId);
     ReactGA.set({ anonymizeIp: true });
+    localStorage.setItem("cookies", "true");
+    localStorage.setItem("cookiesSet", "true");
   }
 
   cookiesDisable() {
-    localStorage.setItem("cookies", false);
-    localStorage.setItem("cookiesSet", true);
     this.setState({ cookiesEnabled: false });
     this.setState({ cookiesSet: true });
+    localStorage.setItem("cookies", "false");
+    localStorage.setItem("cookiesSet", "true");
   }
 
   render() {
     if (this.state.cookiesEnabled) {
-        return (
-          <Analytics id={trackingId} basename={basename} debug>
-            <App
-              cookiesEnabled={localStorage.getItem("cookies")}
-              cookiesSet={localStorage.getItem("cookiesSet")}
-              cookiesEnable={this.cookiesEnable}
-              cookiesDisable={this.cookiesDisable}
-              trackingId={trackingId}
-              history={history}
-            />
-          </Analytics>
-        );
-      } else {
-        return (
+      return (
+        <Analytics id={trackingId} basename={basename} debug>
           <App
-            cookiesEnabled={localStorage.getItem("cookies")}
-            cookiesSet={this.state.cookiesSet}
+            cookiesEnabled={localStorage.getItem("cookies") === "true"}
+            cookiesSet={localStorage.getItem("cookiesSet") === "true"}
             cookiesEnable={this.cookiesEnable}
             cookiesDisable={this.cookiesDisable}
             trackingId={trackingId}
             history={history}
           />
-        );
-      }
+        </Analytics>
+      );
+    } else {
+      return (
+        <App
+          cookiesEnabled={localStorage.getItem("cookies") === "true"}
+          cookiesSet={localStorage.getItem("cookiesSet") === "true"}
+          cookiesEnable={this.cookiesEnable}
+          cookiesDisable={this.cookiesDisable}
+          trackingId={trackingId}
+          history={history}
+        />
+      );
+    }
   }
 }
 

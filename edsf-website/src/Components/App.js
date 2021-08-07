@@ -64,6 +64,7 @@ export default class App extends Component {
   }
 
   twitterEnable() {
+    localStorage.setItem('twitter', 'true');
     this.setState({ twitterEnabled: true });
   }
 
@@ -79,7 +80,7 @@ export default class App extends Component {
               <Home
                 cookiesEnabled={this.props.cookiesEnabled}
                 onTwitterEnable={this.twitterEnable}
-                twitterEnabled={this.state.twitterEnabled}
+                twitterEnabled={localStorage.getItem('twitter') === 'true'}
                 trackingId={this.props.trackingId}
               />
             </Route>
