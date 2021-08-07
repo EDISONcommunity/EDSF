@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EDSF/static/css/main.b8629051.chunk.css",
-    "main.js": "/EDSF/static/js/main.f6ec5004.chunk.js",
-    "main.js.map": "/EDSF/static/js/main.f6ec5004.chunk.js.map",
+    "main.js": "/EDSF/static/js/main.d119ecb3.chunk.js",
+    "main.js.map": "/EDSF/static/js/main.d119ecb3.chunk.js.map",
     "runtime-main.js": "/EDSF/static/js/runtime-main.be6d99b2.js",
     "runtime-main.js.map": "/EDSF/static/js/runtime-main.be6d99b2.js.map",
     "static/js/2.6e7abaa4.chunk.js": "/EDSF/static/js/2.6e7abaa4.chunk.js",
@@ -60,12 +60,16 @@
     "static/media/ed2mit2021tuto_A02-big-data-platforms-v02.fb583215.pdf": "/EDSF/static/media/ed2mit2021tuto_A02-big-data-platforms-v02.fb583215.pdf",
     "static/media/ed2mit2021tuto_A03-data-sql-nosql-v02.e063fef3.pdf": "/EDSF/static/media/ed2mit2021tuto_A03-data-sql-nosql-v02.e063fef3.pdf",
     "static/media/ed2mit2021tuto_A04.01-data-protection-compliance-v01.54074620.pdf": "/EDSF/static/media/ed2mit2021tuto_A04.01-data-protection-compliance-v01.54074620.pdf",
-    "static/media/edison2021-dsci-framework-web-v11.e16b2bff.png": "/EDSF/static/media/edison2021-dsci-framework-web-v11.e16b2bff.png"
+    "static/media/edison2021-dsci-framework-web-v11.e16b2bff.png": "/EDSF/static/media/edison2021-dsci-framework-web-v11.e16b2bff.png",
+    "static/media/logo1.d4bee7fd.png": "/EDSF/static/media/logo1.d4bee7fd.png",
+    "static/media/logo2.7fe28f9d.png": "/EDSF/static/media/logo2.7fe28f9d.png",
+    "static/media/logo3.dc76aea0.png": "/EDSF/static/media/logo3.dc76aea0.png",
+    "static/media/logo4.6378b69a.png": "/EDSF/static/media/logo4.6378b69a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.be6d99b2.js",
     "static/js/2.6e7abaa4.chunk.js",
     "static/css/main.b8629051.chunk.css",
-    "static/js/main.f6ec5004.chunk.js"
+    "static/js/main.d119ecb3.chunk.js"
   ]
 }
