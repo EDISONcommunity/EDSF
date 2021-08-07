@@ -7,70 +7,69 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import ReactGA from "react-ga";
 import Analytics from "react-router-ga";
-import Cookies from 'universal-cookie';
-
 import "./index.css";
 
 const trackingId = process.env.REACT_APP_GA_MEASUREMENT_ID;
-const cookies = new Cookies();
 const history = createBrowserHistory();
-const basename = "/EDSF";
+const basename = "/EDSF"
 
 export default class MyApp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      // cookiesEnabled: false,
+      cookiesEnabled: false,
       cookiesSet: false,
     };
 
+    localStorage.setItem("cookies", false);
+    localStorage.setItem("cookiesSet", false);
     this.cookiesEnable = this.cookiesEnable.bind(this);
     this.cookiesDisable = this.cookiesDisable.bind(this);
   }
 
   cookiesEnable() {
-    cookies.set("cookies", true, { path: "/" });
-    // this.setState({ cookiesEnabled: true });
+    localStorage.setItem("cookies", true);
+    localStorage.setItem("cookiesSet", true);
+    this.setState({ cookiesEnabled: true });
     this.setState({ cookiesSet: true });
     ReactGA.initialize(this.props.trackingId);
     ReactGA.set({ anonymizeIp: true });
   }
 
   cookiesDisable() {
-    cookies.set("cookies", false, { path: "/" });
-    // this.setState({ cookiesEnabled: false });
+    localStorage.setItem("cookies", false);
+    localStorage.setItem("cookiesSet", true);
+    this.setState({ cookiesEnabled: false });
     this.setState({ cookiesSet: true });
   }
 
   render() {
     if (this.state.cookiesEnabled) {
-      return (
-        <Analytics id={trackingId} basename={basename} debug>
+        return (
+          <Analytics id={trackingId} basename={basename} debug>
+            <App
+              cookiesEnabled={localStorage.getItem("cookies")}
+              cookiesSet={localStorage.getItem("cookiesSet")}
+              cookiesEnable={this.cookiesEnable}
+              cookiesDisable={this.cookiesDisable}
+              trackingId={trackingId}
+              history={history}
+            />
+          </Analytics>
+        );
+      } else {
+        return (
           <App
-            // cookiesEnabled={this.state.cookiesEnabled}
+            cookiesEnabled={localStorage.getItem("cookies")}
             cookiesSet={this.state.cookiesSet}
-            cookiesEnabled={cookies.get("cookies")}
             cookiesEnable={this.cookiesEnable}
             cookiesDisable={this.cookiesDisable}
             trackingId={trackingId}
             history={history}
           />
-        </Analytics>
-      );
-    } else {
-      return (
-        <App
-          // cookiesEnabled={this.state.cookiesEnabled}
-          cookiesSet={this.state.cookiesSet}
-          cookiesEnabled={cookies.get("cookies")}
-          cookiesEnable={this.cookiesEnable}
-          cookiesDisable={this.cookiesDisable}
-          trackingId={trackingId}
-          history={history}
-        />
-      );
-    }
+        );
+      }
   }
 }
 
