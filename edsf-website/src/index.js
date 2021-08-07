@@ -7,19 +7,21 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import ReactGA from "react-ga";
 import Analytics from "react-router-ga";
+import Cookies from 'universal-cookie';
 
 import "./index.css";
 
 const trackingId = process.env.REACT_APP_GA_MEASUREMENT_ID;
+const cookies = new Cookies();
 const history = createBrowserHistory();
-const basename = "/EDSF"
+const basename = "/EDSF";
 
 export default class MyApp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      cookiesEnabled: false,
+      // cookiesEnabled: false,
       cookiesSet: false,
     };
 
@@ -28,14 +30,16 @@ export default class MyApp extends Component {
   }
 
   cookiesEnable() {
-    this.setState({ cookiesEnabled: true });
+    cookies.set("cookies", true, { path: "/" });
+    // this.setState({ cookiesEnabled: true });
     this.setState({ cookiesSet: true });
     ReactGA.initialize(this.props.trackingId);
     ReactGA.set({ anonymizeIp: true });
   }
 
   cookiesDisable() {
-    this.setState({ cookiesEnabled: false });
+    cookies.set("cookies", false, { path: "/" });
+    // this.setState({ cookiesEnabled: false });
     this.setState({ cookiesSet: true });
   }
 
@@ -44,8 +48,9 @@ export default class MyApp extends Component {
       return (
         <Analytics id={trackingId} basename={basename} debug>
           <App
-            cookiesEnabled={this.state.cookiesEnabled}
+            // cookiesEnabled={this.state.cookiesEnabled}
             cookiesSet={this.state.cookiesSet}
+            cookiesEnabled={cookies.get("cookies")}
             cookiesEnable={this.cookiesEnable}
             cookiesDisable={this.cookiesDisable}
             trackingId={trackingId}
@@ -56,8 +61,9 @@ export default class MyApp extends Component {
     } else {
       return (
         <App
-          cookiesEnabled={this.state.cookiesEnabled}
+          // cookiesEnabled={this.state.cookiesEnabled}
           cookiesSet={this.state.cookiesSet}
+          cookiesEnabled={cookies.get("cookies")}
           cookiesEnable={this.cookiesEnable}
           cookiesDisable={this.cookiesDisable}
           trackingId={trackingId}
