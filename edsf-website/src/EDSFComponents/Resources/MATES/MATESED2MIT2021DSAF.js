@@ -10,6 +10,11 @@ import matesLogo from "../../../img/MatesMasterLogo_COL.png";
 import Link from "@material-ui/core/Link";
 
 import ed2mit03practice from "../../../files/ed2mit/ed2mit_DSAF/ed2mit03practice01-dsaf-work-environ-prep-v01.pptx.pdf";
+import ed2mit03dsaf1 from "../../../files/ed2mit/ed2mit_DSAF/dsaf-assignment01.docx.pdf";
+import ed2mit03dsaf2 from "../../../files/ed2mit/ed2mit_DSAF/dsaf-assignment02.docx.pdf";
+import ed2mit03dsaf3 from "../../../files/ed2mit/ed2mit_DSAF/dsaf-assignment03.docx.pdf";
+
+import ed2mit03tutorial0 from "../../../files/ed2mit/ed2mit_DSAF/ed2mit03tutorial00-Introduction-data-science-aanlytics-foundation-v03.pptx.pdf";
 import ed2mit03tutorial1 from "../../../files/ed2mit/ed2mit_DSAF/ed2mit03tutorial01-dsaf-research-methods-v02.pptx.pdf";
 import ed2mit03tutorial2 from "../../../files/ed2mit/ed2mit_DSAF/ed2mit03tutorial01-dsaf-research-methods-v02.pptx.pdf";
 import ed2mit03tutorial3 from "../../../files/ed2mit/ed2mit_DSAF/ed2mit03tutorial01-dsaf-research-methods-v02.pptx.pdf";
@@ -66,6 +71,17 @@ class MATESED2MIT2021DSAF extends Component {
             Maritime Sector
           </Typography>
           <br />
+          <Typography variant="h5">Tutorials</Typography>
+          <br />
+          <MATESED2MITTutorial
+            header="Tutorial 0: Introduction - MATES Project and course overview"
+            timeInfo="Self Study Course"
+            topics={["Course Topics", "Course Practices", "Goals"]}
+            materials={[
+              { source: ed2mit03tutorial0, text: "Lecture" },
+            ]}
+          />
+          <br />
           <MATESED2MITTutorial
             header="Tutorial 1: Research Methods in Data Science"
             timeInfo="Self Study Course"
@@ -76,10 +92,7 @@ class MATESED2MIT2021DSAF extends Component {
               "Business research",
               "CRISP-DM: Model, stages and tasks",
             ]}
-            materials={[
-              { source: ed2mit03practice, text: "Practice preparation" },
-              { source: ed2mit03tutorial1, text: "Lecture" },
-            ]}
+            materials={[{ source: ed2mit03tutorial1, text: "Lecture" }]}
           />
           <MATESED2MITTutorial
             header="Tutorial 2: Statistical Data Analysis
@@ -123,15 +136,68 @@ class MATESED2MIT2021DSAF extends Component {
             ]}
             materials={[{ source: ed2mit03tutorial4, text: "Lecture" }]}
           />
-          <Box
-            fontFamily="fontFamily"
-            fontSize="h6.fontSize"
-            fontStyle="italic"
-            fontWeight="fontWeightLight"
-            className={classes.headerText1}
-          >
-            Information about Tutorial 5,6 and 7 is updated soon.
-          </Box>
+          <MATESED2MITTutorial
+            header="Tutorial 5: Qualitative Data Analysis"
+            timeInfo="Self Study Course"
+          />
+          <MATESED2MITTutorial
+            header="Tutorial 6: Machine Learning: Classification Methods"
+            timeInfo="Self Study Course"
+          />
+          <MATESED2MITTutorial
+            header="Tutorial 7: Machine Learning: Cluster Analysis Overview"
+            timeInfo="Self Study Course"
+          />
+
+          <br />
+          <Typography variant="h5">Practice</Typography>
+          <br />
+          <MATESED2MITTutorial
+            header="Practice Preparation"
+            timeInfo="Self Study Course"
+            materials={[{ source: ed2mit03practice, text: "Slides" }]}
+          />{" "}
+          <br />
+          <MATESED2MITTutorial
+            header="Practice 01: Data cleaning and preparation with Python Pandas"
+            timeInfo="Self Study Course"
+            materials={[
+              {
+                source:
+                  "https://drive.google.com/drive/folders/1VHkg9NnYgwZozorViNrn1ngmeubEmtlt?usp=sharing",
+                text: "Python exercises",
+              },
+            ]}
+          />{" "}
+          <br />
+          <MATESED2MITTutorial
+            header="Practice 03: Data preparation and exploration with RapidMiner"
+            timeInfo="Self Study Course"
+            materials={[
+              {
+                source: ed2mit03dsaf1,
+                text: "Assignment 1",
+              },
+              {
+                source: ed2mit03dsaf2,
+                text: "Assignment 2",
+              },
+              {
+                source: ed2mit03dsaf3,
+                text: "Assignment 3",
+              },
+              {
+                source:
+                  "https://drive.google.com/drive/folders/1bC4SznNGmclTdUOh6OTgbU8eo8WGpZrm?usp=sharing",
+                text: "Example solutions",
+              },
+            ]}
+          />{" "}
+          <br />
+          <MATESED2MITTutorial
+            header="Practice 04: Data analysis and Machine Learning with RapidMiner"
+            timeInfo="Self Study Course"
+          />{" "}
           <br />
           <Box
             fontFamily="fontFamily"
@@ -144,11 +210,12 @@ class MATESED2MIT2021DSAF extends Component {
           <br />
           <Typography>
             {" "}
-            Self-study course, online. There will be 7 tutorials in total, each
-            consisting of lecture and practice material for self-study. Practice
-            will include working with Data Analytics tools for data preparation,
-            analysis and reporting, using provided datasets. Course materials
-            are uploaded in advance to this web page.
+            This is a self-study course for online use. There will be 7
+            tutorials with lecture material in total, and 4 practical
+            assignments for self-study. Practice will include working with Data
+            Analytics tools for data preparation, analysis and reporting, using
+            provided datasets. There are provided example solutions to some of
+            the assignments.
           </Typography>
           <br />
           <Box
@@ -224,7 +291,6 @@ class MATESED2MIT2021DSAF extends Component {
             </li>
           </ul>
           <br />
-
           <Box
             fontFamily="fontFamily"
             fontSize="h6.fontSize"

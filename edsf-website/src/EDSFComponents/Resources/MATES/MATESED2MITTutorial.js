@@ -28,14 +28,20 @@ export default function MATESED2MITTutorial(props) {
 
   function Topics() {
     if (props.topics) {
-    var topicList = props.topics.map(function (topic) {
+      var topicList = props.topics.map(function (topic) {
+        return (
+          <li>
+            <Typography>{topic}</Typography>
+          </li>
+        );
+      });
       return (
-        <li>
-          <Typography>{topic}</Typography>
-        </li>
+        <div>
+          <Typography variant="h6"> Topics </Typography>
+          <ul>{topicList}</ul>{" "}
+        </div>
       );
-    });
-    return <ul>{topicList}</ul>;}
+    }
     return <div></div>;
   }
 
@@ -59,7 +65,12 @@ export default function MATESED2MITTutorial(props) {
         );
       });
 
-      return <ul>{materialList}</ul>;
+      return (
+        <div>
+          <Typography variant="h6"> Materials </Typography>
+          <ul>{materialList}</ul>
+        </div>
+      );
     }
     return <div></div>;
   }
@@ -76,10 +87,8 @@ export default function MATESED2MITTutorial(props) {
       </Box>
       <Typography>{props.timeinfo}</Typography>
       <br />
-      <Typography variant="h6"> Topics </Typography>
       <Topics />
       <br />
-      <Typography variant="h6"> Materials </Typography>
       <Materials />
     </div>
   );
