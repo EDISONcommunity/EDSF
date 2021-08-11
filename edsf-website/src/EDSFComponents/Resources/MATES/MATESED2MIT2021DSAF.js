@@ -153,13 +153,13 @@ class MATESED2MIT2021DSAF extends Component {
           <Typography variant="h5">Practice</Typography>
           <br />
           <MATESED2MITTutorial
-            header="Practice Preparation"
+            header="Practice 1: Preparation"
             timeInfo="Self Study Course"
             materials={[{ source: ed2mit03practice, text: "Slides" }]}
           />{" "}
           <br />
           <MATESED2MITTutorial
-            header="Practice 01: Data cleaning and preparation with Python Pandas"
+            header="Practice 2: Data cleaning and preparation with Python Pandas"
             timeInfo="Self Study Course"
             materials={[
               {
@@ -171,7 +171,7 @@ class MATESED2MIT2021DSAF extends Component {
           />{" "}
           <br />
           <MATESED2MITTutorial
-            header="Practice 03: Data preparation and exploration with RapidMiner"
+            header="Practice 3: Data preparation and exploration with RapidMiner"
             timeInfo="Self Study Course"
             materials={[
               {
