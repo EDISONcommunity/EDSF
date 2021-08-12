@@ -76,10 +76,8 @@ class MATESED2MIT2021DSAF extends Component {
           <MATESED2MITTutorial
             header="Tutorial 0: Introduction - MATES Project and course overview"
             timeInfo="Self Study Course"
-            topics={["Course Topics", "Course Practices", "Goals"]}
-            materials={[
-              { source: ed2mit03tutorial0, text: "Lecture" },
-            ]}
+            topics={["Course Topics", "Course Practices", "Course Goals"]}
+            materials={[{ source: ed2mit03tutorial0, text: "Lecture" }]}
           />
           <br />
           <MATESED2MITTutorial
@@ -139,16 +137,18 @@ class MATESED2MIT2021DSAF extends Component {
           <MATESED2MITTutorial
             header="Tutorial 5: Qualitative Data Analysis"
             timeInfo="Self Study Course"
+            topics={["To come"]}
           />
           <MATESED2MITTutorial
             header="Tutorial 6: Machine Learning: Classification Methods"
             timeInfo="Self Study Course"
+            topics={["To come"]}
           />
           <MATESED2MITTutorial
             header="Tutorial 7: Machine Learning: Cluster Analysis Overview"
             timeInfo="Self Study Course"
+            topics={["To come"]}
           />
-
           <br />
           <Typography variant="h5">Practice</Typography>
           <br />
