@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EDSF/static/css/main.b8629051.chunk.css",
-    "main.js": "/EDSF/static/js/main.d119ecb3.chunk.js",
-    "main.js.map": "/EDSF/static/js/main.d119ecb3.chunk.js.map",
+    "main.js": "/EDSF/static/js/main.88340125.chunk.js",
+    "main.js.map": "/EDSF/static/js/main.88340125.chunk.js.map",
     "runtime-main.js": "/EDSF/static/js/runtime-main.be6d99b2.js",
     "runtime-main.js.map": "/EDSF/static/js/runtime-main.be6d99b2.js.map",
     "static/js/2.6e7abaa4.chunk.js": "/EDSF/static/js/2.6e7abaa4.chunk.js",
@@ -43,8 +43,12 @@
     "static/media/dgm03-data-governance-implementation_service-offering_2239(2015).f0b8d2d3.pdf": "/EDSF/static/media/dgm03-data-governance-implementation_service-offering_2239(2015).f0b8d2d3.pdf",
     "static/media/dgm04-Enterprise-Data-Management-23-9-2015.4de69854.pdf": "/EDSF/static/media/dgm04-Enterprise-Data-Management-23-9-2015.4de69854.pdf",
     "static/media/dgm05-DataGovernancePlan(2007).45f0c1b2.pdf": "/EDSF/static/media/dgm05-DataGovernancePlan(2007).45f0c1b2.pdf",
+    "static/media/dsaf-assignment01.docx.b55cb6af.pdf": "/EDSF/static/media/dsaf-assignment01.docx.b55cb6af.pdf",
+    "static/media/dsaf-assignment02.docx.986af707.pdf": "/EDSF/static/media/dsaf-assignment02.docx.986af707.pdf",
+    "static/media/dsaf-assignment03.docx.369f98ab.pdf": "/EDSF/static/media/dsaf-assignment03.docx.369f98ab.pdf",
     "static/media/ed2mit03practice01-dsaf-work-environ-prep-v01.pptx.7cbabfef.pdf": "/EDSF/static/media/ed2mit03practice01-dsaf-work-environ-prep-v01.pptx.7cbabfef.pdf",
-    "static/media/ed2mit03tutorial01-dsaf-research-methods-v02.pptx.328eed7a.pdf": "/EDSF/static/media/ed2mit03tutorial01-dsaf-research-methods-v02.pptx.328eed7a.pdf",
+    "static/media/ed2mit03tutorial00-Introduction-data-science-aanlytics-foundation-v03.pptx.653b06af.pdf": "/EDSF/static/media/ed2mit03tutorial00-Introduction-data-science-aanlytics-foundation-v03.pptx.653b06af.pdf",
+    "static/media/ed2mit03tutorial01-dsaf-research-methods-v02.pptx.0d0ea193.pdf": "/EDSF/static/media/ed2mit03tutorial01-dsaf-research-methods-v02.pptx.0d0ea193.pdf",
     "static/media/ed2mit2020hwa02-mapreduce-pregel.1389708e.pdf": "/EDSF/static/media/ed2mit2020hwa02-mapreduce-pregel.1389708e.pdf",
     "static/media/ed2mit2020practice02-aws-emr-config-v02.885466c8.pdf": "/EDSF/static/media/ed2mit2020practice02-aws-emr-config-v02.885466c8.pdf",
     "static/media/ed2mit2020practice02-virtualbox-cloudera-quickstart-v02.ef23f8d5.pdf": "/EDSF/static/media/ed2mit2020practice02-virtualbox-cloudera-quickstart-v02.ef23f8d5.pdf",
@@ -70,6 +74,6 @@
     "static/js/runtime-main.be6d99b2.js",
     "static/js/2.6e7abaa4.chunk.js",
     "static/css/main.b8629051.chunk.css",
-    "static/js/main.d119ecb3.chunk.js"
+    "static/js/main.88340125.chunk.js"
   ]
 }
