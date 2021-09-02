@@ -62,15 +62,24 @@ export default function Releases() {
       <div className={classes.listBox}>
         <List>
           <ListItem>
-        <Box
-          fontFamily="fontFamily"
-          fontSize="h4.fontSize"
-          fontWeight="fontWeightLight"
-          m={1}
-          className={classes.title}
-        >              EDSF Releases
+            <Box
+              fontFamily="fontFamily"
+              fontSize="h4.fontSize"
+              fontWeight="fontWeightLight"
+              m={1}
+              className={classes.title}
+            >
+              {" "}
+              EDSF Releases
             </Box>
           </ListItem>
+          <CardActions className={classes.yearActions}>
+            <ListItem>
+              <Typography variant="subtitle1">
+                Release 4 {"(Expected 2021)"}
+              </Typography>
+            </ListItem>
+          </CardActions>
           <CardActions className={classes.yearActions}>
             <ListItem>
               <Typography variant="subtitle1">

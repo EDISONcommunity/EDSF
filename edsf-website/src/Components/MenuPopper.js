@@ -228,10 +228,7 @@ export default function MenuPopper() {
                     </TreeItem>
 
                     <TreeItem nodeId="6" label="Resources">
-                      <TreeItem
-                        nodeId="7"
-                        label="EDSF"
-                      >
+                      <TreeItem nodeId="7" label="EDSF">
                         <MenuItemLink
                           label="Data Science Competence Framework"
                           to="/data-science-competence-framework-cf-ds"
@@ -254,8 +251,83 @@ export default function MenuPopper() {
                         />
                       </TreeItem>
 
+                      <TreeItem nodeId="8" label="Releases">
+                        <MenuItemLink
+                          label="All Releases"
+                          onClick={handleClose}
+                          to="/releases"
+                        />
+                        <TreeItem nodeId="9" label="4 (expected 2021)"/>
+                        <TreeItem nodeId="10" label="3 (2018)">
+                          <MenuItemLink
+                            label="CF-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-cfds"
+                          />
+                          <MenuItemLink
+                            label="DS-BoK"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-dsbok"
+                          />
+                          <MenuItemLink
+                            label="MC-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-mcds"
+                          />
+                          <MenuItemLink
+                            label="DSPP"
+                            onClick={handleClose}
+                            to="/resources-edsf-release3-dspp"
+                          />
+                        </TreeItem>
+                        <TreeItem nodeId="11" label="3 (Pre-Release 2018)">
+                          <MenuItemLink
+                            label="CF-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-cfds"
+                          />
+                          <MenuItemLink
+                            label="DS-BoK"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-dsbok"
+                          />
+                          <MenuItemLink
+                            label="MC-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-mcds"
+                          />
+                          <MenuItemLink
+                            label="DSPP"
+                            onClick={handleClose}
+                            to="/resources-edsf-prerelease3-dspp"
+                          />
+                        </TreeItem>
+                        <TreeItem nodeId="12" label="2 (2017)">
+                          <MenuItemLink
+                            label="CF-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-cfds"
+                          />
+                          <MenuItemLink
+                            label="DS-BoK"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-dsbok"
+                          />
+                          <MenuItemLink
+                            label="MC-DS"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-mcds"
+                          />
+                          <MenuItemLink
+                            label="DSPP"
+                            onClick={handleClose}
+                            to="/resources-edsf-release2-dspp"
+                          />
+                        </TreeItem>
+                      </TreeItem>
+
                       <TreeItem
-                        nodeId="8"
+                        nodeId="13"
                         label="MATES ED2MIT Training Courses"
                       >
                         <MenuItemLink
@@ -280,79 +352,6 @@ export default function MenuPopper() {
                         />
                       </TreeItem>
 
-                      <TreeItem nodeId="9" label="Releases">
-                        <MenuItemLink
-                          label="All Releases"
-                          onClick={handleClose}
-                          to="/releases"
-                        />
-                        <TreeItem nodeId="10" label="Release 3">
-                          <MenuItemLink
-                            label="CF-DS"
-                            onClick={handleClose}
-                            to="/resources-edsf-release3-cfds"
-                          />
-                          <MenuItemLink
-                            label="DS-BoK"
-                            onClick={handleClose}
-                            to="/resources-edsf-release3-dsbok"
-                          />
-                          <MenuItemLink
-                            label="MC-DS"
-                            onClick={handleClose}
-                            to="/resources-edsf-release3-mcds"
-                          />
-                          <MenuItemLink
-                            label="DSPP"
-                            onClick={handleClose}
-                            to="/resources-edsf-release3-dspp"
-                          />
-                        </TreeItem>
-                        <TreeItem nodeId="11" label="Pre-Release 3">
-                          <MenuItemLink
-                            label="CF-DS"
-                            onClick={handleClose}
-                            to="/resources-edsf-prerelease3-cfds"
-                          />
-                          <MenuItemLink
-                            label="DS-BoK"
-                            onClick={handleClose}
-                            to="/resources-edsf-prerelease3-dsbok"
-                          />
-                          <MenuItemLink
-                            label="MC-DS"
-                            onClick={handleClose}
-                            to="/resources-edsf-prerelease3-mcds"
-                          />
-                          <MenuItemLink
-                            label="DSPP"
-                            onClick={handleClose}
-                            to="/resources-edsf-prerelease3-dspp"
-                          />
-                        </TreeItem>
-                        <TreeItem nodeId="12" label="Release 2">
-                          <MenuItemLink
-                            label="CF-DS"
-                            onClick={handleClose}
-                            to="/resources-edsf-release2-cfds"
-                          />
-                          <MenuItemLink
-                            label="DS-BoK"
-                            onClick={handleClose}
-                            to="/resources-edsf-release2-dsbok"
-                          />
-                          <MenuItemLink
-                            label="MC-DS"
-                            onClick={handleClose}
-                            to="/resources-edsf-release2-mcds"
-                          />
-                          <MenuItemLink
-                            label="DSPP"
-                            onClick={handleClose}
-                            to="/resources-edsf-release2-dspp"
-                          />
-                        </TreeItem>
-                      </TreeItem>
                       <MenuItemLink
                         label="Data Stewardship Professional and FAIR Competence Framework"
                         onClick={handleClose}
@@ -395,7 +394,7 @@ export default function MenuPopper() {
                       />
                     </TreeItem>
 
-                    <TreeItem nodeId="13" label="Imprint">
+                    <TreeItem nodeId="14" label="Imprint">
                       {/* Contact section   */}
                       <MenuItemLink
                         label="Contact"
