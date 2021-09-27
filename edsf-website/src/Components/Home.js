@@ -908,7 +908,7 @@ export default function Home(props) {
             fontWeight="fontWeightLight"
             m={1}
             className={classes.headerText2}
-          >Call for contribution EDSF Release 4 - <a href="https://github.com/EDISONcommunity/EDSF/wiki/EDSFhome">Link</a>
+          >Call for contribution EDSF Release 4 
         </Box>
         </Box>
         
