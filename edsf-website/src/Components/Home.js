@@ -900,7 +900,7 @@ export default function Home(props) {
             fontWeight="fontWeightLight"
             m={1}
             className={classes.headerText2}
-          >Maintaining the EDISON project legacy
+          >Maintaining the EDISON project legacy since 2018
             </Box>
             <Box
             fontFamily="fontFamily"
