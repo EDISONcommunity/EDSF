@@ -902,6 +902,14 @@ export default function Home(props) {
             className={classes.headerText2}
           >Maintaining the EDISON project legacy</Box>
         </Box>
+        <Box
+            fontFamily="fontFamily"
+            fontSize="h6.fontSize"
+            fontWeight="fontWeightLight"
+            m={1}
+            className={classes.headerText2}
+          >Call for contribution EDSF Release 4 - <a href="https://github.com/EDISONcommunity/EDSF/wiki/EDSFhome">Link</a></Box>
+        </Box>
         <Box className={classes.headerImgBox}>
           <img src={edsfImg} className={classes.headerImg} alt="title" />
         </Box>
