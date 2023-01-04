@@ -1,6 +1,6 @@
 # EDSF
 Community supported EDISON Data Science Framework.
-This directory contains recent version of the EDSF - *EDSF Release 4*.
+This directory contains the recent version of the EDSF - *EDSF Release 4*.
 For older and historical versions check directory x-old-versions.
 
 Editable versions are located in the individual directories by EDSF components:
